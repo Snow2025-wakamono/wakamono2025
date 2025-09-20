@@ -1,0 +1,193 @@
+/* ベース：白背景 */
+:root{
+  --bg:#fff;
+  --text:#111827;
+  --muted:#6b7280;
+  --primary:#b91c1c;
+  --border:#e5e7eb;
+  --radius:14px;
+  --shadow:0 6px 24px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans JP',sans-serif;line-height:1.7}
+.container{width:min(1100px,92%);margin-inline:auto;padding:24px 0}
+
+/* ヘッダー */
+.site-header{position:sticky;top:0;background:#db6b67;border-bottom:1px solid var(--border);z-index:30}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+.brand{ text-decoration:none; color:var(--text); font-weight:700; }
+.nav-toggle{background:white;border:1px solid var(--border);border-radius:10px;padding:8px 12px;font-size:1.2rem;cursor:pointer}
+/* nav-toggle 内の画像にだけ効く */
+.nav-toggle img{
+  width: 41px;       /* 横幅を40pxに固定 */
+  height: auto;      /* 縦横比は自動で保持 */
+  display: block;    /* 行のズレを防ぐ */
+  margin: 0 auto;    /* ボタン内で中央寄せ */
+}
+
+
+/* ヘッダーのタイトル（.brand）の文字サイズ調整 */
+.site-header .brand{
+  font-size: 1rem;   /* ← 好きな大きさに変更 */
+  font-weight: 500;    /* 太さも調整可 */
+  color: black;
+}
+
+/* 右スライド ドロワー */
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(320px,90vw);background:#fff;border-left:1px solid var(--border);box-shadow:var(--shadow);transform:translateX(100%);transition:transform .25s ease;z-index:40;display:flex;flex-direction:column}
+.drawer.open{transform:translateX(0)}
+.drawer-header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--border)}
+.drawer-close{background:none;border:none;font-size:1.4rem;cursor:pointer}
+.drawer-nav{padding:10px 16px;overflow:auto}
+.tab-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.tab{display:block;padding:12px 14px;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);background:#fff}
+.tab:hover{background:#fafafa}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff}
+
+/* バックドロップ */
+.backdrop{position:fixed;inset:0;background:rgba(0,0,0,.28);z-index:35}
+[hidden]{display:none!important}
+
+/* ヒーロー */
+.hero h1{margin:.2rem 0 0}
+.lead{color:var(--muted);margin:0 0 1rem}
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+.hero-logo {
+  max-width: 390px;   /* 横幅を大きめに調整 */
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+/* 来訪カウンター */
+.visitor-section{padding:8px 0 24px}
+.visitor-line{font-size:1.1rem}
+.muted{color:var(--muted);font-size:.9rem}
+
+/* フッター */
+.site-footer{border-top:1px solid var(--border);margin-top:18px;background:#fff}
+.site-footer .container{padding:1px 0}
+.back-to-top{position:fixed;right:18px;bottom:18px;border:none;padding:10px 12px;border-radius:999px;background:var(--primary);color:#fff;box-shadow:var(--shadow);cursor:pointer;display:none;z-index:45}
+.back-to-top.show{display:block}
+
+/*ロゴ*/
+.logo {
+  max-width: 200px;
+  height: auto;
+}
+
+@import "compass/css3";
+
+/* Global */
+body{ background-color:#f2f1ed; font-family: "Lato", system-ui, -apple-system, "Segoe UI", "Noto Sans JP", sans-serif; }
+
+.wrap{
+  position:absolute; inset:0; margin:auto; height:310px;
+}
+
+a{ text-decoration:none; color:#1a1a1a; }
+
+/* Title */
+h1{
+  margin-bottom:60px; text-align:center;
+  font-weight:300; font-size:2.25em; text-transform:uppercase;
+}
+h1 strong{ font-weight:400; color:#4c5fea; }
+
+h2{
+  margin-bottom:80px; text-align:center;
+  font-weight:300; font-size:.7em; text-transform:uppercase;
+}
+h2 strong{ font-weight:400; }
+
+/* Countdown */
+.countdown{ width:1300px; margin: auto; }
+.countdown .bloc-time{
+  float:left; margin-right:45px; text-align:center;
+}
+.countdown .bloc-time:last-child{ margin-right:0; }
+
+.countdown .count-title{
+  display:block; margin-bottom:15px;
+  font-size:.94em; font-weight:400; color:#1a1a1a; text-transform:uppercase;
+}
+
+.countdown .figure{
+  position:relative; float:left; height:90px; width:80px; margin-right:10px;
+  background-color:#fff; border-radius:8px;
+  box-shadow: 0 3px 4px rgba(0,0,0,.2), inset 2px 4px rgba(255,255,255,.08);
+  perspective:200px; transform-style:preserve-3d;
+}
+.countdown .figure:last-child{ margin-right:0; }
+
+.countdown .figure > span{
+  position:absolute; left:0; right:0; margin:auto;
+  font-weight:700; font-size:5.04em; line-height:77px; color:#de4848; text-align:center;
+}
+
+/* split line on top & bottom-back */
+.countdown .figure .top::after,
+.countdown .figure .bottom-back::after{
+  content:""; position:absolute; z-index:-1; left:0; bottom:0;
+  width:100%; height:100%; border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+/* faces */
+.countdown .figure .top{
+  z-index:3; background-color:#f7f7f7;
+  transform-origin:50% 100%;
+  -webkit-transform-origin:50% 100%;
+  border-top-left-radius:10px; border-top-right-radius:10px;
+  transform: perspective(200px);
+  -webkit-backface-visibility:hidden; backface-visibility:hidden;
+}
+
+.countdown .figure .bottom{ z-index:1; }
+.countdown .figure .bottom::before{
+  content:""; position:absolute; top:0; left:0; width:100%; height:50%;
+  background-color:rgba(0,0,0,.02);
+}
+
+.countdown .figure .bottom-back{
+  z-index:2; top:0; height:50%; overflow:hidden; background-color:#f7f7f7;
+  border-top-left-radius:10px; border-top-right-radius:10px;
+  position:absolute; left:0; right:0;
+}
+.countdown .figure .bottom-back span{
+  position:absolute; top:0; left:0; right:0; margin:auto;
+}
+
+/* top & top-back (upper half) */
+.countdown .figure .top,
+.countdown .figure .top-back{
+  height:50%; overflow:hidden;
+  -webkit-backface-visibility:hidden; backface-visibility:hidden;
+}
+
+.countdown .figure .top-back{
+  position:absolute; left:0; right:0; z-index:4; bottom:0; background-color:#fff;
+  transform-origin:50% 0;
+  -webkit-transform-origin:50% 0;
+  transform: perspective(200px) rotateX(180deg);
+  border-bottom-left-radius:10px; border-bottom-right-radius:10px;
+}
+.countdown .figure .top-back span{
+  position:absolute; top:-100%; left:0; right:0; margin:auto;
+}
+/* === place countdown lower & non-overlapping === */
+.wrap{
+  position: static !important;   /* ここがポイント：absolute をやめる */
+  max-width: 960px;
+  margin: 48px auto 0;           /* 上に余白を作ってメイン画像と分離 */
+  padding-bottom: 24px;
+}
+
+@media (min-width: 1200px){
+  .wrap{ margin-top: 64px; }     /* PCではさらに間隔を広めに */
+}
