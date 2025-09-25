@@ -3,16 +3,27 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>わかもの in 北関 フェス</title>
+<title>ラボ・パーティ 2025わかものin 北関</title>
 <link rel="stylesheet" href="assets/css/styles.css" />
 <script defer src="assets/js/main.js"></script>
 
+<link rel="icon" href="assets/img/favicon.JPG" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- まだ公開前なので検索避け（必要なら外してください） -->
+<meta name="robots" content="noindex, nofollow">
 </head>
-<body>
+<body data-page="tickets">
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="index.html">わかもの in 北関</a>
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="assets/img/favicon.JPG" alt="わかもの in 北関 ロゴ" width="36" height="36">
+      <span class="brand-text">2025 わかもの in 北関</span>
+    </a>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">☰</button>
+    <!--<button class="nav-toggle" aria-label="メニューを開く">
+      <img src="assets/img/kitakuma2.png" alt="メニュー" width="30" height="30">
+    </button> -->
   </div>
 </header>
 
@@ -24,19 +35,41 @@
   </div>
   <nav class="drawer-nav" role="navigation">
     <ul class="tab-list">
-      <li><a class="tab" href="index.html">ホーム</a></li> <li><a class="tab" href="about.html">団体紹介</a></li> <li><a class="tab" href="fest.html">フェスについて</a></li> <li><a class="tab" href="camp.html">合宿について</a></li> <li><a class="tab" href="kitakan.html">北関について</a></li> <li><a class="tab active" href="tickets.html" aria-current="page">チケット購入</a></li> <li><a class="tab" href="committee.html">実行委員について</a></li> <li><a class="tab" href="mypage.html">マイページ</a></li>
+      <li><a class="tab" href="index.html" aria-current="page">ホーム</a></li> <li><a class="tab" href="about.html">発表団体紹介</a></li> <li><a class="tab" href="fest.html">フェスティバル</a><li><a class="tab active" href="tickets.html">チケット購入</a></li> <li><a class="tab" href="camp.html">合宿</a></li> <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a></li> </li> <li><a class="tab" href="committee.html">実行委員</a></li> <li><a class="tab" href="mypage.html">マイページ</a></li>
     </ul>
   </nav>
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
-<main class="container"><h1>チケット購入</h1><p>外部チケットサイトへのリンクや価格表、注意事項を掲載します。</p></main>
+<main class="container">
+  <section class="comingsoon" aria-labelledby="cs-title">
+    <div class="cs-icon" aria-hidden="true">🎫</div>
+    <h1 id="cs-title" class="cs-title">Coming Soon</h1>
+    <p class="cs-lead">チケット販売ページは現在準備中です。</p>
+    <p class="cs-note">公開予定：販売日時などの詳細が決定後に更新します。最新情報はホームまたは各種SNSをご確認ください。</p>
+    <div class="cs-actions">
+      <a class="btn" href="index.html">ホームへ戻る</a>
+    </div>
+  </section>
+</main>
+
 <footer class="site-footer">
   <div class="container">
-    <p>© <span id="year"></span> わかもの in 北関</p>
+    <nav class="footer-sns" aria-label="SNSリンク">
+      <a class="sns-btn sns-line" href="https://line.me/R/ti/p/@YOUR_ID" target="_blank" rel="noopener" aria-label="LINE公式">
+        <i class="fa-brands fa-line" aria-hidden="true"></i>
+      </a>
+      <a class="sns-btn sns-instagram" href="https://instagram.com/YOUR_ACCOUNT" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a class="sns-btn sns-facebook" href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noopener" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      </a>
+    </nav>
+
+    <p>© <span id="year"></span> わかもの in 北関実行委員</p>
   </div>
 </footer>
 <button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
-
 </body>
 </html>

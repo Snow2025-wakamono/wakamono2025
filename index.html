@@ -6,13 +6,17 @@
 <title>ラボ・パーティ 2025わかものin 北関</title>
 <link rel="stylesheet" href="assets/css/styles.css" />
 <script defer src="assets/js/main.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 <link rel="icon" href="assets/img/favicon.JPG" type="image/png">
-<body>
+<body data-page="home">
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="index.html">2025 わかもの in 北関</a>
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="assets/img/favicon.JPG" alt="わかもの in 北関 ロゴ" width="36" height="36">
+      <span class="brand-text">2025 わかもの in 北関</span>
+    </a>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">☰</button>
     <!--<button class="nav-toggle" aria-label="メニューを開く">
       <img src="assets/img/kitakuma2.png" alt="メニュー" width="30" height="30">
@@ -31,6 +35,10 @@
       <li><a class="tab active" href="index.html" aria-current="page">ホーム</a></li> <li><a class="tab" href="about.html">発表団体紹介</a></li> <li><a class="tab" href="fest.html">フェスティバル</a><li><a class="tab" href="tickets.html">チケット購入</a></li> <li><a class="tab" href="camp.html">合宿</a></li> <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a></li> </li> <li><a class="tab" href="committee.html">実行委員</a></li> <li><a class="tab" href="mypage.html">マイページ</a></li>
     </ul>
   </nav>
+  <!-- キャラクター（ドロワー下部） -->
+  <div class="drawer-character" aria-hidden="true">
+    <img id="drawerCharacter" src="assets/img/drkitakuma.png" alt="">
+  </div>
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
@@ -41,7 +49,7 @@
 
 <div class="wrap">
   <div class="wrap countdown-panel"> 
-  <h1>わかもの開催まで、あと～</h1>
+  <h1>わかもの開催まで,あと～</h1>
   <div class="countdown" data-deadline="2026-03-01T10:00:00+09:00">
 
     <!-- === Days === -->
@@ -127,9 +135,13 @@
 
 <hr class="divider--soft">
 
-<main class="maintheme">
+<main class="maintheme" style="
+  --mt-align:center;
+  --mt-accent:#b91c1c;
+  --mt-size-title:clamp(2.4rem, 8vw, 4.6rem);
+">
   <h1>全体テーマ</h1>
-  <h1>Identity</h1>
+  <h1><a class="theme-link" href="identity.html" aria-label="テーマ詳細へ">Identity</a></h1>
   <h1>～過去と今とこれからと～</h1>
 </main>
 
@@ -142,18 +154,31 @@
 
 <hr class="divider--soft">
 
-<section class="visitor-section">
+<!--<section class="visitor-section">
   <h2>来訪カウンター</h2>
   <p class="visitor-line">あなたは <strong id="visitorCount">—</strong> 人目の来訪者です。</p>
   <p class="muted">※合計カウント（ページ閲覧数）。同一セッションでは二重カウントしません。</p>
-</section>
+</section>-->
 </main>
 
 <footer class="site-footer">
   <div class="container">
+    <nav class="footer-sns" aria-label="SNSリンク">
+      <a class="sns-btn sns-line" href="https://line.me/R/ti/p/@YOUR_ID" target="_blank" rel="noopener" aria-label="LINE公式">
+        <i class="fa-brands fa-line" aria-hidden="true"></i>
+      </a>
+      <a class="sns-btn sns-instagram" href="https://instagram.com/YOUR_ACCOUNT" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a class="sns-btn sns-facebook" href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noopener" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      </a>
+    </nav>
+
     <p>© <span id="year"></span> わかもの in 北関実行委員</p>
   </div>
 </footer>
+
 <button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
 
 </body>
