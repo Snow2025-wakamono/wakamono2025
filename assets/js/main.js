@@ -148,3 +148,69 @@ document.addEventListener('DOMContentLoaded', () => {
     if (c.done){ clearInterval(timer); }
   }, 1000);
 })();
+
+// === Drawer character: per-page swap ===
+document.addEventListener('DOMContentLoaded', () => {
+  const img = document.getElementById('drawerCharacter');
+  if (!img) return;
+
+  // body に設定した data-page からページ種別を取得
+  const page = (document.body.dataset.page || '').toLowerCase();
+
+  // ページ → 画像パスのマップ（必要なものだけ用意してOK）
+  const charMap = {
+    'home'     : 'assets/img/drkitakuma.png',
+    'about'    : 'assets/img/drkitakuma.png',
+    'fest'     : 'assets/img/drkitakuma.png',
+    'camp'     : 'assets/img/drkitakuma.png',
+    'kitakan'  : 'assets/img/drkitakuma.png',
+    'tickets'  : 'assets/img/drkitakuma.png',
+    'committee': 'assets/img/drkitakuma.png',
+    'mypage'   : 'assets/img/drkitakuma.png',
+    'identity' : 'assets/img/drkitakuma.png'
+  };
+
+  const src = charMap[page] || 'assets/img/drkitakuma.png';
+  img.src = src;
+  img.alt = (page ? `${page}のキャラクター` : 'キャラクター');
+});
+
+
+// ===== Committee interactions (toggle details) =====
+document.addEventListener('click', (e)=>{
+  const toggle = e.target.closest('.member-toggle');
+  if (toggle){
+    const card = toggle.closest('.member-card');
+    const panelId = toggle.getAttribute('aria-controls');
+    const panel = panelId && document.getElementById(panelId);
+    if (!panel) return;
+
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+
+    // ほかを閉じたい場合はこのブロックを有効化
+    // card.parentElement.querySelectorAll('.member-toggle[aria-expanded="true"]').forEach(btn=>{
+    //   if(btn !== toggle){
+    //     const pid = btn.getAttribute('aria-controls');
+    //     const pn = pid && document.getElementById(pid);
+    //     btn.setAttribute('aria-expanded','false');
+    //     pn && pn.setAttribute('hidden','');
+    //   }
+    // });
+
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    if (expanded){
+      panel.setAttribute('hidden', '');
+    }else{
+      panel.removeAttribute('hidden');
+    }
+  }
+
+  // 閉じるボタン
+  const close = e.target.closest('.member-close');
+  if (close){
+    const extra = close.closest('.member-extra');
+    const btn = extra && document.querySelector(`.member-toggle[aria-controls="${extra.id}"]`);
+    if (btn){ btn.setAttribute('aria-expanded', 'false'); }
+    extra && extra.setAttribute('hidden','');
+  }
+});
