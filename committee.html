@@ -40,317 +40,861 @@
       <li><a class="tab" href="index.html" aria-current="page">ホーム</a></li> <li><a class="tab" href="about.html">発表団体紹介</a></li> <li><a class="tab" href="fest.html">フェスティバル</a><li><a class="tab" href="tickets.html">チケット購入</a></li> <li><a class="tab" href="camp.html">合宿</a></li> <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a></li> </li> <li><a class="tab active" href="committee.html">実行委員</a></li> <li><a class="tab" href="mypage.html">マイページ</a></li>
     </ul>
   </nav>
+  <!-- キャラクター（ドロワー下部） -->
+  <div class="drawer-character" aria-hidden="true">
+    <img id="drawerCharacter" src="assets/img/drkitakuma.png" alt="">
+  </div>
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
-<section class="committee" aria-labelledby="cm-title">
-  <h1 id="cm-title" class="visually-hidden">実行委員紹介</h1>
 
-  <div class="member-grid">
-    <!-- Member 1 -->
-    <article class="member-card" data-member="tanaka">
-      <figure class="member-figure">
-        <img src="assets/img/members/tanaka_main.jpg" alt="田中さんの写真">
-      </figure>
-      <div class="member-body">
-        <h2 class="member-name">
-          <button class="member-toggle" aria-expanded="false" aria-controls="m-tanaka">
-            田中 太郎
-          </button>
-        </h2>
-        <p class="member-role">広報 / MC</p>
-        <ul class="member-tags">
-          <li>#SNS運用</li><li>#朗読</li><li>#写真</li>
-        </ul>
+<main class="container committee-page">
+  <h1>実行委員紹介</h1>
 
-        <!-- 開くと出る：別写真＋コメント -->
-        <div class="member-extra" id="m-tanaka" hidden>
-          <figure class="member-figure-alt">
-            <img src="assets/img/members/tanaka_alt.jpg" alt="田中さん 別カット">
-            <figcaption>ステージ裏でのワンショット</figcaption>
-          </figure>
-          <p class="member-comment">
-            「来てくれたみんなが“自分の物語”を持ち帰れるように、一緒に盛り上げます！」
-          </p>
-          <button class="member-close" aria-label="閉じる">閉じる</button>
+  <section class="committee-group">
+    <h2>実行委員長</h2>
+    <div class="committee-grid">
+    <!-- Member #1 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <!-- Front -->
+        <div class="card-face card-front">
+          <img src="assets/img/members/alice.jpg" alt="kuma" class="member-photo">
+          <h2 class="member-name">くま 大4</h2>
+        </div>
+
+        <!-- Back -->
+        <div class="card-face card-back">
+          <img src="assets/img/members/alice-alt.jpg" alt="kuma 別写真" class="member-photo">
+          <p class="member-comment">意気込み：素敵なわかものを作ります！お楽しみに～<br>北関の好きなところ：全部、ですかね。</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
         </div>
       </div>
     </article>
-  <div class="field">
-  <div class="card">
-  <h2>実行委員長</h2>
-  <h3>くま 大4</h3>
-  <div>意気込み：素敵なわかものを作ります！お楽しみに～</div>
-  <div>北関の好きなところ：全部、ですかね。</div></div></div><br>
-  <h2>総務</h2>
-  <div class="field">
-  <div class="card">
-  <h3>いくら 大4</h3>
-  <div>意気込み：凛とする</div>
-  <div>北関の好きなところ：ホームを感じる。</div></div><br>
-
-  <div class="card">
-  <h3>もありん 大4</h3>
-  <div>意気込み：笑顔をキープしたい！</div>
-  <div>北関の好きなところ：あったかいところ〜</div></div><br>
-
-  <div class="card">
-  <h3>みなみ 大3</h3>
-  <div>意気込み：楽しんで思い出をたくさんつくる！</div>
-  <div>北関の好きなところ：個性豊かで優しい☺️</div></div><br>
-
-  <div class="card">
-  <h3>なな 大2</h3>
-  <div>意気込み：全部たのしむ</div>
-  <div>北関の好きなところ：なんかみんなすごい</div></div><br>
-
-  <div class="card">
-  <h3>まーくん 大2</h3>
-  <div>意気込み：責任を持って頑張ります！</div>
-  <div>北関の好きなところ：優しい人が多いところ！</div></div></div><br>
-  <h2>フェス</h2>
-  <div class="field">
-  <div class="card">
-  <h3>ぐっち 大4</h3>
-  <div>意気込み：全員に魔法をかけます</div>
-  <div>北関の好きなところ：積極的！優しい！楽しい！ </div></div><br>
-
-  <div class="card">
-  <h3>しゅーまい 大3</h3>
-  <div>意気込み：楽しませちゃうよ〜😆</div>
-  <div>北関の好きなところ：みーんな優しいから何かあったら遠慮なく聞けちゃう笑
-    あとは楽しいし面白い！時間が経つのが早い！ </div></div><br>
-
-  <div class="card">
-  <h3>りょうと 大4</h3>
-  <div>意気込み：楽しさを追求する！</div>
-  <div>北関の好きなところ：みんな優しくあったかいところ！ </div></div><br>
-    
-  <div class="card">
-  <h3>ジャス 大3</h3>
-  <div>意気込み：頑張ります！</div>
-  <div>北関の好きなところ：穏やかなところ</div></div><br>    
-
-  <div class="card">
-  <h3>やっち 大3</h3>
-  <div>意気込み：頑張ります！</div>
-  <div>北関の好きなところ：暖かいところ</div></div><br>
-
-  <div class="card">
-  <h3>ゆうり 大3</h3>
-  <div>意気込み：出来ることを全力で！！</div>
-  <div>北関の好きなところ：みんな優しい！🥺</div></div><br>
-
-  <div class="card">
-  <h3>さえ 大2</h3>
-  <div>意気込み：とにかく頑張る！</div>
-  <div>北関の好きなところ：みんなおもしろい </div></div><br>
-
-  <div class="card">
-  <h3>たつ 大2</h3>
-  <div>意気込み：全員に魔法をかけます</div>
-  <div>北関の好きなところ：積極的！優しい！楽しい！ </div></div><br>
-
-  <div class="card">
-  <h3>なっとう 大2</h3>
-  <div>意気込み：みんなが楽しくなれるものを作る！</div>
-  <div>北関の好きなところ：個性豊か！ </div></div><br>
-
-  <div class="card">
-  <h3>めめ 大2</h3>
-  <div>意気込み：思い出となるわかものを作る！</div>
-  <div>北関の好きなところ：良い仲間たちがたくさんいるところ </div></div><br>
-
-  <div class="card">
-  <h3>かがり 大1</h3>
-  <div>意気込み：楽しむ！</div>
-  <div>北関の好きなところ：みんな優しい </div></div><br>
-
-  <div class="card">
-  <h3>かんQ 大1</h3>
-  <div>意気込み：細部までこだわります</div>
-  <div>北関の好きなところ：和気あいあいとしてるところ </div></div><br>
-
-  <div class="card">
-  <h3>さっくん 大1</h3>
-  <div>意気込み：きたかんでのわかものの成功に貢献します！</div>
-  <div>北関の好きなところ：やる気があるところ </div></div></div><br>
-  <h2>合宿</h2>
-  <div class="field">
-  <div class="card">
-  <h3>さちお 大4</h3>
-  <div>意気込み：妥協することなく楽しいわかものを作る</div>
-  <div>北関の好きなところ：個性的 </div></div><br>
-
-  <div class="card">
-  <h3>だいき 大4</h3>
-  <div>意気込み：最高なわかものを作るっす</div>
-  <div>北関の好きなところ：フラットな関係 </div></div><br>
-
-  <div class="card">
-  <h3>りゅう 大2</h3>
-  <div>意気込み：楽しくて素敵なわかものを作るぞ‼️</div>
-  <div>北関の好きなところ：温かくて和気あいあいなところ </div></div><br>
-
-  <div class="card">
-  <h3>なんゆ〜 大4</h3>
-  <div>意気込み：お世話になったキタカンに恩返しを！</div>
-  <div>北関の好きなところ：顔馴染みの皆がいるところ </div></div><br>
-
-  <div class="card">
-  <h3>ケイリー 大3</h3>
-  <div>意気込み：楽しいわかものにする</div>
-  <div>北関の好きなところ：仲がいい！</div></div><br>
-
-<div class="card">
-  <h3>みなみ 大3</h3>
-  <div>意気込み：きたかんの魅力を余すことなく伝えたい</div>
-  <div>北関の好きなところ：みんな優しいから素の自分でいられるところ❤️ </div></div><br>
-
-  <div class="card">
-  <h3> いっちゃん 大2</h3>
-  <div>意気込み：全力で良いものを作る！</div>
-  <div>北関の好きなところ：みんなといる時の安心感！ </div></div><br>
-
-  <div class="card">
-  <h3>かれん 大2</h3>
-  <div>意気込み：</div>
-  <div>北関の好きなところ：</div></div><br>
-
-  <div class="card">
-  <h3> ばにく 大2</h3>
-  <div>意気込み：最高のわかものにします！</div>
-  <div>北関の好きなところ：みんなめっちゃ仲良いところ </div></div><br>
-
-  <div class="card">
-  <h3> りゅうた 大2</h3>
-  <div>意気込み：頑張ります！</div>
-  <div>北関の好きなところ：人がいっぱいいるところ </div></div><br>
-
-  <div class="card">
-  <h3> かよ 大1</h3>
-  <div>意気込み：</div>
-  <div>北関の好きなところ：</div></div><br>
-
-<div class="card">
-  <h3> しょ〜たれ 大1</h3>
-  <div>意気込み：今年度最後の思い出に最高のものを！</div>
-  <div>北関の好きなところ：なんでも真面目に楽しくできるところ！</div></div><br>
-
-  <div class="card">
-  <h3> たいき 大1</h3>
-  <div>意気込み：みんなが楽しめるものにする！</div>
-  <div>北関の好きなところ：仲良く話せるところ！ </div></div><br>
-
-  <div class="card">
-  <h3> ぴのん 大1</h3>
-  <div>意気込み：熱意を持ってとにかく全力でやります！</div>
-  <div>北関の好きなところ：お互いを認め合う温かい空気感があるところ </div></div><br>
-
-  <div class="card">
-  <h3> ゆり 大1</h3>
-  <div>意気込み：</div>
-  <div>北関の好きなところ： </div></div></div><br>
-<h2>広報</h2>
-  <div class="field">
-  <div class="card">
-  <h3>そらり 大4</h3>
-  <div>意気込み：たくさんの人の心に残るわかものを届けます✨</div>
-  <div>北関の好きなところ：顔を見たら落ち着くところ</div></div><br>
-
-  <div class="card">
-  <h3> まお 大3</h3>
-  <div>意気込み：笑顔！全力！みんなで！楽しんで頑張ります💪</div>
-  <div>北関の好きなところ：和気あいあいとしながらも、真剣に活動、メンバーと向き合えるところ🫶 </div></div><br>
-  
-  <div class="card">
-  <h3> スノー 大4</h3>
-  <div>意気込み：良い思い出となるようなわかものとHPをつくる！</div>
-  <div>北関の好きなところ：個性豊かで仲が良い！ </div></div><br>
-
-  <div class="card">
-  <h3>  りお 大4</h3>
-  <div>意気込み：参加者全員にとって心に残るわかものをつくる！</div>
-  <div>北関の好きなところ：和気あいあいとしている </div></div><br>
-
-  <div class="card">
-  <h3> のん 大3</h3>
-  <div>意気込み：北関らしさを沢山届ける！！！</div>
-  <div>北関の好きなところ：優しさの塊💖 </div></div><br>
-
-  <div class="card">
-  <h3> むっく 大3</h3>
-  <div>意気込み：楽しむぞー！✨</div>
-  <div>北関の好きなところ：雰囲気がすき🫶 </div></div><br>
-
-  <div class="card">
-  <h3> りま 大3</h3>
-  <div>意気込み：記憶に残るようなわかものになるように頑張ります！</div>
-  <div>北関の好きなところ：真っ直ぐな仲間がいるところ </div></div><br>
-
-  <div class="card">
-  <h3> アイス 大2</h3>
-  <div>意気込み：</div>
-  <div>北関の好きなところ：</div></div><br>
-
-  <div class="card">
-  <h3> けんと 大2</h3>
-  <div>意気込み：頑張ります！当日楽しみます</div>
-  <div>北関の好きなところ：アットホームなところ </div></div><br>
-
-  <div class="card">
-  <h3> うみ 大1</h3>
-  <div>意気込み：楽しむ！</div>
-  <div>北関の好きなところ：みんな優しい</div></div></div><br>
-  <h2>協力隊</h2>
-  <div class="field">
-  <div class="card">
-  <h3>きみお 大3</h3>
-  <div>意気込み：がむしゃらららら</div>
-  <div>北関の好きなところ：温もり</div></div><br>
-
-  <div class="card">
-  <h3>カズ 大4</h3>
-  <div>意気込み：とにかく頑張ります！</div>
-  <div>北関の好きなところ：皆仲良い〜</div></div><br>
-
-  <div class="card">
-  <h3>はる 大4</h3>
-  <div>意気込み：たくさんの人の心に残るわかものを届けます✨</div>
-  <div>北関の好きなところ：</div></div><br>
-
-  <div class="card">
-  <h3>しゅう 大3</h3>
-  <div>意気込み：楽しむぞ〜</div>
-  <div>北関の好きなところ：ほんわか</div></div><br>
-
-  <div class="card">
-  <h3>ましゅまろ 大3</h3>
-  <div>意気込み：みんなでいっしょにがんばるぞ〜！</div>
-  <div>北関の好きなところ：わいわいしてる感じ！</div></div><br>
-
-  <div class="card">
-  <h3>まめしば 大3</h3>
-  <div>意気込み：僕が1番楽しんじゃいます！</div>
-  <div>北関の好きなところ：みんなとぉぉっても優しい！面白い！</div></div><br>
-
-  <div class="card">
-  <h3>おにぎり 大2</h3>
-  <div>意気込み：</div>
-  <div>北関の好きなところ：</div></div><br>
-
-  <div class="card">
-  <h3>しゅーじ 大2</h3>
-  <div>意気込み：一生の思い出となるわかものを！</div>
-  <div>北関の好きなところ：みんな優しいところ</div></div><br>
-
-  <div class="card">
-  <h3>あんばー 大1</h3>
-  <div>意気込み：北関の魅力を広めちゃうヨ😻🤍</div>
-  <div>北関の好きなところ：きたかんって感じな空気🫶</div></div><br>
-
   </div>
-</section>
+  </section>
+
+  <section class="committee-group">
+    <h2>総務</h2>
+    <div class="committee-grid">
+    <!-- Member #1 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <!-- Front -->
+        <div class="card-face card-front">
+          <img src="assets/img/members/alice.jpg" alt="ikura" class="member-photo">
+          <h2 class="member-name">いくら 大4</h2>
+        </div>
+
+        <!-- Back -->
+        <div class="card-face card-back">
+          <img src="assets/img/members/alice-alt.jpg" alt="ikura 別写真" class="member-photo">
+          <p class="member-comment">意気込み：凛とする<br>北関の好きなところ：ホームを感じる。</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #2 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="moarin" class="member-photo">
+          <h2 class="member-name">もありん 大4</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="moarin 別写真" class="member-photo">
+          <p class="member-comment">意気込み：笑顔をキープしたい！<br>北関の好きなところ：あったかいところ〜</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #3 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="minami" class="member-photo">
+          <h2 class="member-name">みなみ 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="minami 別写真" class="member-photo">
+          <p class="member-comment">意気込み：楽しんで思い出をたくさんつくる！<br>北関の好きなところ：個性豊かで優しい☺️</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #4 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="nana" class="member-photo">
+          <h2 class="member-name">なな 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="nana 別写真" class="member-photo">
+          <p class="member-comment">意気込み：全部たのしむ<br>北関の好きなところ：なんかみんなすごい</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #5 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="maakun" class="member-photo">
+          <h2 class="member-name">まーくん 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="maakun 別写真" class="member-photo">
+          <p class="member-comment">意気込み：責任を持って頑張ります！<br>北関の好きなところ：優しい人が多いところ！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  </section>
+
+  <section class="committee-group">
+    <h2>フェス</h2>
+    <div class="committee-grid">
+    <!-- Member #1 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <!-- Front -->
+        <div class="card-face card-front">
+          <img src="assets/img/members/alice.jpg" alt="gucci" class="member-photo">
+          <h2 class="member-name">ぐっち 大4</h2>
+        </div>
+
+        <!-- Back -->
+        <div class="card-face card-back">
+          <img src="assets/img/members/alice-alt.jpg" alt="gucci 別写真" class="member-photo">
+          <p class="member-comment">意気込み：全員に魔法をかけます<br>北関の好きなところ：積極的！優しい！楽しい！ </p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #2 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="shumai" class="member-photo">
+          <h2 class="member-name">しゅーまい 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="shumai 別写真" class="member-photo">
+          <p class="member-comment">意気込み：楽しませちゃうよ〜😆<br>北関の好きなところ：みーんな優しいから何かあったら遠慮なく聞けちゃう笑
+    あとは楽しいし面白い！時間が経つのが早い！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #3 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="ryouto" class="member-photo">
+          <h2 class="member-name">りょうと 大4</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="ryouto 別写真" class="member-photo">
+          <p class="member-comment">意気込み：楽しさを追求する！<br>北関の好きなところ：みんな優しくあったかいところ！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #4 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="jyasu" class="member-photo">
+          <h2 class="member-name">ジャス 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="jyasu 別写真" class="member-photo">
+          <p class="member-comment">意気込み：頑張ります！<br>北関の好きなところ：穏やかなところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #5 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="yacchi" class="member-photo">
+          <h2 class="member-name">やっち 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="yacchi 別写真" class="member-photo">
+          <p class="member-comment">意気込み：頑張ります！<br>北関の好きなところ：暖かいところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #6 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="yuuri" class="member-photo">
+          <h2 class="member-name">ゆうり 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="yuuri 別写真" class="member-photo">
+          <p class="member-comment">意気込み：出来ることを全力で！！<br>北関の好きなところ：みんな優しい！🥺</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #7 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="sae" class="member-photo">
+          <h2 class="member-name">さえ 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="sae 別写真" class="member-photo">
+          <p class="member-comment">意気込み：とにかく頑張る！<br>北関の好きなところ：みんなおもしろい</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #8 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="tatsu" class="member-photo">
+          <h2 class="member-name">たつ 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="tatsu 別写真" class="member-photo">
+          <p class="member-comment">意気込み：全員に魔法をかけます<br>北関の好きなところ：積極的！優しい！楽しい！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #9 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="nattou" class="member-photo">
+          <h2 class="member-name">なっとう 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="nattou 別写真" class="member-photo">
+          <p class="member-comment">意気込み：みんなが楽しくなれるものを作る！<br>北関の好きなところ：個性豊か！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #10 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="meme" class="member-photo">
+          <h2 class="member-name">めめ 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="meme 別写真" class="member-photo">
+          <p class="member-comment">意気込み：思い出となるわかものを作る！<br>北関の好きなところ：良い仲間たちがたくさんいるところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #11 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="kagari" class="member-photo">
+          <h2 class="member-name">かがり 大1</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="kagari 別写真" class="member-photo">
+          <p class="member-comment">意気込み：楽しむ！<br>北関の好きなところ：みんな優しい</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #12 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="kanQ" class="member-photo">
+          <h2 class="member-name">かんQ 大1</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="kanQ 別写真" class="member-photo">
+          <p class="member-comment">意気込み：細部までこだわります<br>北関の好きなところ：和気あいあいとしてるところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #13 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="sakuya" class="member-photo">
+          <h2 class="member-name">さっくん 大1</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="sakuya 別写真" class="member-photo">
+          <p class="member-comment">意気込み：きたかんでのわかものの成功に貢献します！<br>北関の好きなところ：やる気があるところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  </section>
+
+  <section class="committee-group">
+    <h2>合宿</h2>
+    <div class="committee-grid">
+    <!-- Member #1 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <!-- Front -->
+        <div class="card-face card-front">
+          <img src="assets/img/members/alice.jpg" alt="sachio" class="member-photo">
+          <h2 class="member-name">さちお 大4</h2>
+        </div>
+
+        <!-- Back -->
+        <div class="card-face card-back">
+          <img src="assets/img/members/alice-alt.jpg" alt="sachio 別写真" class="member-photo">
+          <p class="member-comment">意気込み：妥協することなく楽しいわかものを作る<br>北関の好きなところ：個性的</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #2 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="daiki" class="member-photo">
+          <h2 class="member-name">だいき 大4</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="daiki 別写真" class="member-photo">
+          <p class="member-comment">意気込み：最高なわかものを作るっす<br>北関の好きなところ：フラットな関係</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #3 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="ryu" class="member-photo">
+          <h2 class="member-name">りゅう 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="ryu 別写真" class="member-photo">
+          <p class="member-comment">意気込み：楽しくて素敵なわかものを作るぞ‼️<br>北関の好きなところ：温かくて和気あいあいなところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #4 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="nanyu" class="member-photo">
+          <h2 class="member-name">なんゆ〜 大4</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="nanyu 別写真" class="member-photo">
+          <p class="member-comment">意気込み：お世話になったキタカンに恩返しを！<br>北関の好きなところ：顔馴染みの皆がいるところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #5 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="keiry" class="member-photo">
+          <h2 class="member-name">ケイリー 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="keiry 別写真" class="member-photo">
+          <p class="member-comment">意気込み：楽しいわかものにする<br>北関の好きなところ：仲がいい！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #6 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="minami" class="member-photo">
+          <h2 class="member-name">みなみ 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="minami 別写真" class="member-photo">
+          <p class="member-comment">意気込み：きたかんの魅力を余すことなく伝えたい<br>北関の好きなところ：みんな優しいから素の自分でいられるところ❤️</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #7 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="icchan" class="member-photo">
+          <h2 class="member-name">いっちゃん 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="icchan 別写真" class="member-photo">
+          <p class="member-comment">意気込み：全力で良いものを作る！<br>北関の好きなところ：みんなといる時の安心感！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #8 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="karen" class="member-photo">
+          <h2 class="member-name">かれん 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="karen 別写真" class="member-photo">
+          <p class="member-comment">意気込み：<br>北関の好きなところ：</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #9 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="baniku" class="member-photo">
+          <h2 class="member-name">ばにく 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="baniku 別写真" class="member-photo">
+          <p class="member-comment">意気込み：最高のわかものにします！<br>北関の好きなところ：みんなめっちゃ仲良いところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #10 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="ryuta" class="member-photo">
+          <h2 class="member-name">りゅうた 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="ryuta 別写真" class="member-photo">
+          <p class="member-comment">意気込み：頑張ります！<br>北関の好きなところ：人がいっぱいいるところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #11 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="kayo" class="member-photo">
+          <h2 class="member-name">かよ 大1</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="kayo 別写真" class="member-photo">
+          <p class="member-comment">意気込み：<br>北関の好きなところ：</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #12 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="shotare" class="member-photo">
+          <h2 class="member-name">しょ〜たれ 大1</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="shotare 別写真" class="member-photo">
+          <p class="member-comment">意気込み：今年度最後の思い出に最高のものを！<br>北関の好きなところ：なんでも真面目に楽しくできるところ！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #13 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="taiki" class="member-photo">
+          <h2 class="member-name">たいき 大1</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="taiki 別写真" class="member-photo">
+          <p class="member-comment">意気込み：みんなが楽しめるものにする！<br>北関の好きなところ：仲良く話せるところ！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #14 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="pinon" class="member-photo">
+          <h2 class="member-name">ぴのん 大1</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="pinon 別写真" class="member-photo">
+          <p class="member-comment">意気込み：熱意を持ってとにかく全力でやります！<br>北関の好きなところ：お互いを認め合う温かい空気感があるところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #15 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="yuri" class="member-photo">
+          <h2 class="member-name">Bゆり 大1</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="yuri 別写真" class="member-photo">
+          <p class="member-comment">意気込み：全力で楽しむ！<br>北関の好きなところ：いろんな人がいるところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  </section>
+
+  <section class="committee-group">
+    <h2>広報</h2>
+    <div class="committee-grid">
+    <!-- Member #1 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <!-- Front -->
+        <div class="card-face card-front">
+          <img src="assets/img/members/alice.jpg" alt="sorari" class="member-photo">
+          <h2 class="member-name">そらり 大4</h2>
+        </div>
+
+        <!-- Back -->
+        <div class="card-face card-back">
+          <img src="assets/img/members/alice-alt.jpg" alt="sorari 別写真" class="member-photo">
+          <p class="member-comment">意気込み：たくさんの人の心に残るわかものを届けます✨<br>北関の好きなところ：顔を見たら落ち着くところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #2 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="mao" class="member-photo">
+          <h2 class="member-name">まお 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="mao 別写真" class="member-photo">
+          <p class="member-comment">意気込み：笑顔！全力！みんなで！楽しんで頑張ります💪<br>北関の好きなところ：和気あいあいとしながらも、真剣に活動、メンバーと向き合えるところ🫶 </p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #3 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="snow" class="member-photo">
+          <h2 class="member-name">スノー 大4</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="snow 別写真" class="member-photo">
+          <p class="member-comment">意気込み：良い思い出となるようなわかものとHPをつくる！<br>北関の好きなところ：個性豊かで仲が良い！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #4 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="rio" class="member-photo">
+          <h2 class="member-name">りお 大4</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="rio 別写真" class="member-photo">
+          <p class="member-comment">意気込み：参加者全員にとって心に残るわかものをつくる！<br>北関の好きなところ：和気あいあいとしている</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #5 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="non" class="member-photo">
+          <h2 class="member-name">のん 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="non 別写真" class="member-photo">
+          <p class="member-comment">意気込み：北関らしさを沢山届ける！！！<br>北関の好きなところ：優しさの塊💖</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #6 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="mukku" class="member-photo">
+          <h2 class="member-name">むっく 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="mukku 別写真" class="member-photo">
+          <p class="member-comment">意気込み：楽しむぞー！✨<br>北関の好きなところ：雰囲気がすき🫶</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #7 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="rima" class="member-photo">
+          <h2 class="member-name">りま 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="rima 別写真" class="member-photo">
+          <p class="member-comment">意気込み：記憶に残るようなわかものになるように頑張ります！<br>北関の好きなところ：真っ直ぐな仲間がいるところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #8 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="ice" class="member-photo">
+          <h2 class="member-name">アイス 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="ice 別写真" class="member-photo">
+          <p class="member-comment">意気込み：<br>北関の好きなところ：</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #9 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="kento" class="member-photo">
+          <h2 class="member-name">けんと 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="kento 別写真" class="member-photo">
+          <p class="member-comment">意気込み：頑張ります！当日楽しみます<br>北関の好きなところ：アットホームなところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #10 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="umi" class="member-photo">
+          <h2 class="member-name">うみ 大1</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="umi 別写真" class="member-photo">
+          <p class="member-comment">意気込み：楽しむ！<br>北関の好きなところ：みんな優しい</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  </section>
+
+  <section class="committee-group">
+    <h2>協力隊</h2>
+    <div class="committee-grid">
+    <!-- Member #1 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <!-- Front -->
+        <div class="card-face card-front">
+          <img src="assets/img/members/alice.jpg" alt="kimio" class="member-photo">
+          <h2 class="member-name">きみお 大3</h2>
+        </div>
+
+        <!-- Back -->
+        <div class="card-face card-back">
+          <img src="assets/img/members/alice-alt.jpg" alt="kimio 別写真" class="member-photo">
+          <p class="member-comment">意気込み：がむしゃらららら<br>北関の好きなところ：温もり</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #2 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="kazu" class="member-photo">
+          <h2 class="member-name">カズ 大4</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="kazu 別写真" class="member-photo">
+          <p class="member-comment">意気込み：とにかく頑張ります！<br>北関の好きなところ：皆仲良い〜</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #3 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="haru" class="member-photo">
+          <h2 class="member-name">はる 大4</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="haru 別写真" class="member-photo">
+          <p class="member-comment">意気込み：一生の思い出をつくる！<br>北関の好きなところ：優しくてユニークであったかいところ！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #4 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="shu" class="member-photo">
+          <h2 class="member-name">しゅう 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="shu 別写真" class="member-photo">
+          <p class="member-comment">意気込み：楽しむぞ〜<br>北関の好きなところ：ほんわか</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #5 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="mashumaro" class="member-photo">
+          <h2 class="member-name">ましゅまろ 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="mashumaro 別写真" class="member-photo">
+          <p class="member-comment">意気込み：みんなでいっしょにがんばるぞ〜！<br>北関の好きなところ：わいわいしてる感じ！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #6 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="mameshiba" class="member-photo">
+          <h2 class="member-name">まめしば 大3</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="mameshiba 別写真" class="member-photo">
+          <p class="member-comment">意気込み：僕が1番楽しんじゃいます！<br>北関の好きなところ：みんなとぉぉっても優しい！面白い！</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #7 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="onigiri" class="member-photo">
+          <h2 class="member-name">おにぎり 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="onigiri 別写真" class="member-photo">
+          <p class="member-comment">意気込み：<br>北関の好きなところ：</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #8 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="shuji" class="member-photo">
+          <h2 class="member-name">しゅーじ 大2</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="shuji 別写真" class="member-photo">
+          <p class="member-comment">意気込み：一生の思い出となるわかものを！<br>北関の好きなところ：みんな優しいところ</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Member #9 -->
+    <article class="member-card flip-card" tabindex="0" aria-expanded="false">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="assets/img/members/bob.jpg" alt="amber" class="member-photo">
+          <h2 class="member-name">あんばー 大1</h2>
+        </div>
+        <div class="card-face card-back">
+          <img src="assets/img/members/bob-alt.jpg" alt="amber 別写真" class="member-photo">
+          <p class="member-comment">意気込み：北関の魅力を広めちゃうヨ😻🤍<br>北関の好きなところ：きたかんって感じな空気🫶</p>
+          <button class="close-btn" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  </section>
+</main>
 
 <footer class="site-footer">
   <div class="container">

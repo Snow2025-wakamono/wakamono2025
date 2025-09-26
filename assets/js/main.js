@@ -175,42 +175,35 @@ document.addEventListener('DOMContentLoaded', () => {
   img.alt = (page ? `${page}のキャラクター` : 'キャラクター');
 });
 
+//実行委員紹介ページのカード
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.flip-card');
 
-// ===== Committee interactions (toggle details) =====
-document.addEventListener('click', (e)=>{
-  const toggle = e.target.closest('.member-toggle');
-  if (toggle){
-    const card = toggle.closest('.member-card');
-    const panelId = toggle.getAttribute('aria-controls');
-    const panel = panelId && document.getElementById(panelId);
-    if (!panel) return;
+  cards.forEach(card => {
+    const closeBtn = card.querySelector('.close-btn');
 
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    // カード全体クリックで裏面へ（すでに反転なら何もしない）
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.close-btn')) return;
+      if (card.classList.contains('is-flipped')) return; // ←追加
+      card.classList.add('is-flipped');
+      card.setAttribute('aria-expanded','true');
+    });
 
-    // ほかを閉じたい場合はこのブロックを有効化
-    // card.parentElement.querySelectorAll('.member-toggle[aria-expanded="true"]').forEach(btn=>{
-    //   if(btn !== toggle){
-    //     const pid = btn.getAttribute('aria-controls');
-    //     const pn = pid && document.getElementById(pid);
-    //     btn.setAttribute('aria-expanded','false');
-    //     pn && pn.setAttribute('hidden','');
-    //   }
-    // });
+    // ×で戻す
+    closeBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      card.classList.remove('is-flipped');
+      card.setAttribute('aria-expanded','false');
+    });
 
-    toggle.setAttribute('aria-expanded', String(!expanded));
-    if (expanded){
-      panel.setAttribute('hidden', '');
-    }else{
-      panel.removeAttribute('hidden');
-    }
-  }
-
-  // 閉じるボタン
-  const close = e.target.closest('.member-close');
-  if (close){
-    const extra = close.closest('.member-extra');
-    const btn = extra && document.querySelector(`.member-toggle[aria-controls="${extra.id}"]`);
-    if (btn){ btn.setAttribute('aria-expanded', 'false'); }
-    extra && extra.setAttribute('hidden','');
-  }
+    // Escでも戻す（任意）
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape'){
+        card.classList.remove('is-flipped');
+        card.setAttribute('aria-expanded','false');
+      }
+    });
+  });
 });
+

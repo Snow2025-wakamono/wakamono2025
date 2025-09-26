@@ -429,61 +429,112 @@ h2 strong{ font-weight:400; }
 }
 .pill-list h3{ margin:.2rem 0 .2rem; font-size:1.1rem; }
 
-/* ===== Committee cards ===== */
-.visually-hidden{ position:absolute!important; clip:rect(1px,1px,1px,1px); width:1px; height:1px; overflow:hidden; }
+/* 実行委員紹介 */
 
-.member-grid{
-  display:grid; gap:16px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  margin: 12px 0 28px;
+.group-title{
+  margin: 24px 0 8px;
+  font-size: 1.25rem;
+  font-weight: 800;
 }
+.committee-group + .committee-group{
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 20px;
+}
+
+/* Grid 配置 */
+.committee-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+  gap:20px;
+  margin:20px 0;
+}
+
+/* カード（高さ固定で周囲を動かさない） */
 .member-card{
-  display:flex; flex-direction:column;
+  height:340px;
   border:1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius:var(--radius);
   background:#fff;
-  box-shadow: var(--shadow);
+  box-shadow:var(--shadow);
   overflow:hidden;
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-.member-card:hover{ transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.08); }
-
-.member-figure img{ width:100%; height:240px; object-fit:cover; display:block; }
-.member-body{ padding:12px 14px 14px; }
-
-.member-name{ margin:0 0 4px; font-size:1.05rem; }
-.member-toggle{
-  all: unset; cursor:pointer; color:#111827; font-weight:800; line-height:1.2;
-  border-bottom:2px solid transparent;
-}
-.member-toggle:hover{ border-bottom-color:#94a3b8; }
-
-.member-role{ margin:.1rem 0 .4rem; color:#374151; font-weight:600; }
-.member-tags{ list-style:none; padding:0; margin:0 0 .4rem; display:flex; gap:6px; flex-wrap:wrap; }
-.member-tags li{
-  font-size:.85rem; color:#475569; background:#f1f5f9; border:1px solid #e2e8f0;
-  padding:2px 8px; border-radius:999px;
 }
 
-/* Extra area (hidden by default) */
-.member-extra{
-  border-top:1px dashed #e5e7eb;
-  margin-top:10px; padding-top:10px;
-  display:grid; grid-template-columns: 110px 1fr; gap:12px;
-  align-items:start;
-  transition: opacity .2s ease, max-height .2s ease;
-}
-.member-figure-alt img{ width:110px; height:110px; object-fit:cover; border-radius:10px; display:block; }
-.member-comment{ margin:.2rem 0 .6rem; color:#111827; }
-.member-close{
-  justify-self:start;
-  padding:6px 10px; border-radius:999px;
-  background:#f1f5f9; border:1px solid #e5e7eb; color:#111827; cursor:pointer;
-}
-.member-close:hover{ background:#e2e8f0; }
+/* 3Dフリップの土台 */
+.flip-card{ perspective:1200px; }
 
-/* 開閉アニメ：hidden 属性切替に伴う表示 */
-.member-extra[hidden]{ display:none; }
+/* 回転する内側 */
+.card-inner{
+  position:relative;
+  width:100%; height:100%;
+  transform-style:preserve-3d;
+  transition:transform .6s cubic-bezier(.2,.7,.2,1);
+}
+
+/* 表裏の面 */
+.card-face{
+  position:absolute; inset:0;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:12px;
+  backface-visibility:hidden; /* ←これが超重要 */
+}
+
+/* Front面 */
+.card-front{
+  background:#fff;
+}
+
+/* Back面（Y軸180度反転） */
+.card-back{
+  background:#fff;
+  transform:rotateY(180deg);
+  position:absolute;
+}
+
+/* 反転状態 */
+.flip-card.is-flipped .card-inner{
+  transform:rotateY(180deg);
+}
+
+/* 画像・文字 */
+.member-photo{
+  width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:10px;
+}
+.member-name{
+  font-size:1.2rem; font-weight:800; color:#111; margin:0; text-align:center;
+}
+.member-comment{
+  margin:8px 0 0; color:#374151; text-align:center; padding:0 6px;
+}
+
+/* 閉じるボタン（背面に表示） */
+.close-btn{
+  position:absolute; top:10px; right:10px;
+  width:32px; height:32px; border:none; border-radius:999px;
+  background:var(--primary); color:#fff; cursor:pointer;
+  box-shadow:var(--shadow);
+}
+
+/* 反転状態（これを hover より「後ろ」に書く） */
+.flip-card.is-flipped .card-inner{
+  transform: rotateY(180deg);
+}
+
+/* 裏面が前に出た時は、表のクリックを無効化しておくと安心 */
+.flip-card.is-flipped .card-front{ pointer-events: none; }
+.flip-card.is-flipped .card-back { pointer-events: auto;  }
+
+
+/* 動きを苦手とする人への配慮 */
+@media (prefers-reduced-motion: reduce){
+  .card-inner{ transition:none; }
+  .flip-card.is-flipped .card-inner{ transform:none; }
+  /* 代替：前面を非表示に、背面を表示（すり替えのみ） */
+  .flip-card .card-front{ display:block; }
+  .flip-card.is-flipped .card-front{ display:none; }
+  .flip-card .card-back{ transform:none; }
+}
+
 
 /* スマホ最適化 */
 @media (max-width:560px){

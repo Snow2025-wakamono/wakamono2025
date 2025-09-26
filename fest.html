@@ -3,16 +3,309 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>わかもの in 北関 フェス</title>
+<title>ラボ・パーティ 2025わかものin 北関</title>
 <link rel="stylesheet" href="assets/css/styles.css" />
 <script defer src="assets/js/main.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
-<body>
+<link rel="icon" href="assets/img/favicon.JPG" type="image/png">
+
+<style>
+  .center{text-align: center;}
+  .right{text-align: right;}
+  .concept{color: brown;}
+  .center{font-size: 30px;}
+  h3{border-top: solid 2px #ffa0ff;}
+  hr{
+    border: none;
+    border-bottom: 1px solid #333;
+    margin: 0;
+}
+  .map {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 75%; /* 比率を4:3に固定 */
+}
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.cp_cssslider04 {
+  height: 360px;/*枠分プラス（10px+10px）*/
+  width:454px;
+  margin:2em auto;
+  overflow:visible;
+  position:relative;
+  background:#cccccc;
+  border: 10px solid #ffffff;
+  box-shadow:1px 1px 5px rgba(0,0,0,0.7);
+}
+.cp_cssslider04 .mask {
+  overflow:hidden;
+  height:340px;
+}
+.cp_cssslider04 ul {
+  margin:0;
+  padding:0;
+  position:relative;
+}
+.cp_cssslider04 li {
+  position:absolute;
+  top:-340px;
+  width:454px;
+  height:340px;
+  list-style:none;
+}
+.cp_cssslider04 li:nth-child(1){
+  animation:cycle1 36s linear infinite;
+}
+.cp_cssslider04 li:nth-child(2){
+  animation:cycle2 36s linear infinite;
+}
+.cp_cssslider04 li:nth-child(3){
+  animation:cycle3 36s linear infinite;
+}
+.cp_cssslider04 li:nth-child(4){
+  animation:cycle4 36s linear infinite;
+}
+.cp_cssslider04 li:nth-child(5){
+  animation:cycle5 36s linear infinite;
+}
+.cp_cssslider04 li:nth-child(6){
+  animation:cycle6 36s linear infinite;
+}
+.cp_cssslider04 li:nth-child(7){
+  animation:cycle7 36s linear infinite;
+}
+.cp_cssslider04 li:nth-child(8){
+  animation:cycle8 36s linear infinite;
+}
+.cp_cssslider04 li:nth-child(9){
+  animation:cycle9 36s linear infinite;
+}
+/* tooltip */
+.cp_cssslider04 .tooltip {
+  position:relative;
+  bottom:95px;
+  left:-300px;
+  width:260px;
+  height:auto;
+  background:rgba(0,0,0,0.7);
+  transition:all 0.3s ease-in-out;
+}
+.cp_cssslider04 .tooltip h1 {
+  color:#fff;
+  padding:0 0 0 20px;
+}
+.cp_cssslider04 li:hover .tooltip{
+  left:0px;
+}
+.cp_cssslider04:hover li,
+.cp_cssslider04:hover .cp_progressbar {
+  animation-play-state:paused;
+}
+/* PROGRESS BAR */
+.cp_progressbar {
+  position:relative;
+  top:-5px;
+  width:470px;
+  height:5px;
+  background:#000000;
+  animation:progressbar 36s ease-out infinite;
+}
+/* ANIMATION */
+@keyframes cycle1 {
+  0%   { top:0px; }
+  7%   { top:0px; opacity:1; z-index:0; }
+  11%  { top:200px; opacity:0; z-index:0; }
+  12%  { top:-200px; opacity:0; z-index:-1; }
+  50%  { top:-200px; opacity:0; z-index:-1; }
+  80%  { top:-200px; opacity:0; z-index:0; }
+  90%  { top:-200px; opacity:0; }
+  100% { top:0px; opacity:1; }
+}
+
+@keyframes cycle2 {
+  0%   { top:-200px; opacity:0; }
+  7%   { top:-200px; opacity:0; }
+  11%  { top:0px; opacity:1; }
+  15%  { top:0px; opacity:1; }
+  18%  { top:0px; opacity:1; z-index:0; }
+  22%  { top:200px; opacity:0; z-index:0; }
+  23%  { top:-200px; opacity:0; z-index:-1; }
+  100% { top:-200px; opacity:0; z-index:-1; }
+}
+
+@keyframes cycle3 {
+  0%   { top:-200px; opacity:0; }
+  18%  { top:-200px; opacity:0; }
+  22%  { top:0px; opacity:1; }
+  26%  { top:0px; opacity:1; }
+  29%  { top:0px; opacity:1; z-index:0; }
+  33%  { top:200px; opacity:0; z-index:0; }
+  34%  { top:-200px; opacity:0; z-index:-1; }
+  100% { top:-200px; opacity:0; z-index:-1; }
+}
+
+@keyframes cycle4 {
+  0%   { top:-200px; opacity:0; }
+  29%  { top:-200px; opacity:0; }
+  33%  { top:0px; opacity:1; }
+  37%  { top:0px; opacity:1; }
+  40%  { top:0px; opacity:1; z-index:0; }
+  44%  { top:200px; opacity:0; z-index:0; }
+  45%  { top:-200px; opacity:0; z-index:-1; }
+  100% { top:-200px; opacity:0; z-index:-1; }
+}
+
+@keyframes cycle5 {
+  0%   { top:-200px; opacity:0; }
+  39%  { top:-200px; opacity:0; }
+  44%  { top:0px; opacity:1; }
+  48%  { top:0px; opacity:1; }
+  51%  { top:0px; opacity:1; z-index:0; }
+  55%  { top:200px; opacity:0; z-index:0; }
+  56%  { top:-200px; opacity:0; z-index:-1; }
+  100% { top:-200px; opacity:0; z-index:-1; }
+}
+
+@keyframes cycle6 {
+  0%   { top:-200px; opacity:0; }
+  51%  { top:-200px; opacity:0; }
+  55%  { top:0px; opacity:1; }
+  59%  { top:0px; opacity:1; }
+  62%  { top:0px; opacity:1; z-index:0; }
+  66%  { top:200px; opacity:0; z-index:0; }
+  67%  { top:-200px; opacity:0; z-index:-1; }
+  100% { top:-200px; opacity:0; z-index:-1; }
+}
+
+@keyframes cycle7 {
+  0%   { top:-200px; opacity:0; }
+  62%  { top:-200px; opacity:0; }
+  66%  { top:0px; opacity:1; }
+  70%  { top:0px; opacity:1; }
+  73%  { top:0px; opacity:1; z-index:0; }
+  77%  { top:200px; opacity:0; z-index:0; }
+  78%  { top:-200px; opacity:0; z-index:-1; }
+  100% { top:-200px; opacity:0; z-index:-1; }
+}
+
+@keyframes cycle8 {
+  0%   { top:-200px; opacity:0; }
+  73%  { top:-200px; opacity:0; }
+  77%  { top:0px; opacity:1; }
+  81%  { top:0px; opacity:1; }
+  84%  { top:0px; opacity:1; z-index:0; }
+  88%  { top:200px; opacity:0; z-index:0; }
+  89%  { top:-200px; opacity:0; z-index:-1; }
+  100% { top:-200px; opacity:0; z-index:-1; }
+}
+
+@keyframes cycle9 {
+  0%   { top:-200px; opacity:0; }
+  84%  { top:-200px; opacity:0; }
+  88%  { top:0px; opacity:1; }
+  92%  { top:0px; opacity:1; }
+  96%  { top:0px; opacity:1; z-index:0; }
+  100% { top:200px; opacity:0; z-index:0; }
+}
+/* ANIMATION BAR */
+@keyframes progressbar {
+  0%, 11%, 22%, 33%, 44%, 55%, 66%, 77%, 88%, 100% { width:0%; opacity:0; z-index:2; }
+  4%, 15%, 26%, 37%, 48%, 59%, 70%, 81%, 92% { width:0%; opacity:0.3; z-index:2; }
+  7%, 18%, 29%, 40%, 51%, 62%, 73%, 84%, 96%{ width:100%; opacity:0.3; z-index:2; }
+  9%, 20%, 31%, 42%, 53%, 64%, 75%, 86%, 98%{ width:100%; opacity:0; z-index:2; }
+}
+
+.cp_box1 {
+  position: relative;
+}
+.cp_box1 input {
+  display: none;
+}
+/*開くためのボタンとテキストを隠すグラデーションの設定*/
+.cp_box1 label {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  bottom: -10px;
+  width: 100%;
+  height: 140px; /* グラデーションの高さ */
+  cursor: pointer;
+  text-align: center;
+  /* 以下グラデーションは背景を自身のサイトに合わせて設定してください */
+  background: linear-gradient(to bottom, rgba(250, 252, 252, 0) 0%, rgba(250, 252, 252, 0.95) 90%);
+}
+/* 開いた時にグラデーションを消す */
+.cp_box1 input:checked + label {
+  background: inherit;
+}
+.cp_box1 input:checked + label {
+  display: none ; 
+}
+.cp_box1 .cp_container {
+  overflow: hidden;
+  height: 150px; /* 開く前に見えている部分の高さ */
+  transition: all 0.5s;
+}
+/*続きをよむボタン*/
+.cp_box1 label:after,
+.cp_box1 label::before {
+  content: '';
+  position: absolute;
+  line-height: 2.5rem;
+}
+.cp_box1 label:after {
+  z-index: 2;
+  bottom: 5px;
+  width: 13em;
+  content: '続きをよむ';
+  color: #ffffff;
+  background: #1b2538;
+  border-radius: 20px;
+}
+.cp_box1 label::before {
+  position: absolute;
+  bottom: 38px;
+  left: calc(50% - 3.5em);
+  z-index: 3;
+  width: 10px;
+  height: 5px;
+  background: #ffffff;
+  clip-path: polygon(50% 100%, 0 0, 100% 0)
+}
+
+.cp_box1 input:checked + label:before {
+  left: calc(50% - 2.5em);
+  transform: scale(1, -1);
+}
+.cp_box1 input:checked ~ .cp_container {
+  height: auto;
+  transition: all 0.5s;
+}
+</style>
+
+<body data-page="fest">
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="index.html">わかもの in 北関</a>
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="assets/img/favicon.JPG" alt="わかもの in 北関 ロゴ" width="36" height="36">
+      <span class="brand-text">2025 わかもの in 北関</span>
+    </a>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">☰</button>
+    <!--<button class="nav-toggle" aria-label="メニューを開く">
+      <img src="assets/img/kitakuma2.png" alt="メニュー" width="30" height="30">
+    </button> -->
   </div>
 </header>
 
@@ -24,16 +317,106 @@
   </div>
   <nav class="drawer-nav" role="navigation">
     <ul class="tab-list">
-      <li><a class="tab" href="index.html">ホーム</a></li> <li><a class="tab" href="about.html">団体紹介</a></li> <li><a class="tab active" href="fest.html" aria-current="page">フェスについて</a></li> <li><a class="tab" href="camp.html">合宿について</a></li> <li><a class="tab" href="kitakan.html">北関について</a></li> <li><a class="tab" href="tickets.html">チケット購入</a></li> <li><a class="tab" href="committee.html">実行委員について</a></li> <li><a class="tab" href="mypage.html">マイページ</a></li>
+      <li><a class="tab" href="index.html" aria-current="page">ホーム</a></li> <li><a class="tab" href="about.html">発表団体紹介</a></li> <li><a class="tab active" href="fest.html">フェスティバル</a><li><a class="tab" href="tickets.html">チケット購入</a></li> <li><a class="tab" href="camp.html">合宿</a></li> <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a></li> </li> <li><a class="tab" href="committee.html">実行委員</a></li> <li><a class="tab" href="mypage.html">マイページ</a></li>
     </ul>
   </nav>
+  <!-- キャラクター（ドロワー下部） -->
+  <div class="drawer-character" aria-hidden="true">
+    <img id="drawerCharacter" src="assets/img/drkitakuma.png" alt="">
+  </div>
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
-<main class="container"><h1>フェスについて</h1><p>開催趣旨、会場情報、タイムテーブル（後日）など。</p></main>
+<main class="container"><h1>フェスティバル</h1>
+  <h2 class="concept">フェスティバルコンセプト</h2>
+  <div class="center">
+  『MOMENT×MAGIC』
+  </div>
+  <div class="cp_box1">
+  <input id="cp01" type="checkbox">
+  <label for="cp01"></label>
+  <div class="cp_container">
+  <p>
+    わかものフェスティバルは、全国の大学生ラボっ子がそれぞれの想いをテーマ活動を通して言葉や体にのせて表現し、観客に全力をぶつけることのできる貴重な時間だ。彼らが織りなす表現には各人・各支部の想いや色が存在し、過去の葛藤や試行錯誤も垣間見える。そんな'’Identity’’を持つ彼らは、発表を通じて達成感や高揚感を味わうことができる。一方で、発表中の表現から魅力的な瞬間が生み出されると、そこから観客は演者が伝えたい想いや彼らへの憧れを感じる。演者が表現を届けるその“瞬間’’、会場全体は感動と興奮すなわち“魔法”で包まれていく。そしてこの“瞬間”がかける“魔法”はそのときのみならず、永遠の魔法となる。フェスティバルが終わった後も表現活動への憧れやテーマ活動の可能性を広げるなどの、様々な影響を与え続けるだろう。
+    　今回のわかものフェスティバルでは、全国から集う大学生ラボっ子が表現する全力の瞬間
+    －MOMENT－と、それによってかけられる魔法－MAGIC－を惹き起こすべくこのコンセプトを建てた。それぞれが感じた魔法を持ち帰り、今後のラボのモチベーションとなるフェスティバルを作り上げる。そして、このフェスティバルを通じて今後のラボ活動にどのように向き合うか、そしてどのように生きていきたいかを問うきっかけを与えたい。
+  </p>
+  </div>
+</div><br>
+
+  <hr>
+  <h2>会場情報</h2>
+  <p>概要</p>
+  <div>日時：</div>
+  <div>場所：深谷市民文化会館<br>〒366-0823 埼玉県深谷市本住町17番1号<br><a href="https://fukaya-connect.com/bunka/">https://fukaya-connect.com/bunka/</a></div>
+  <p>アクセス：深谷駅から徒歩約20分</p>
+  <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3219.6202993326206!2d139.2871247!3d36.2001152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ed9617bbcf0d9%3A0x483cebb0dc51c916!2z5rex6LC35biC5rCR5paH5YyW5Lya6aSo44O75rex6LC344Kz44Of44Ol44OL44OG44Kj44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1756654473963!5m2!1sja!2sjp" 
+    width="600"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe></div><br>
+
+  <h2>タイムテーブル</h2><br><!-- 画像を貼り付けたい -->
+
+
+  <h2>発表者団体</h2><br><!-- 画像の名前変更必須 -->
+<div class="cp_cssslider04">
+  <div class="mask">
+  <ul>
+    <li><a href="#"><img src="assets/img/東北.jpeg" /></a>
+    <div class="tooltip"><h1>東北支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/北関.jpeg" /></a>
+    <div class="tooltip"><h1>北関東信越支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/東京.jpeg" /></a>
+    <div class="tooltip"><h1>東京支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/千葉.jpeg" /></a>
+    <div class="tooltip"><h1>千葉支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/神奈川.jpeg" /></a>
+    <div class="tooltip"><h1>神奈川支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/中部.jpeg" /></a>
+    <div class="tooltip"><h1>中部支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/関西.jpeg" /></a>
+    <div class="tooltip"><h1>関西支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/中国・四国.jpeg" /></a>
+    <div class="tooltip"><h1>中国・四国支部</h1></div></li>
+
+  <li><a href="#"><img src="assets/img/九州.jpeg" /></a>
+    <div class="tooltip"><h1>九州支部</h1></div></li>
+  </ul>
+  </div>
+  <div class="cp_progressbar"></div>
+</div>
+
+<h2>館内情報</h2><!-- 会場のホームページから画像持ってくる -->
+
+<br>
+</div>
+</main>
 <footer class="site-footer">
   <div class="container">
-    <p>© <span id="year"></span> わかもの in 北関</p>
+    <nav class="footer-sns" aria-label="SNSリンク">
+      <a class="sns-btn sns-line" href="https://line.me/R/ti/p/@YOUR_ID" target="_blank" rel="noopener" aria-label="LINE公式">
+        <i class="fa-brands fa-line" aria-hidden="true"></i>
+      </a>
+      <a class="sns-btn sns-instagram" href="https://instagram.com/YOUR_ACCOUNT" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a class="sns-btn sns-facebook" href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noopener" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      </a>
+    </nav>
+
+    <p>© <span id="year"></span> わかもの in 北関実行委員</p>
   </div>
 </footer>
 <button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
