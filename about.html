@@ -3,16 +3,24 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>わかもの in 北関 フェス</title>
+<title>ラボ・パーティ 2025わかものin 北関</title>
 <link rel="stylesheet" href="assets/css/styles.css" />
 <script defer src="assets/js/main.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
-<body>
+<link rel="icon" href="assets/img/favicon.JPG" type="image/png">
+<body data-page="about">
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="index.html">わかもの in 北関</a>
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="assets/img/favicon.JPG" alt="わかもの in 北関 ロゴ" width="36" height="36">
+      <span class="brand-text">2025 わかもの in 北関</span>
+    </a>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">☰</button>
+    <!--<button class="nav-toggle" aria-label="メニューを開く">
+      <img src="assets/img/kitakuma2.png" alt="メニュー" width="30" height="30">
+    </button> -->
   </div>
 </header>
 
@@ -24,15 +32,31 @@
   </div>
   <nav class="drawer-nav" role="navigation">
     <ul class="tab-list">
-      <li><a class="tab" href="index.html">ホーム</a></li> <li><a class="tab active" href="about.html" aria-current="page">団体紹介</a></li> <li><a class="tab" href="fest.html">フェスについて</a></li> <li><a class="tab" href="camp.html">合宿について</a></li> <li><a class="tab" href="kitakan.html">北関について</a></li> <li><a class="tab" href="tickets.html">チケット購入</a></li> <li><a class="tab" href="committee.html">実行委員について</a></li> <li><a class="tab" href="mypage.html">マイページ</a></li>
+      <li><a class="tab" href="index.html" aria-current="page">ホーム</a></li> <li><a class="tab active" href="about.html">発表団体紹介</a></li> <li><a class="tab" href="fest.html">フェスティバル</a><li><a class="tab" href="tickets.html">チケット購入</a></li> <li><a class="tab" href="camp.html">合宿</a></li> <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a></li> </li> <li><a class="tab" href="committee.html">実行委員</a></li> <li><a class="tab" href="mypage.html">マイページ</a></li>
     </ul>
   </nav>
+  <!-- キャラクター（ドロワー下部） -->
+  <div class="drawer-character" aria-hidden="true">
+    <img id="drawerCharacter" src="assets/img/drkitakuma.png" alt="">
+  </div>
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
-<main class="container"><h1>団体紹介</h1><p>団体のミッション・沿革・活動実績などを記載します。</p></main>
+<main class="container"><h1>発表団体紹介</h1><p>各支部の紹介</p></main>
 <footer class="site-footer">
   <div class="container">
+    <nav class="footer-sns" aria-label="SNSリンク">
+      <a class="sns-btn sns-line" href="https://line.me/R/ti/p/@YOUR_ID" target="_blank" rel="noopener" aria-label="LINE公式">
+        <i class="fa-brands fa-line" aria-hidden="true"></i>
+      </a>
+      <a class="sns-btn sns-instagram" href="https://instagram.com/YOUR_ACCOUNT" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a class="sns-btn sns-facebook" href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noopener" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      </a>
+    </nav>
+
     <p>© <span id="year"></span> わかもの in 北関</p>
   </div>
 </footer>

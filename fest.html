@@ -17,21 +17,31 @@
   .concept{color: brown;}
   .center{font-size: 30px;}
   h3{border-top: solid 2px #ffa0ff;}
+  .summary {
+  padding-left: 1em; /* 内側に寄せる */
+}
   hr{
     border: none;
     border-bottom: 1px solid #333;
     margin: 0;
 }
-  .map {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-top: 75%; /* 比率を4:3に固定 */
+.venue {
+  display: flex;          /* 横並びにする */
+  gap: 20px;              /* 要素間の余白 */
+  align-items: flex-start;/* 上揃え */
+  flex-wrap: wrap;        /* 画面が狭いときは折り返す */
 }
-.map iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+
+.venue .info {
+  flex: 1 1 300px;        /* 最小300pxで残りは可変 */
+}
+
+.venue .map {
+  flex: 1 1 400px;        /* 最小400pxで残りは可変 */
+  aspect-ratio: 4 / 3;    /* 比率を固定 */
+}
+
+.venue .map iframe {
   width: 100%;
   height: 100%;
 }
@@ -327,6 +337,7 @@
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
+
 <main class="container"><h1>フェスティバル</h1>
   <h2 class="concept">フェスティバルコンセプト</h2>
   <div class="center">
@@ -345,19 +356,34 @@
 </div><br>
 
   <hr>
-  <h2>会場情報</h2>
-  <p>概要</p>
-  <div>日時：</div>
-  <div>場所：深谷市民文化会館<br>〒366-0823 埼玉県深谷市本住町17番1号<br><a href="https://fukaya-connect.com/bunka/">https://fukaya-connect.com/bunka/</a></div>
-  <p>アクセス：深谷駅から徒歩約20分</p>
-  <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3219.6202993326206!2d139.2871247!3d36.2001152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ed9617bbcf0d9%3A0x483cebb0dc51c916!2z5rex6LC35biC5rCR5paH5YyW5Lya6aSo44O75rex6LC344Kz44Of44Ol44OL44OG44Kj44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1756654473963!5m2!1sja!2sjp" 
-    width="600"
-    height="450"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe></div><br>
+<section class="venue">
+  <div class="info">
+    <h2>会場情報</h2>
+    <div class="summary">
+    <p>概要</p>
+    <div>日時：</div>
+    <div>
+      場所：深谷市民文化会館<br>
+      〒366-0823 埼玉県深谷市本住町17番1号<br>
+      <a href="https://fukaya-connect.com/bunka/">https://fukaya-connect.com/bunka/</a>
+    </div>
+    <p>アクセス：深谷駅から徒歩約20分</p>
+    </div>
+  </div>
+
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3219.6202993326206!2d139.2871247!3d36.2001152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ed9617bbcf0d9%3A0x483cebb0dc51c916!2z5rex6LC35biC5rCR5paH5YyW5Lya6aSo44O75rex6LC344Kz44Of44Ol44OL44OG44Kj44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1756654473963!5m2!1sja!2sjp"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+<br>
 
   <h2>タイムテーブル</h2><br><!-- 画像を貼り付けたい -->
 
@@ -416,7 +442,7 @@
       </a>
     </nav>
 
-    <p>© <span id="year"></span> わかもの in 北関実行委員</p>
+    <p>© <span id="year"></span> わかもの in 北関</p>
   </div>
 </footer>
 <button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
