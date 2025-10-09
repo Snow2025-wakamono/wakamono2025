@@ -121,7 +121,7 @@ a{ text-decoration:none; color:#1a1a1a; }
   display:flex; flex-direction:column; align-items:center; justify-content:center; padding:40px 0;
 }
 .hero-logo{
-  max-width:390px; width:100%; height:auto; margin-bottom:16px;
+  max-width:650px; width:100%; height:auto; margin-bottom:16px;
 }
 
 /* ロゴ */
@@ -458,18 +458,26 @@ h2 strong{ font-weight:400; }
   font-size: 1.25rem;
   font-weight: 800;
 }
+/* 区切りはそのまま */
 .committee-group + .committee-group{
   border-top: 1px solid var(--border);
   padding-top: 16px;
   margin-top: 20px;
 }
 
-/* Grid 配置 */
+/* Grid 配置（auto-fit + 中央寄せ） */
 .committee-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
-  gap:20px;
-  margin:20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+  justify-items: center; /* 各セル内で中央に */
+}
+
+/* カードの最大幅を決めて、セル中央に配置 */
+.member-card{
+  width: 100%;
+  max-width: 360px; /* 好きなカード幅に調整 */
 }
 
 /* カード（高さ固定で周囲を動かさない） */
@@ -577,4 +585,5 @@ h2 strong{ font-weight:400; }
   }
   .member-extra{ grid-template-columns: 1fr; }
   .member-figure img{ height:200px; }
+  .member-card{ max-width: 320px; }
 }
