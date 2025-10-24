@@ -568,6 +568,7 @@ h2 strong{ font-weight:400; }
 .center{text-align: center;}
 .right{text-align: right;}
 .concept{color: brown;}
+.center{font-size: 30px;}
 .line{border-top: solid 1px #000000;}
 .underline{text-decoration:underline;}
 
