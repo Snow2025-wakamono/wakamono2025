@@ -65,7 +65,7 @@ a{ text-decoration:none; color:#1a1a1a; }
 }
 
 /* =========================================================
-   Drawer (Right Slide) & Backdrop
+  Drawer (Right Slide) & Backdrop
    ========================================================= */
 .drawer{
   position:fixed; top:0; right:0; height:100%; width:min(320px,90vw);
@@ -113,7 +113,7 @@ a{ text-decoration:none; color:#1a1a1a; }
 .backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.28); z-index:35; }
 
 /* =========================================================
-   Hero
+  Hero
    ========================================================= */
 .hero h1{ margin:.2rem 0 0; }
 .lead{ color:var(--muted); margin:0 0 1rem; }
@@ -128,14 +128,14 @@ a{ text-decoration:none; color:#1a1a1a; }
 .logo{ max-width:200px; height:auto; }
 
 /* =========================================================
-   Visitor Counter
+  Visitor Counter
    ========================================================= */
 .visitor-section{ padding:8px 0 24px; }
 .visitor-line{ font-size:1.1rem; }
 .muted{ color:var(--muted); font-size:.9rem; }
 
 /* =========================================================
-   Footer & Back-to-top
+  Footer & Back-to-top
    ========================================================= */
 .site-footer{ border-top:1px solid var(--border); margin-top:18px; background:#fff; }
 /* ===== Footer SNS ===== */
@@ -180,7 +180,7 @@ a{ text-decoration:none; color:#1a1a1a; }
 .back-to-top.show{ display:block; }
 
 /* =========================================================
-   Countdown (Legacy base styles)
+  Countdown (Legacy base styles)
    ========================================================= */
 /* Supplementary global for countdown block */
 body{
@@ -257,7 +257,7 @@ h2 strong{ font-weight:400; }
 .countdown .figure .top-back span{ position:absolute; top:-100%; left:0; right:0; margin:auto; }
 
 /* =========================================================
-   Countdown Panel / Layout overrides
+  Countdown Panel / Layout overrides
    ========================================================= */
 /* カード化（背景色/枠） */
 .countdown-panel{
