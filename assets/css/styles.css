@@ -591,5 +591,4 @@ h2 strong{ font-weight:400; }
   .member-extra{ grid-template-columns: 1fr; }
   .member-figure img{ height:200px; }
   .member-card{ max-width: 320px; }
-  .camp-map img{ max-width: 400px;}
 }
