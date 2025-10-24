@@ -350,9 +350,6 @@ h2 strong{ font-weight:400; }
   font-size: 30px;
 }
 
-/* テーマリンク（トップの“Identity”の下線を消す） */
-.theme-link{ color: inherit; text-decoration: none; }
-.theme-link:hover{ text-decoration: underline;text-underline-offset: 0.7rem; text-decoration-thickness: 4px; /* ← 下線の太さを指定 */}
 
 /* ===== Coming Soon ===== */
 .comingsoon{
