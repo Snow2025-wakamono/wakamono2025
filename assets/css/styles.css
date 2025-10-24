@@ -378,12 +378,12 @@ h2 strong{ font-weight:400; }
   margin: 6px 0;
 }
 .cs-lead{
-  font-size: clamp(1rem, 2.6vw, 1.25rem);
-  color: var(--muted);
+  font-size: clamp(1.1rem, 4.3vw, 1.9rem);
+  color: black;
   margin: 0;
 }
 .cs-note{
-  color:#475569;
+  color:#1e2227;
   margin: 6px 0 16px;
 }
 .cs-actions .btn{
