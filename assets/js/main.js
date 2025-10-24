@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
   el.classList.add('typing');
 
   // 速度設定（ミリ秒）。速くしたい: 60 / ゆっくり: 120〜150
-  const STEP = 90;
+  const STEP = 110;
 
   let i = 0;
   const tick = () => {
