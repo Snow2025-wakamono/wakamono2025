@@ -207,3 +207,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// ===== Coming Soon: typewriter effect =====
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.getElementById('cs-title');
+  if (!el) return;
+
+  // reduced motion の場合は即表示して終了
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fullText = el.textContent.trim(); // 例: "Coming Soon"
+
+  if (prefersReduced) {
+    el.textContent = fullText;
+    return;
+  }
+
+  // タイプ開始準備
+  el.textContent = '';
+  el.classList.add('typing');
+
+  // 速度設定（ミリ秒）。速くしたい: 60 / ゆっくり: 120〜150
+  const STEP = 90;
+
+  let i = 0;
+  const tick = () => {
+    if (i <= fullText.length) {
+      el.textContent = fullText.slice(0, i);
+      i++;
+      setTimeout(tick, STEP);
+    } else {
+      // 完了後、カーソルだけ少し残してから外す（好みで）
+      setTimeout(() => el.classList.remove('typing'), 600);
+    }
+  };
+  tick();
+});

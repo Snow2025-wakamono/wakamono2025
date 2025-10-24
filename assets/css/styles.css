@@ -571,7 +571,31 @@ h2 strong{ font-weight:400; }
 .center{font-size: 30px;}
 .line{border-top: solid 1px #000000;}
 .underline{text-decoration:underline;}
-  
+
+/*coming soon タイピングエフェクト*/
+/* タイプ中のカーソル（疑似要素） */
+.cs-title.typing::after{
+  content: "│";
+  margin-left: .08em;
+  animation: caretBlink .9s steps(1, end) infinite;
+}
+
+@keyframes caretBlink{
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+
+/* 動きを苦手とする人にはアニメ無効・即表示 */
+@media (prefers-reduced-motion: reduce){
+  .cs-title.typing::after{ animation: none; }
+}
+
+@keyframes caretBlink{
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
 
 /* 動きを苦手とする人への配慮 */
 @media (prefers-reduced-motion: reduce){
