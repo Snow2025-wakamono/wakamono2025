@@ -350,6 +350,15 @@ h2 strong{ font-weight:400; }
   font-size: 30px;
 }
 
+.mt-desc{
+  margin: clamp(10px, 2vw, 16px) auto 0; /* 上だけ少し空ける */
+  max-width: min(800px, 92%);            /* 読みやすい横幅に制限 */
+  font-size: clamp(.95rem, 2.2vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--muted);
+  text-align: var(--mt-align, left);     /* 上の変数と揃える */
+  text-wrap: balance;
+}
 
 /* ===== Coming Soon ===== */
 .comingsoon{
