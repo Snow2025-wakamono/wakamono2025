@@ -540,7 +540,7 @@ h2 strong{ font-weight:400; }
   font-size:1.2rem; font-weight:800; color:#111; margin:0; text-align:center;
 }
 .member-comment{
-  margin:8px 0 0; color:#374151; text-align:center; padding:0 6px;
+  margin:8px 0 0; color:#435675; text-align:center; padding:0 6px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /* 閉じるボタン（背面に表示） */
