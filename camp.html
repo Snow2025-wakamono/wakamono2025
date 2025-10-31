@@ -17,10 +17,10 @@
   .summary {
   padding-left: 1em; /* 内側に寄せる */
 }
-  hr{
-    border: none;
-    border-bottom: 1px solid #333;
-    margin: 0;
+.line {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 0px;
 }
 .venue {
   display: flex;          /* 横並びにする */
@@ -73,7 +73,7 @@
 }
 .cp_box1 .cp_container {
   overflow: hidden;
-  height: 150px; /* 開く前に見えている部分の高さ */
+  height: 120px; /* 開く前に見えている部分の高さ */
   transition: all 0.5s;
 }
 /*続きをよむボタン*/
@@ -146,10 +146,10 @@
 <div id="backdrop" class="backdrop" hidden></div>
 
 <main class="container"><h1>合宿</h1>
-  <h2 class="concept">合宿コンセプト</h2>
-  <div class="center">
+  <div class="concept center size20">合宿コンセプト</div>
+  <div class="center size30">
     <div class="font_concept">
-  『ROOT×ROUTE』
+  &emsp;『ROOT×ROUTE』
     </div>
   </div>
   <div class="cp_box1">
@@ -164,22 +164,25 @@
 </div>
 </div><br>
 
-  <hr>
+  <hr class="line">
+  <div class="space_big"></div>
   <section class="venue">
   <div class="info">
-    <h2 class="font_wide">会場情報</h2>
+    <div class="font_wide center size20">会場情報</div>
+    <div class="space_min"></div>
     <div class="summary">
-    <div>日時：2026年　3/1(日)～3日(火)</div>
-    <div>場所：ホテルヘリテイジ　四季の湯温泉(埼玉県熊谷市)</div>
+    <div><span class="underline">日時</span>：2026年　3/1(日)～3日(火)</div>
+    <div><span class="underline">場所</span>：ホテルヘリテイジ　四季の湯温泉(埼玉県熊谷市)</div>
     <div class="text_indent3">〒360-0103埼玉県熊谷市小江川228</div>
       <a href="https://www.hotel-heritage.co.jp/"><div class="text_blue text_indent3">https://www.hotel-heritage.co.jp/</div></a>
     </div>
     <p>
     <div class="underline">アクセス</div>
     <div>【お車】</div>
-    <div>▶東松山ICより熊谷方面へ約5.3㎞「滑川中学校北」交差点を左折、次の「滑川町役場北」を右折、直進役3.9km </div><br>
+    <div>▶東松山ICより熊谷方面へ約5.3㎞「滑川中学校北」交差点を左折、次の「滑川町役場北」を右折、直進役3.9km </div>
+    <br>
     <div>【公共交通機関】</div>
-    <div>電車：東武東上線 森林公園駅で下車、路線バスorタクシーで約15分</div>
+    <div>▶電車：東武東上線 森林公園駅で下車、路線バスorタクシーで約15分</div>
     <div>▶路線バス：森林公園駅-ふかや花園プレミアム・アウトレット線ホテルヘリテイジで下車運賃380円(交通系IC370円)</div>
     </p>
     </div>
@@ -197,12 +200,14 @@
   </iframe>
 </div>
 </section>
-<br>
+<div class="space_big"></div>
   <!--
     <h2>タイムテーブル</h2><br>
     タイムテーブルの画像を貼り付けたい　キャンプの予定表みたいなイメージ -->
-  
-    <h2 class="line">館内案内</h2><!-- 会場のホームページから画像持ってくる -->
+  <hr class="line">
+  <div class="space_big"></div>
+    <div class="font_wide center size20">館内案内</div><!-- 会場のホームページから画像持ってくる -->
+    <div class="space_big"></div>
     <div class="center">
     <img src="assets/img/camp_map.jpg" style="width:80%; aspect-ratio:√2/1; overflow: hidden;">
     </div>
