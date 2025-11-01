@@ -1079,26 +1079,29 @@ h2 strong {
 
 .mainanounce {
   text-align: center;
-  padding: 40px 20px;
-  background: #fff;
-  border-top: 2px solid var(--border);
+  padding: 10px;
+  border: 1px;
+  background: transparent;
+  border: double 5px #db6b67;/*線*/
+  border-radius: 10px;/*角の丸み*/
 }
 
 .news-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .news-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .news-list li {
-  margin: 10px 0;
+  margin: 12px 0;
   font-size: 1.1rem;
   color: #111;
 }
