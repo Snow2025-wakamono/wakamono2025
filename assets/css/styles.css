@@ -835,9 +835,6 @@ h2 strong {
 
 /* 実行委員紹介 */
 
-<<<<<<< Updated upstream
-.group-title {
-=======
 .committee-nav {
   background: #fff;
   border-bottom: 1px solid var(--border);
@@ -876,7 +873,6 @@ h2 strong {
 }
 
 .group-title{
->>>>>>> Stashed changes
   margin: 24px 0 8px;
   font-size: 1.25rem;
   font-weight: 800;
@@ -1080,18 +1076,6 @@ h2 strong {
   animation: caretBlink .9s steps(1, end) infinite;
 }
 
-<<<<<<< Updated upstream
-@keyframes caretBlink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-=======
 .mainanounce {
   text-align: center;
   padding: 40px 20px;
@@ -1149,7 +1133,6 @@ h2 strong {
 @keyframes caretBlink{
   0%, 100% { opacity: 1; }
   50%      { opacity: 0; }
->>>>>>> Stashed changes
 }
 
 
@@ -1199,44 +1182,6 @@ h2 strong {
 
 
 /* スマホ最適化 */
-<<<<<<< Updated upstream
-@media (max-width:560px) {
-  .brand {
-    gap: 8px;
-  }
-
-  .brand-logo {
-    width: 32px;
-    height: 32px;
-  }
-
-  .brand-text {
-    font-size: .95rem;
-  }
-
-  .drawer-character {
-    min-height: 120px;
-  }
-
-  .drawer-character img {
-    width: min(180px, 80%);
-  }
-
-  .countdown .bloc-time {
-    padding-right: 0;
-  }
-
-  .countdown .bloc-time:not(:last-child)::after {
-    display: none;
-  }
-
-  .countdown .figure {
-    width: 72px;
-    height: 82px;
-  }
-
-  .countdown .figure>span,
-=======
 @media (max-width:560px){
   .brand{ gap: 8px; }
   .brand-logo{ width: 32px; height: 32px; }
@@ -1249,7 +1194,6 @@ h2 strong {
   .countdown .bloc-time:not(:last-child)::after{ display:none; }
   .countdown .figure{ width:72px; height:82px; }
   .countdown .figure > span,
->>>>>>> Stashed changes
   .countdown .figure .top,
   .countdown .figure .bottom,
   .countdown .figure .top-back span,
