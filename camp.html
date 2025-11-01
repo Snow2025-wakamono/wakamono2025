@@ -1,236 +1,270 @@
 <!doctype html>
 <html lang="ja">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>ラボ・パーティ 2025わかものin 北関</title>
-<link rel="stylesheet" href="assets/css/styles.css" />
-<script defer src="assets/js/main.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ラボ・パーティ 2025わかものin 北関</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 </head>
 <link rel="icon" href="assets/img/favicon.JPG" type="image/png">
 
 <style>
-  .font_concept{font-family: 'Crimson Text', serif;}
+  .font_concept {
+    font-family: 'Crimson Text', serif;
+  }
+
   .summary {
-  padding-left: 1em; /* 内側に寄せる */
-}
-.line {
-  border: none;
-  border-top: 1px solid #333;
-  margin: 0px;
-}
-.venue {
-  display: flex;          /* 横並びにする */
-  gap: 20px;              /* 要素間の余白 */
-  align-items: flex-start;/* 上揃え */
-  flex-wrap: wrap;        /* 画面が狭いときは折り返す */
-}
+    padding-left: 1em;
+    /* 内側に寄せる */
+  }
 
-.venue .info {
-  flex: 1 1 300px;        /* 最小300pxで残りは可変 */
-}
+  .line {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 0px;
+  }
 
-.venue .map {
-  flex: 1 1 400px;        /* 最小400pxで残りは可変 */
-  aspect-ratio: 4 / 3;    /* 比率を固定 */
-}
+  .venue {
+    display: flex;
+    /* 横並びにする */
+    gap: 20px;
+    /* 要素間の余白 */
+    align-items: flex-start;
+    /* 上揃え */
+    flex-wrap: wrap;
+    /* 画面が狭いときは折り返す */
+  }
 
-.venue .map iframe {
-  width: 100%;
-  height: 100%;
-}
+  .venue .info {
+    flex: 1 1 300px;
+    /* 最小300pxで残りは可変 */
+  }
 
-.cp_box1 {
-  position: relative;
-}
-.cp_box1 input {
-  display: none;
-}
-/*開くためのボタンとテキストを隠すグラデーションの設定*/
-.cp_box1 label {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-  bottom: -10px;
-  width: 100%;
-  height: 140px; /* グラデーションの高さ */
-  cursor: pointer;
-  text-align: center;
-  /* 以下グラデーションは背景を自身のサイトに合わせて設定してください */
-  background: linear-gradient(to bottom, rgba(250, 252, 252, 0) 0%, rgba(250, 252, 252, 0.95) 90%);
-}
-/* 開いた時にグラデーションを消す */
-.cp_box1 input:checked + label {
-  background: inherit;
-}
-.cp_box1 input:checked + label {
-  display: none ; 
-}
-.cp_box1 .cp_container {
-  overflow: hidden;
-  height: 120px; /* 開く前に見えている部分の高さ */
-  transition: all 0.5s;
-}
-/*続きをよむボタン*/
-.cp_box1 label:after,
-.cp_box1 label::before {
-  content: '';
-  position: absolute;
-  line-height: 2.5rem;
-}
-.cp_box1 label:after {
-  z-index: 2;
-  bottom: 5px;
-  width: 13em;
-  content: '続きをよむ';
-  color: #ffffff;
-  background: #1b2538;
-  border-radius: 20px;
-}
-.cp_box1 label::before {
-  position: absolute;
-  bottom: 38px;
-  left: calc(50% - 3.5em);
-  z-index: 3;
-  width: 10px;
-  height: 5px;
-  background: #ffffff;
-  clip-path: polygon(50% 100%, 0 0, 100% 0)
-}
+  .venue .map {
+    flex: 1 1 400px;
+    /* 最小400pxで残りは可変 */
+    aspect-ratio: 4 / 3;
+    /* 比率を固定 */
+  }
 
-.cp_box1 input:checked + label:before {
-  left: calc(50% - 2.5em);
-  transform: scale(1, -1);
-}
-.cp_box1 input:checked ~ .cp_container {
-  height: auto;
-  transition: all 0.5s;
-}
+  .venue .map iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cp_box1 {
+    position: relative;
+  }
+
+  .cp_box1 input {
+    display: none;
+  }
+
+  /*開くためのボタンとテキストを隠すグラデーションの設定*/
+  .cp_box1 label {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    bottom: -10px;
+    width: 100%;
+    height: 140px;
+    /* グラデーションの高さ */
+    cursor: pointer;
+    text-align: center;
+    /* 以下グラデーションは背景を自身のサイトに合わせて設定してください */
+    background: linear-gradient(to bottom, rgba(250, 252, 252, 0) 0%, rgba(250, 252, 252, 0.95) 90%);
+  }
+
+  /* 開いた時にグラデーションを消す */
+  .cp_box1 input:checked+label {
+    background: inherit;
+  }
+
+  .cp_box1 input:checked+label {
+    display: none;
+  }
+
+  .cp_box1 .cp_container {
+    overflow: hidden;
+    height: 120px;
+    /* 開く前に見えている部分の高さ */
+    transition: all 0.5s;
+  }
+
+  /*続きをよむボタン*/
+  .cp_box1 label:after,
+  .cp_box1 label::before {
+    content: '';
+    position: absolute;
+    line-height: 2.5rem;
+  }
+
+  .cp_box1 label:after {
+    z-index: 2;
+    bottom: 5px;
+    width: 13em;
+    content: '続きをよむ';
+    color: #ffffff;
+    background: #1b2538;
+    border-radius: 20px;
+  }
+
+  .cp_box1 label::before {
+    position: absolute;
+    bottom: 38px;
+    left: calc(50% - 3.5em);
+    z-index: 3;
+    width: 10px;
+    height: 5px;
+    background: #ffffff;
+    clip-path: polygon(50% 100%, 0 0, 100% 0)
+  }
+
+  .cp_box1 input:checked+label:before {
+    left: calc(50% - 2.5em);
+    transform: scale(1, -1);
+  }
+
+  .cp_box1 input:checked~.cp_container {
+    height: auto;
+    transition: all 0.5s;
+  }
 </style>
 
 <body data-page="camp">
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <img class="brand-logo" src="assets/img/favicon.JPG" alt="わかもの in 北関 ロゴ" width="36" height="36">
-      <span class="brand-text">2025 わかもの in 北関</span>
-    </a>
-    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">☰</button>
-    <!--<button class="nav-toggle" aria-label="メニューを開く">
-      <img src="assets/img/kitakuma2.png" alt="メニュー" width="30" height="30">
-    </button> -->
-  </div>
-</header>
-
-<!-- 右スライドのドロワー -->
-<aside id="drawer" class="drawer" aria-hidden="true">
-  <div class="drawer-header">
-    <strong>メニュー</strong>
-    <button class="drawer-close" aria-label="メニューを閉じる">×</button>
-  </div>
-  <nav class="drawer-nav" role="navigation">
-    <ul class="tab-list">
-      <li><a class="tab" href="index.html" aria-current="page">ホーム</a></li> <li><a class="tab" href="about.html">発表団体紹介</a></li> <li><a class="tab" href="fest.html">フェスティバル</a><li><a class="tab" href="tickets.html">チケット購入</a></li> <li><a class="tab active" href="camp.html">合宿</a></li> <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a></li> </li> <li><a class="tab" href="committee.html">実行委員紹介</a></li> <li><a class="tab" href="mypage.html">マイページ</a></li>
-    </ul>
-  </nav>
-  <!-- キャラクター（ドロワー下部） -->
-  <div class="drawer-character" aria-hidden="true">
-    <img id="drawerCharacter" src="assets/img/drkitakuma.png" alt="">
-  </div>
-</aside>
-<div id="backdrop" class="backdrop" hidden></div>
-
-<main class="container"><h1>合宿</h1>
-  <div class="concept center size20">合宿コンセプト</div>
-  <div class="center size30">
-    <div class="font_concept">
-  &emsp;『ROOT×ROUTE』
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/img/favicon.JPG" alt="わかもの in 北関 ロゴ" width="36" height="36">
+        <span class="brand-text">2025 わかもの in 北関</span>
+      </a>
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">☰</button>
+      <!--<button class="nav-toggle" aria-label="メニューを開く">
+          <img src="assets/img/kitakuma2.png" alt="メニュー" width="30" height="30">
+        </button> -->
     </div>
-  </div>
-  <div class="cp_box1">
-  <input id="cp01" type="checkbox">
-  <label for="cp01"></label>
-  <div class="cp_container">
-<p>
-  我々はいま、ラボの世界の最年長と社会の最年少の狭間で生きている。このジレンマを抜けた先には、今よりも重大な責任や選択が待っているだろう。大学生という子どもから社会人へと変わっていく変遷期を経て未来を強く進むには、自身の武器や経験を生かして自分は何者かということを表していく必要があると考える。
-  同じ世代を生きる全国の仲間が集まるわかもの合宿。ここには異なる背景を持つ人同士で刺激をし合い、視野を広げ、自己理解を深めるきっかけを生んでくれる。なにより我々はラボで多様な他者との出会い、テーマ活動で目にした多くの表現から得た学びをもとに“今の自分”が形作られている。そのすべてがこれからの人生を歩むためのわたしらしさになる。
-  北関が提供するわかもの合宿では対話を通して自身を見つめなおし、気づきを表現へとつなげる。そうしてこれからのわたしの輪郭を少しずつ描いていく時間にしていく。参加者が未来を生きる自信を得るきっかけとなってほしい。
-</p>
-</div>
-</div><br>
+  </header>
 
-  <hr class="line">
-  <div class="space_big"></div>
-  <section class="venue">
-  <div class="info">
-    <div class="font_wide center size20">会場情報</div>
-    <div class="space_min"></div>
-    <div class="summary">
-    <div><span class="underline">日時</span>：2026年　3/1(日)～3日(火)</div>
-    <div><span class="underline">場所</span>：ホテルヘリテイジ　四季の湯温泉(埼玉県熊谷市)</div>
-    <div class="text_indent3">〒360-0103埼玉県熊谷市小江川228</div>
-      <a href="https://www.hotel-heritage.co.jp/"><div class="text_blue text_indent3">https://www.hotel-heritage.co.jp/</div></a>
+  <!-- 右スライドのドロワー -->
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <strong>メニュー</strong>
+      <button class="drawer-close" aria-label="メニューを閉じる">×</button>
     </div>
-    <p>
-    <div class="underline">アクセス</div>
-    <div>【お車】</div>
-    <div>▶東松山ICより熊谷方面へ約5.3㎞「滑川中学校北」交差点を左折、次の「滑川町役場北」を右折、直進役3.9km </div>
-    <br>
-    <div>【公共交通機関】</div>
-    <div>▶電車：東武東上線 森林公園駅で下車、路線バスorタクシーで約15分</div>
-    <div>▶路線バス：森林公園駅-ふかや花園プレミアム・アウトレット線ホテルヘリテイジで下車運賃380円(交通系IC370円)</div>
-    </p>
+    <nav class="drawer-nav" role="navigation">
+      <ul class="tab-list">
+        <li><a class="tab" href="index.html" aria-current="page">ホーム</a></li>
+        <li><a class="tab" href="about.html">発表団体紹介</a></li>
+        <li><a class="tab" href="fest.html">フェスティバル</a>
+        <li><a class="tab" href="tickets.html">チケット購入</a></li>
+        <li><a class="tab active" href="camp.html">合宿</a></li>
+        <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a></li>
+        </li>
+        <li><a class="tab" href="committee.html">実行委員紹介</a></li>
+        <li><a class="tab" href="mypage.html">マイページ</a></li>
+      </ul>
+    </nav>
+    <!-- キャラクター（ドロワー下部） -->
+    <div class="drawer-character" aria-hidden="true">
+      <img id="drawerCharacter" src="assets/img/drkitakuma.png" alt="">
     </div>
-  </div>
+  </aside>
+  <div id="backdrop" class="backdrop" hidden></div>
 
-    <div class="map">
-      <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8761.607028088709!2d139.33476652095146!3d36.09336012071876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ed5dc05dccf49%3A0x6d2d5c72994bf852!2z5Zub5a2j44Gu5rmv5rip5rOJ44Ob44OG44Or44OY44Oq44OG44Kk44K4!5e0!3m2!1sja!2sjp!4v1758850084837!5m2!1sja!2sjp" 
-    width="600"
-    height="450"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-</section>
-<div class="space_big"></div>
-  <!--
-    <h2>タイムテーブル</h2><br>
-    タイムテーブルの画像を貼り付けたい　キャンプの予定表みたいなイメージ -->
-  <hr class="line">
-  <div class="space_big"></div>
+  <main class="container">
+    <h1>合宿</h1>
+    <div class="concept center size20">合宿コンセプト</div>
+    <div class="center size30">
+      <div class="font_concept">
+        &emsp;『ROOT×ROUTE』
+      </div>
+    </div>
+    <div class="cp_box1">
+      <input id="cp01" type="checkbox">
+      <label for="cp01"></label>
+      <div class="cp_container">
+        <p>
+          我々はいま、ラボの世界の最年長と社会の最年少の狭間で生きている。このジレンマを抜けた先には、今よりも重大な責任や選択が待っているだろう。大学生という子どもから社会人へと変わっていく変遷期を経て未来を強く進むには、自身の武器や経験を生かして自分は何者かということを表していく必要があると考える。
+          同じ世代を生きる全国の仲間が集まるわかもの合宿。ここには異なる背景を持つ人同士で刺激をし合い、視野を広げ、自己理解を深めるきっかけを生んでくれる。なにより我々はラボで多様な他者との出会い、テーマ活動で目にした多くの表現から得た学びをもとに“今の自分”が形作られている。そのすべてがこれからの人生を歩むためのわたしらしさになる。
+          北関が提供するわかもの合宿では対話を通して自身を見つめなおし、気づきを表現へとつなげる。そうしてこれからのわたしの輪郭を少しずつ描いていく時間にしていく。参加者が未来を生きる自信を得るきっかけとなってほしい。
+        </p>
+      </div>
+    </div><br>
+
+    <hr class="line">
+    <div class="space_big"></div>
+    <section class="venue">
+      <div class="info">
+        <div class="font_wide center size20">会場情報</div>
+        <div class="space_min"></div>
+        <div class="summary">
+          <div><span class="underline">日時</span>：2026年　3/1(日)～3日(火)</div>
+          <div><span class="underline">場所</span>：ホテルヘリテイジ　四季の湯温泉(埼玉県熊谷市)</div>
+          <div class="text_indent3">〒360-0103埼玉県熊谷市小江川228</div>
+          <a href="https://www.hotel-heritage.co.jp/">
+            <div class="text_blue text_indent3">https://www.hotel-heritage.co.jp/</div>
+          </a>
+        </div>
+        <p>
+        <div class="underline">アクセス</div>
+        <div>【お車】</div>
+        <div>▶東松山ICより熊谷方面へ約5.3㎞「滑川中学校北」交差点を左折、次の「滑川町役場北」を右折、直進役3.9km </div>
+        <br>
+        <div>【公共交通機関】</div>
+        <div>▶電車：東武東上線 森林公園駅で下車、路線バスorタクシーで約15分</div>
+        <div>▶路線バス：森林公園駅-ふかや花園プレミアム・アウトレット線ホテルヘリテイジで下車運賃380円(交通系IC370円)</div>
+        </p>
+      </div>
+
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8761.607028088709!2d139.33476652095146!3d36.09336012071876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ed5dc05dccf49%3A0x6d2d5c72994bf852!2z5Zub5a2j44Gu5rmv5rip5rOJ44Ob44OG44Or44OY44Oq44OG44Kk44K4!5e0!3m2!1sja!2sjp!4v1758850084837!5m2!1sja!2sjp"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+    <div class="space_big"></div>
+    <!--
+        <h2>タイムテーブル</h2><br>
+        タイムテーブルの画像を貼り付けたい　キャンプの予定表みたいなイメージ
+      -->
+    <hr class="line">
+    <div class="space_big"></div>
     <div class="font_wide center size20">館内案内</div><!-- 会場のホームページから画像持ってくる -->
     <div class="space_big"></div>
     <div class="center">
-    <img src="assets/img/camp_map.jpg" style="width:80%; aspect-ratio:√2/1; overflow: hidden;">
+      <img src="assets/img/camp_map.jpg" style="width:80%; aspect-ratio:√2/1; overflow: hidden;">
     </div>
 
-</main>
-<footer class="site-footer">
-  <div class="container">
-    <nav class="footer-sns" aria-label="SNSリンク">
-      <a class="sns-btn sns-line" href="https://lin.ee/I1zqlAx" target="_blank" rel="noopener" aria-label="LINE公式">
-        <i class="fa-brands fa-line" aria-hidden="true"></i>
-      </a>
-      <a class="sns-btn sns-instagram" href="https://www.instagram.com/labo_wakamono/?igsh=anNoMGw0bGF4dDNz" target="_blank" rel="noopener" aria-label="Instagram">
-        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-      </a>
-      <a class="sns-btn sns-facebook" href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noopener" aria-label="Facebook">
-        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-      </a>
-    </nav>
+  </main>
 
-    <p>© <span id="year"></span> わかもの in 北関</p>
-  </div>
-</footer>
-<button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-sns" aria-label="SNSリンク">
+        <a class="sns-btn sns-line" href="https://lin.ee/I1zqlAx" target="_blank" rel="noopener" aria-label="LINE公式">
+          <i class="fa-brands fa-line" aria-hidden="true"></i>
+        </a>
+        <a class="sns-btn sns-instagram" href="https://www.instagram.com/labo_wakamono/?igsh=anNoMGw0bGF4dDNz"
+          target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="sns-btn sns-facebook" href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noopener"
+          aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+      </nav>
 
+      <p>© <span id="year"></span> わかもの in 北関</p>
+    </div>
+  </footer>
+  <button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
 </body>
+
 </html>
