@@ -836,13 +836,13 @@ h2 strong {
 /* 実行委員紹介 */
 
 .committee-nav {
-  background: #fff;
+  background:none;
   border-bottom: 1px solid var(--border);
   padding: 10px 0;
   margin-bottom: 30px;
   text-align: center;
   position: sticky; /* ← スクロールしても上に固定 */
-  top: 60px;        /* ヘッダーの高さに合わせて調整 */
+  top: 70px;        /* ヘッダーの高さに合わせて調整 */
   z-index: 50;
 }
 
