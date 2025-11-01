@@ -166,9 +166,14 @@ a {
   overflow: hidden;
   border-top: 1px solid var(--border);
 }
+<<<<<<< Updated upstream
 
 .drawer-character img {
   width: min(120px, 70%);
+=======
+.drawer-character img{
+  width: min(140px, 70%);
+>>>>>>> Stashed changes
   height: auto;
   transform: translateY(12px) scale(.98);
   opacity: 0;
@@ -836,7 +841,48 @@ h2 strong {
 
 /* 実行委員紹介 */
 
+<<<<<<< Updated upstream
 .group-title {
+=======
+.committee-nav {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+  margin-bottom: 30px;
+  text-align: center;
+  position: sticky; /* ← スクロールしても上に固定 */
+  top: 60px;        /* ヘッダーの高さに合わせて調整 */
+  z-index: 50;
+}
+
+.committee-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+}
+
+.committee-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #b91c1c;
+  background: #fff;
+  border: 2px solid #b91c1c;
+  border-radius: 20px;
+  padding: 6px 14px;
+  transition: all 0.2s ease;
+}
+
+.committee-nav a:hover {
+  background: #b91c1c;
+  color: #fff;
+}
+
+.group-title{
+>>>>>>> Stashed changes
   margin: 24px 0 8px;
   font-size: 1.25rem;
   font-weight: 800;
@@ -1040,6 +1086,7 @@ h2 strong {
   animation: caretBlink .9s steps(1, end) infinite;
 }
 
+<<<<<<< Updated upstream
 @keyframes caretBlink {
 
   0%,
@@ -1050,6 +1097,65 @@ h2 strong {
   50% {
     opacity: 0;
   }
+=======
+.mainanounce {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+  border-top: 2px solid var(--border);
+}
+
+.news-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.news-list li a {
+  color: #1d4ed8;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.news-list li a:hover {
+  border-bottom: 1px solid #1d4ed8;
+}
+
+.news-list .date {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-left: 6px;
+}
+
+/* 「New」バッジ */
+.new {
+  color: white;
+  background: #e11d48;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  margin-left: 6px;
+}
+
+
+@keyframes caretBlink{
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+>>>>>>> Stashed changes
 }
 
 
@@ -1099,6 +1205,7 @@ h2 strong {
 
 
 /* スマホ最適化 */
+<<<<<<< Updated upstream
 @media (max-width:560px) {
   .brand {
     gap: 8px;
@@ -1135,6 +1242,20 @@ h2 strong {
   }
 
   .countdown .figure>span,
+=======
+@media (max-width:560px){
+  .brand{ gap: 8px; }
+  .brand-logo{ width: 32px; height: 32px; }
+  .brand-text{ font-size: .95rem; }
+  .drawer-character{ min-height: 110px; }
+  .drawer-character img{ width: min(170px, 80%); }
+  .wrap .countdown-panel.h1{ font-size: small;}/* スマホ用文字サイズ調整 */
+  .countdown-panel .h1{ font-size: small;}/* スマホ用文字サイズ調整 */
+  .countdown .bloc-time{ padding-right:0; }
+  .countdown .bloc-time:not(:last-child)::after{ display:none; }
+  .countdown .figure{ width:72px; height:82px; }
+  .countdown .figure > span,
+>>>>>>> Stashed changes
   .countdown .figure .top,
   .countdown .figure .bottom,
   .countdown .figure .top-back span,

@@ -160,13 +160,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // ページ → 画像パスのマップ（必要なものだけ用意してOK）
   const charMap = {
     'home'     : 'assets/img/drkitakuma.png',
-    'about'    : 'assets/img/drkitakuma.png',
-    'fest'     : 'assets/img/drkitakuma.png',
-    'camp'     : 'assets/img/drkitakuma.png',
-    'kitakan'  : 'assets/img/drkitakuma.png',
-    'tickets'  : 'assets/img/drkitakuma.png',
-    'committee': 'assets/img/drkitakuma.png',
-    'mypage'   : 'assets/img/drkitakuma.png',
+    'about'    : 'assets/img/kitakumaver2.png',
+    'fest'     : 'assets/img/feskitakuma.png',
+    'camp'     : 'assets/img/gasshukukitakuma.png',
+    'kitakan'  : 'assets/img/kouhoukitakuma.png',
+    'tickets'  : 'assets/img/soumukitakuma.png',
+    'committee': 'assets/img/kitakuma.png',
+    'mypage'   : 'assets/img/kouhoukitakuma.png',
     'identity' : 'assets/img/drkitakuma.png'
   };
 
