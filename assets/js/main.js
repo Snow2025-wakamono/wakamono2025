@@ -161,12 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const charMap = {
     'home'     : 'assets/img/drkitakuma.png',
     'about'    : 'assets/img/kitakumaver2.png',
-    'fest'     : 'assets/img/feskitakuma.png',
-    'camp'     : 'assets/img/gasshukukitakuma.png',
-    'kitakan'  : 'assets/img/kouhoukitakuma.png',
-    'tickets'  : 'assets/img/soumukitakuma.png',
+    'fest'     : 'assets/img/feskitakuma.PNG',
+    'camp'     : 'assets/img/gasshukukitakuma.PNG',
+    'kitakan'  : 'assets/img/kouhoukitakuma.PNG',
+    'tickets'  : 'assets/img/soumukitakuma.PNG',
     'committee': 'assets/img/kitakuma.png',
-    'mypage'   : 'assets/img/kouhoukitakuma.png',
+    'mypage'   : 'assets/img/kouhoukitakuma.PNG',
   };
 
   const src = charMap[page] || 'assets/img/drkitakuma.png';
