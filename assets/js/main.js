@@ -167,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'tickets'  : 'assets/img/soumukitakuma.png',
     'committee': 'assets/img/kitakuma.png',
     'mypage'   : 'assets/img/kouhoukitakuma.png',
-    'identity' : 'assets/img/drkitakuma.png'
   };
 
   const src = charMap[page] || 'assets/img/drkitakuma.png';
