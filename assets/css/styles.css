@@ -972,6 +972,7 @@ h2 strong {
   color: #111;
   margin: 0;
   text-align: center;
+  text-transform: none; /* ← 大文字変換を解除 */
 }
 
 .member-comment {
