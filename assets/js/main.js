@@ -240,3 +240,10 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   tick();
 });
+
+// キャラクターページ
+document.querySelectorAll(".char-card").forEach(card=>{
+  card.addEventListener("click", ()=>{
+    card.classList.toggle("active");
+  });
+});

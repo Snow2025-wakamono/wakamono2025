@@ -1134,6 +1134,72 @@ h2 strong {
   margin-left: 6px;
 }
 
+/* キャラクター紹介ページ */
+.characters-page {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.characters-page .char-hero h1 {
+  font-family: Impact, sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  color: var(--primary);
+  text-shadow: 2px 2px 0 #fff, 4px 4px 8px rgba(0,0,0,0.2);
+}
+
+.characters-page .char-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 24px;
+  width: min(1100px, 90%);
+  margin: 40px auto;
+}
+
+.characters-page .char-card {
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+/* ★ ここからが他ページのカードとぶつかっていた部分 */
+.characters-page .card-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transition: transform .7s;
+  transform-style: preserve-3d;
+}
+
+.characters-page .char-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.characters-page .card-front,
+.characters-page .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.characters-page .card-front img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.characters-page .card-back {
+  background: #fffaf5;
+  transform: rotateY(180deg);
+}
+
+
 
 @keyframes caretBlink{
   0%, 100% { opacity: 1; }
@@ -1218,4 +1284,22 @@ h2 strong {
   .member-card {
     max-width: 320px;
   }
+
+  .characters-page .char-grid{
+    gap: 16px;
+  }
+
+  .characters-page .card-inner{
+    height: 240px; /* 少し低めで収まりが良い */
+  }
+
+  .characters-page .card-front,
+  .characters-page .card-back{
+    padding: 10px;
+  }
+
+  .characters-page .card-front img{
+    border-radius: 10px;
+  }
+  
 }
