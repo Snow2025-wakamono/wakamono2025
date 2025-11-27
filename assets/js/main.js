@@ -241,9 +241,64 @@ document.addEventListener('DOMContentLoaded', () => {
   tick();
 });
 
-// キャラクターページ
-document.querySelectorAll(".char-card").forEach(card=>{
-  card.addEventListener("click", ()=>{
-    card.classList.toggle("active");
+// === キャラクター紹介ページ用：ページ内スクロール & ナビ強調 ===
+document.addEventListener('DOMContentLoaded', () => {
+  // .characters-page が無ければ何もしない（他ページに影響しないように）
+  const charPage = document.querySelector('.characters-page');
+  if (!charPage) return;
+
+  const buttons  = charPage.querySelectorAll('.char-nav button');
+  const sections = charPage.querySelectorAll('.char-section');
+
+  if (!buttons.length || !sections.length) return;
+
+  // アクティブ切り替え用の関数
+  function setActiveButton(targetId) {
+    buttons.forEach(btn => {
+      const isTarget = btn.dataset.target === targetId;
+      btn.classList.toggle('is-active', isTarget);
+    });
+  }
+
+  // クリックしたとき：スクロール + ハイライト変更
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetSelector = btn.dataset.target;
+      const section = document.querySelector(targetSelector);
+      if (!section) return;
+
+      const rect   = section.getBoundingClientRect();
+      const offset = window.scrollY + rect.top - 90; // ヘッダー分だけずらす
+
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+      });
+
+      // クリック時点でもハイライト変更
+      setActiveButton(targetSelector);
+    });
   });
+
+  // スクロール量に応じて「今見ているキャラ」のボタンをハイライト
+  function handleScroll() {
+    const y = window.scrollY;
+    let activeId = null;
+
+    sections.forEach(sec => {
+      const top    = sec.offsetTop - 120;           // ヘッダーぶん調整
+      const bottom = top + sec.offsetHeight;
+      if (y >= top && y < bottom) {
+        activeId = '#' + sec.id;
+      }
+    });
+
+    if (activeId) {
+      setActiveButton(activeId);
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // ページ読み込み直後にも一回判定
 });
+

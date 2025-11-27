@@ -10,7 +10,7 @@
 
 </head>
 <link rel="icon" href="assets/img/favicon.JPG" type="image/png">
-<body data-page="character">
+<body data-page="characters">
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
@@ -42,108 +42,193 @@
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
-<main class="characters-page">
+<main class="container characters-page">
 
+  <!-- ヒーロー（タイトル部分） -->
   <section class="char-hero">
-    <h1>キャラクター紹介</h1>
-    <p>わかもの in 北関を盛り上げる仲間たち！</p>
+    <p class="char-label-en">CHARACTER</p>
+    <h1 class="char-title">キャラクター紹介</h1>
+    <p class="char-sub">
+      「2025 わかもの in 北関」を盛り上げる、6体のキャラクターたち。<br>
+      それぞれの個性や役割をのぞいてみよう！
+    </p>
   </section>
 
-  <section class="char-grid">
+  <!-- キャラ一覧ナビ -->
+  <nav class="char-nav" aria-label="キャラクターナビ">
+    <ul>
+      <li><button type="button" data-target="#char-1">きたくまちゃん</button></li>
+      <li><button type="button" data-target="#char-2">そうむちゃん</button></li>
+      <li><button type="button" data-target="#char-3">ふぇすちゃん</button></li>
+      <li><button type="button" data-target="#char-4">がっしゅくん</button></li>
+      <li><button type="button" data-target="#char-5">こ～ほ～ちゃん</button></li>
+      <li><button type="button" data-target="#char-6">きょうりょくさん</button></li>
+    </ul>
+  </nav>
 
-    <!-- キャラ 1 -->
-    <article class="char-card flip-card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="assets/img/chkitakuma.png" alt="きたくまちゃん">
-          <h2>きたくまちゃん</h2>
+  <!-- 1: きたくまちゃん -->
+  <section id="char-1" class="char-section char-secret">
+    <div class="char-visual">
+      <img src="assets/img/chkitakuma.png" alt="きたくまちゃんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">？？？</p>
+      <h2 class="char-name">きたくまちゃん</h2>
+      <p class="char-copy">当日のお楽しみ。イベントのどこかで会えるかも…？</p>
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>全体の調整・スケジュール管理・当日サポート</dd>
         </div>
-        <div class="card-back">
-          <p>性格：</p>
-          <p>特技：</p>
-          <p>好きなもの：</p>
+        <div>
+          <dt>性格</dt><dd>しっかり者だけど、ちょっとドジな一面もある。</dd>
         </div>
-      </div>
-    </article>
+        <div>
+          <dt>好きなもの</dt><dd>チェックリスト、きれいなノート、あったかい飲み物。</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「みんなが安心して楽しめるように、ぜんぶ準備しておくね！」</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
 
-    <!-- キャラ 2 -->
-    <article class="char-card flip-card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="assets/img/soumukitakuma.PNG" alt="そうむちゃん">
-          <h2>そうむちゃん</h2>
-        </div>
-        <div class="card-back">
-          <p>性格：</p>
-          <p>特技：</p>
-          <p>好きなもの：</p>
-        </div>
-      </div>
-    </article>
+  <!-- 2: そうむちゃん -->
+  <section id="char-2" class="char-section is-alt">
+    <div class="char-visual">
+      <img src="assets/img/soumukitakuma.PNG" alt="そうむちゃんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">総務担当</p>
+      <h2 class="char-name">そうむちゃん</h2>
+      <p class="char-copy">みんなの「困った！」をそっと支える、頼れるまとめ役。</p>
 
-    <!-- キャラ 3 -->
-    <article class="char-card flip-card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="assets/img/feskitakuma.PNG" alt="ふぇすちゃん">
-          <h2>ふぇすちゃん</h2>
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>全体の調整・スケジュール管理・当日サポート</dd>
         </div>
-        <div class="card-back">
-          <p>性格：</p>
-          <p>特技：</p>
-          <p>好きなもの：</p>
+        <div>
+          <dt>性格</dt><dd>しっかり者だけど、ちょっとドジな一面もある。</dd>
         </div>
-      </div>
-    </article>
+        <div>
+          <dt>好きなもの</dt><dd>チェックリスト、きれいなノート、あったかい飲み物。</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「みんなが安心して楽しめるように、ぜんぶ準備しておくね！」</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
 
-    <!-- キャラ 4 -->
-    <article class="char-card flip-card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="assets/img/gasshukukitakuma.PNG" alt="がっしゅくん">
-          <h2>がっしゅくん</h2>
-        </div>
-        <div class="card-back">
-          <p>性格：</p>
-          <p>特技：</p>
-          <p>好きなもの：</p>
-        </div>
-      </div>
-    </article>
+  <!-- 3: ふぇすちゃん -->
+  <section id="char-3" class="char-section">
+    <div class="char-visual">
+      <img src="assets/img/feskitakuma.PNG" alt="ふぇすちゃんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">フェス担当</p>
+      <h2 class="char-name">ふぇすちゃん</h2>
+      <p class="char-copy">ステージと音楽がだいすきな、にぎやか担当。</p>
 
-    <!-- キャラ 5 -->
-    <article class="char-card flip-card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="assets/img/kouhoukitakuma.PNG" alt="こ～ほ～ちゃん">
-          <h2>こ～ほ～ちゃん</h2>
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>フェスティバルの企画・進行・盛り上げ係</dd>
         </div>
-        <div class="card-back">
-          <p>性格：</p>
-          <p>特技：</p>
-          <p>好きなもの：</p>
+        <div>
+          <dt>性格</dt><dd>明るく元気！ でも本番前はちょっとだけ緊張する。</dd>
         </div>
-      </div>
-    </article>
+        <div>
+          <dt>好きなもの</dt><dd>スポットライト、拍手、みんなの笑顔。</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「いっしょに、いちばんのフェスにしよー！！！」</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
 
-    <!-- キャラ 6 -->
-    <article class="char-card flip-card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="assets/img/kyouryokutaikitakuma.PNG" alt="きょうりょくさん">
-          <h2>きょうりょくさん</h2>
-        </div>
-        <div class="card-back">
-          <p>性格：</p>
-          <p>特技：</p>
-          <p>好きなもの：</p>
-        </div>
-      </div>
-    </article>
+  <!-- 4: がっしゅくん -->
+  <section id="char-4" class="char-section is-alt">
+    <div class="char-visual">
+      <img src="assets/img/gasshukukitakuma.PNG" alt="がっしゅくんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">合宿担当</p>
+      <h2 class="char-name">がっしゅくん</h2>
+      <p class="char-copy">夜のおしゃべりと、みんなで過ごす時間がだいすき。</p>
 
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>合宿の企画・運営・夜の見守り係</dd>
+        </div>
+        <div>
+          <dt>性格</dt><dd>おっとりしていて話しやすい、聞き役タイプ。</dd>
+        </div>
+        <div>
+          <dt>好きなもの</dt><dd>星空、焚き火、みんなとの「ないしょ話」。</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「夜もふくめて、まるごと全部、たのしもうね。」</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 5: こ～ほ～ちゃん -->
+  <section id="char-5" class="char-section">
+    <div class="char-visual">
+      <img src="assets/img/kouhoukitakuma.PNG" alt="こ～ほ～ちゃんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">広報担当</p>
+      <h2 class="char-name">こ～ほ～ちゃん</h2>
+      <p class="char-copy">「たのしい」を、ちゃんとみんなに届けたい！ 発信のプロ。</p>
+
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>SNS・チラシ・ホームページの情報発信</dd>
+        </div>
+        <div>
+          <dt>性格</dt><dd>マイペースだけど、好きなことには全力。</dd>
+        </div>
+        <div>
+          <dt>好きなもの</dt><dd>カメラ、スタンプ、いいね！ とリポスト。</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「#わかもの北関 で、感想たくさん教えてね！」</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 6: きょうりょくさん -->
+  <section id="char-6" class="char-section is-alt">
+    <div class="char-visual">
+      <img src="assets/img/kyouryokutaikitakuma.PNG" alt="きょうりょくさんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">協力隊</p>
+      <h2 class="char-name">きょうりょくさん</h2>
+      <p class="char-copy">「手伝うよ」が口ぐせの、縁の下の力持ち。</p>
+
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>当日の全体サポート・困りごと相談・お手伝い全般</dd>
+        </div>
+        <div>
+          <dt>性格</dt><dd>やさしくて、相手をよく見て動けるタイプ。</dd>
+        </div>
+        <div>
+          <dt>好きなもの</dt><dd>「ありがとう」の言葉と、みんなのほっとした顔。</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「なにかあったら、すぐ呼んでね。すぐ行くから！」</dd>
+        </div>
+      </dl>
+    </div>
   </section>
 
 </main>
+
 
 
 

@@ -1134,70 +1134,190 @@ h2 strong {
   margin-left: 6px;
 }
 
-/* キャラクター紹介ページ */
+/* =========================
+   キャラクター紹介ページ
+   ========================= */
 .characters-page {
-  padding: 40px 0;
-  text-align: center;
+  padding: 40px 0 50px;
 }
 
-.characters-page .char-hero h1 {
-  font-family: Impact, sans-serif;
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
-  color: var(--primary);
-  text-shadow: 2px 2px 0 #fff, 4px 4px 8px rgba(0,0,0,0.2);
+/* ヒーロー */
+.characters-page .char-hero{
+  text-align:center;
+  margin-bottom: 32px;
+}
+.characters-page .char-label-en{
+  font-size:.9rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 4px;
+}
+.characters-page .char-title{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', system-ui;
+  font-size:clamp(2.4rem, 6vw, 3.8rem);
+  margin:0 0 8px;
+  color:var(--primary);
+  text-shadow:2px 2px 0 #fff, 4px 4px 10px rgba(0,0,0,.18);
+}
+.characters-page .char-sub{
+  margin:0;
+  font-size:clamp(.95rem, 2.3vw, 1.1rem);
+  color:var(--muted);
 }
 
-.characters-page .char-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 24px;
-  width: min(1100px, 90%);
-  margin: 40px auto;
+/* サイドナビ風リンク（上に配置） */
+.characters-page .char-nav{
+  margin:28px auto 32px;
+  max-width:780px;
+}
+.characters-page .char-nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+}
+.characters-page .char-nav button{
+  border-radius:999px;
+  border:1px solid var(--border);
+  padding:6px 14px;
+  background:#fff;
+  font-size:.95rem;
+  cursor:pointer;
+  transition:background .2s, color .2s, border-color .2s, transform .1s;
 }
 
-.characters-page .char-card {
-  cursor: pointer;
-  perspective: 1000px;
+.characters-page .char-nav button:hover{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+  transform:translateY(-1px);
 }
 
-/* ★ ここからが他ページのカードとぶつかっていた部分 */
-.characters-page .card-inner {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  transition: transform .7s;
-  transform-style: preserve-3d;
+.characters-page .char-nav button.is-active{
+  background:#b91c1c;
+  color:#fff;
+  border-color:#b91c1c;
 }
 
-.characters-page .char-card:hover .card-inner {
-  transform: rotateY(180deg);
+/* キャラセクション本体 */
+.characters-page .char-section{
+  display:flex;
+  align-items:stretch;
+  gap:28px;
+  padding:24px 20px;
+  border-radius:20px;
+  background:#fff;
+  box-shadow:0 12px 40px rgba(15,23,42,.08);
+  margin:0 auto 28px;
+  max-width:1000px;
+}
+.characters-page .char-section.is-alt{
+  background:linear-gradient(135deg, #fff7f2, #ffe6ea);
+}
+.characters-page .char-section.char-secret{
+  background:linear-gradient(135deg, #e5ecff, #f2f7ff);
 }
 
-.characters-page .card-front,
-.characters-page .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 8px;
+/* 画像側 */
+.characters-page .char-visual{
+  flex:1 1 40%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.characters-page .char-visual img{
+  max-width:100%;
+  height:auto;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(15,23,42,.18);
 }
 
-.characters-page .card-front img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
+/* プロフィール側 */
+.characters-page .char-profile{
+  flex:1 1 60%;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.characters-page .char-tag{
+  display:inline-block;
+  font-size:.8rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#6b7280;
+  background:#e5e7eb;
+  border-radius:999px;
+  padding:3px 12px;
+  align-self:flex-start;
+}
+.characters-page .char-name{
+  font-size:clamp(1.6rem, 4vw, 2.2rem);
+  margin:2px 0 4px;
+}
+.characters-page .char-copy{
+  margin:0 0 10px;
+  font-weight:500;
+}
+.characters-page .char-note{
+  margin-top:10px;
+  color:#334155;
 }
 
-.characters-page .card-back {
-  background: #fffaf5;
-  transform: rotateY(180deg);
+/* プロフィール項目表っぽく */
+.characters-page .char-table{
+  margin:4px 0 0;
+  padding:0;
 }
+.characters-page .char-table > div{
+  display:flex;
+  gap:10px;
+  padding:6px 0;
+  border-bottom:1px dashed rgba(148,163,184,.6);
+}
+.characters-page .char-table > div:last-child{
+  border-bottom:none;
+}
+.characters-page .char-table dt{
+  min-width:80px;
+  font-weight:600;
+  color:#475569;
+}
+.characters-page .char-table dd{
+  margin:0;
+  flex:1;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px){
+  .characters-page .char-section{
+    flex-direction:column;
+    padding:18px 14px;
+  }
+  .characters-page .char-profile{
+    order:2;
+  }
+  .characters-page .char-visual{
+    order:1;
+  }
+}
+
+@media (max-width: 480px){
+  .characters-page .char-section{
+    margin-bottom:20px;
+  }
+  .characters-page .char-nav ul{
+    gap:6px;
+  }
+  .characters-page .char-nav button{
+    font-size:.8rem;
+    padding:5px 10px;
+  }
+}
+
 
 
 
@@ -1283,23 +1403,6 @@ h2 strong {
 
   .member-card {
     max-width: 320px;
-  }
-
-  .characters-page .char-grid{
-    gap: 16px;
-  }
-
-  .characters-page .card-inner{
-    height: 240px; /* 少し低めで収まりが良い */
-  }
-
-  .characters-page .card-front,
-  .characters-page .card-back{
-    padding: 10px;
-  }
-
-  .characters-page .card-front img{
-    border-radius: 10px;
   }
   
 }
