@@ -302,3 +302,4 @@ document.addEventListener('DOMContentLoaded', () => {
   handleScroll(); // ページ読み込み直後にも一回判定
 });
 
+$("slide-items").slick();

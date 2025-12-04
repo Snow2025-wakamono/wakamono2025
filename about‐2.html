@@ -8,6 +8,12 @@
 <script defer src="assets/js/main.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<link rel="stylesheet" href="js/plugins/slick/slick.css">
+<link rel="stylesheet" href="js/plugins/slick/slick-theme.css">
+<!-- js -->
+<script src="assets/js/library/jquery-3.7.1.min.js"></script>
+<script src="assets/js/plugins/slick/slick.min.js"></script>
+
 </head>
 <link rel="icon" href="assets/img/favicon.JPG" type="image/png">
 <body data-page="about">
@@ -61,6 +67,18 @@
     <p>中国</p>
     <p>九州</p>
   </div>
+
+  <div>
+    <article>
+      <section>
+        <ul class="slide-items">
+          <li><a href="#content1"><img src="assets/img/Comingski.png" class="hero-logo container"></a></li>
+          <li><a href="#content2"><img src="assets/img/Comingboard.png" class="hero-logo"></a></li>
+          <li><a href="#content3"><img src="assets/img/ComingW.png" class="hero-logo"></a></li>
+        </ul>
+      </section>
+    </article>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -83,4 +101,12 @@
 <button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
 
 </body>
+<script type="text/javascript">
+
+$(".slide-items").slick({
+  arrows: true, // 矢印
+  dots: true, // インジケーター
+});
+
+</script>
 </html>

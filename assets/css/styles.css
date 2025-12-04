@@ -1069,6 +1069,24 @@ h2 strong {
   margin: 30px;
 }
 
+slide-items {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+.slide-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+.slick-dots li button:before {
+  font-size: 12px;
+  top: 6px;
+}
 
 /*coming soon タイピングエフェクト*/
 /* タイプ中のカーソル（疑似要素） */
