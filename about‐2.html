@@ -8,14 +8,59 @@
 <script defer src="assets/js/main.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<link rel="stylesheet" href="js/plugins/slick/slick.css">
-<link rel="stylesheet" href="js/plugins/slick/slick-theme.css">
+
+<link rel="stylesheet" href="assets/js/plugins/slick/slick.css">
+<link rel="stylesheet" href="assets/js/plugins/slick/slick-theme.css">
 <!-- js -->
 <script src="assets/js/library/jquery-3.7.1.min.js"></script>
 <script src="assets/js/plugins/slick/slick.min.js"></script>
 
 </head>
 <link rel="icon" href="assets/img/favicon.JPG" type="image/png">
+
+<style>
+  .slide-items {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+.slide-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+.slick-dots li button:before {
+  font-size: 12px;
+  top: 6px;
+}
+
+.content {
+    align-items: flex-start;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.content_img {
+    max-width: 160px;
+}
+
+.status {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.status dt, .status dd {
+    width: 100px;
+}
+</style>
+
 <body data-page="about">
 <header class="site-header">
   <div class="container header-inner">
@@ -72,9 +117,9 @@
     <article>
       <section>
         <ul class="slide-items">
-          <li><a href="#content1"><img src="assets/img/Comingski.png" class="hero-logo container"></a></li>
-          <li><a href="#content2"><img src="assets/img/Comingboard.png" class="hero-logo"></a></li>
-          <li><a href="#content3"><img src="assets/img/ComingW.png" class="hero-logo"></a></li>
+          <li><a href="#content1"><img src="assets/img/Comingski.png"></a></li>
+          <li><a href="#content2"><img src="assets/img/Comingboard.png"></a></li>
+          <li><a href="#content3"><img src="assets/img/ComingW.png"></a></li>
         </ul>
       </section>
     </article>
