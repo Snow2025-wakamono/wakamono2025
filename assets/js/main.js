@@ -334,7 +334,6 @@ function transform(section) {
     progress,
     maxScroll
   });
-s
   scrollSection.style.transform = `translateX(${-maxScroll * progress}px)`;
 }
 /*
