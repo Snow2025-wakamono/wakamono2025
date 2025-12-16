@@ -301,3 +301,54 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll);
   handleScroll(); // ページ読み込み直後にも一回判定
 });
+
+// 発表者団体、横スクロール
+const stickySections = [...document.querySelectorAll('.contents')];
+
+window.addEventListener('scroll', () => {
+  for (let i = 0; i < stickySections.length; i++) {
+    transform(stickySections[i]);
+  }
+});
+
+function transform(section) {
+  const offsetTop = section.parentElement.offsetTop;
+  const scrollSection = section.querySelector('.horizontal_scroll');
+
+  const scrollWidth = scrollSection.scrollWidth;
+  const windowWidth = window.innerWidth;
+  const maxScroll = scrollWidth - windowWidth;
+
+  const picture = section.parentElement;
+  const totalHeight = picture.offsetHeight;
+
+  let rawProgress = (window.scrollY - offsetTop) / totalHeight;
+  let progress = Math.min(Math.max(rawProgress, 0), 1);
+
+  // デバッグログ
+  console.log({
+    scrollY: window.scrollY,
+    offsetTop,
+    totalHeight,
+    rawProgress,
+    progress,
+    maxScroll
+  });
+s
+  scrollSection.style.transform = `translateX(${-maxScroll * progress}px)`;
+}
+/*
+function autoHeight() {
+  const picture = document.querySelector('.picture');
+  const items = document.querySelectorAll('.pic');
+
+  // 要素数× 100vh
+  const totalHeight = (items.length - 2) * window.innerHeight;
+  picture.style.height = `${totalHeight}px`;
+}
+
+// 初期化
+autoHeight();
+// 画面サイズが変わったら再計算
+window.addEventListener('resize', autoHeight);
+*/

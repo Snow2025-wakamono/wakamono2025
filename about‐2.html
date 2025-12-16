@@ -59,6 +59,52 @@
 .status dt, .status dd {
     width: 100px;
 }
+
+
+.picture {
+  height: 1000vh;
+}
+
+.picture .contents {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.picture .horizontal_scroll {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+}
+
+.picture .pic {
+  flex: 0 0 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture img {
+  width: 60vw;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+.picture p {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+
 </style>
 
 <body data-page="about">
@@ -120,10 +166,71 @@
           <li><a href="#content1"><img src="assets/img/Comingski.png"></a></li>
           <li><a href="#content2"><img src="assets/img/Comingboard.png"></a></li>
           <li><a href="#content3"><img src="assets/img/ComingW.png"></a></li>
+          <li><a href="#content4"><img src="assets/img/Comingski.png"></a></li>
+          <li><a href="#content5"><img src="assets/img/Comingboard.png"></a></li>
+          <li><a href="#content6"><img src="assets/img/ComingW.png"></a></li>
         </ul>
       </section>
     </article>
   </div>
+
+<section class="picture" id="scroll">
+    <div class="contents">
+        <div class="horizontal_scroll">
+
+            <div class="pic">
+                <img src="assets/img/Comingski.png" alt="1">
+                <p>北海道</p>
+            </div>
+
+            <div class="pic">
+                <img src="assets/img/Comingboard.png" alt="2">
+                <p>東北</p>
+            </div>
+
+            <div class="pic">
+                <img src="assets/img/ComingW.png" alt="3">
+                <p>北関東信越</p>
+            </div>
+
+            <div class="pic">
+                <img src="assets/img/Comingski.png" alt="4">
+                <p>東京</p>
+            </div>
+
+            <div class="pic">
+                <img src="assets/img/Comingboard.png" alt="5">
+                <p>千葉</p>
+            </div>
+
+            <div class="pic">
+                <img src="assets/img/ComingW.png" alt="6">
+                <p>神奈川</p>
+            </div>
+
+            <div class="pic">
+                <img src="assets/img/Comingski.png" alt="7">
+                <p>中部</p>
+            </div>
+
+            <div class="pic">
+                <img src="assets/img/Comingboard.png" alt="8">
+                <p>関西</p>
+            </div>
+
+            <div class="pic">
+                <img src="assets/img/ComingW.png" alt="9">
+                <p>中国</p>
+            </div>
+
+            <div class="pic">
+                <img src="assets/img/Comingboard.png" alt="10">
+                <p>九州</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 </main>
 
 <footer class="site-footer">
