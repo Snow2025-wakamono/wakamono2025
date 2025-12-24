@@ -1403,5 +1403,8 @@ h2 strong {
   .member-card {
     max-width: 320px;
   }
+  .characters-page .char-sub{
+  font-size:clamp(14px, 1.2vw, 18px);
+  }
   
 }
