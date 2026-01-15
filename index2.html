@@ -8,6 +8,88 @@
 <script defer src="assets/js/main.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<style>
+  .cp_box1 {
+    position: relative;
+  }
+
+  .cp_box1 input {
+    display: none;
+  }
+
+  /*開くためのボタンとテキストを隠すグラデーションの設定*/
+  .cp_box1 label {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    bottom: -10px;
+    width: 100%;
+    height: 140px;
+    /* グラデーションの高さ */
+    cursor: pointer;
+    text-align: center;
+    /* 以下グラデーションは背景を自身のサイトに合わせて設定してください */
+    background: linear-gradient(to bottom, rgba(250, 252, 252, 0) 0%, rgba(250, 252, 252, 0.95) 90%);
+  }
+
+  /* 開いた時にグラデーションを消す */
+  .cp_box1 input:checked+label {
+    background: inherit;
+  }
+
+  .cp_box1 input:checked+label {
+    display: none;
+  }
+
+  .cp_box1 .cp_container {
+    overflow: hidden;
+    height: 120px;
+    /* 開く前に見えている部分の高さ */
+    transition: all 0.5s;
+  }
+
+  /*続きをよむボタン*/
+  .cp_box1 label:after,
+  .cp_box1 label::before {
+    content: '';
+    position: absolute;
+    line-height: 2.5rem;
+  }
+
+  .cp_box1 label:after {
+    z-index: 2;
+    bottom: 5px;
+    width: 13em;
+    content: '続きをよむ';
+    color: #ffffff;
+    background: #1b2538;
+    border-radius: 20px;
+  }
+
+  .cp_box1 label::before {
+    position: absolute;
+    bottom: 38px;
+    left: calc(50% - 3.5em);
+    z-index: 3;
+    width: 10px;
+    height: 5px;
+    background: #ffffff;
+    clip-path: polygon(50% 100%, 0 0, 100% 0)
+  }
+
+  .cp_box1 input:checked+label:before {
+    left: calc(50% - 2.5em);
+    transform: scale(1, -1);
+  }
+
+  .cp_box1 input:checked~.cp_container {
+    height: auto;
+    transition: all 0.5s;
+  }
+</style>
+
 </head>
 <link rel="icon" href="assets/img/favicon.JPG" type="image/png">
 <body data-page="home">
@@ -157,6 +239,58 @@
 </section>
 
 <hr class="divider--soft">
+<h2 class="font_wide size30">
+  わかもののうた
+</h2>
+
+<div class="cp_box1">
+<input id="cp01" type="checkbox">
+<label for="cp01"></label>
+<div class="cp_container center">
+<p style="display:inline-block; text-align:left;">
+1.<br>
+こする目に うつる太陽<br>
+耳を澄ませば 無限の世界<br>
+まじり合う いろんな色<br>
+いつもの空には 月がほほえむ<br><br>
+
+ここまできた 大舞台<br>
+指の先まで とがらせて<br><br>
+
+たましい もえあがる<br>
+きらきら かがやける<br>
+みんなが 熱くなれるばしょ<br>
+ぼくらわかもの みんなのわかもの<br><br>
+
+2.<br>
+あたらしい芽に おおきな花<br>
+真っ白なキャンバス 彩るように<br>
+ひさしぶり はじめまして<br>
+つながる手と手が ほどけないように<br><br>
+
+立ち止まり もう一度<br>
+時間のすきまを とびこえて<br><br>
+
+ことばが あふれてる<br>
+きぼうが つむがれる<br>
+みんなが 笑顔になれるばしょ<br>
+ぼくらわかもの みんなのわかもの<br><br>
+
+空に咲く あざやかな雲<br>
+ひもを 結んで 走りだす<br>
+優しさ広げ 幸せ抱いて<br>
+この先 ゆたかであるように<br><br>
+
+君と あげる花火<br>
+こころを うつ瞬き<br>
+みんなが 夢見られるばしょ<br>
+ぼくらわかもの みんなのわかもの<br>
+</p>
+</div>
+</div>
+
+<hr class="divider--soft">
+
 <h2 class="font_wide size30">
   わかもののうた
 </h2>
