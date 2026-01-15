@@ -1290,6 +1290,135 @@ h2 strong {
   flex:1;
 }
 
+/* =========================
+   Tickets page (only)
+   ========================= */
+body[data-page="tickets"] .ticket-guide{
+  margin: 28px auto 10px;
+  width: min(900px, 100%);
+  padding: 18px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: #fff;
+}
+
+body[data-page="tickets"] .ticket-row{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 14px 18px;
+  align-items: start;
+  padding: 10px 0;
+}
+
+body[data-page="tickets"] .ticket-row-title{
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+body[data-page="tickets"] .ticket-row-body p{
+  margin: 6px 0;
+}
+
+body[data-page="tickets"] .ticket-list{
+  margin: 8px 0 0;
+  padding-left: 1.2em;
+}
+
+body[data-page="tickets"] .ticket-sep{
+  border: 0;
+  border-top: 1px dashed var(--border);
+  margin: 12px 0;
+  opacity: .9;
+}
+
+/* スマホは縦積み */
+@media (max-width: 640px){
+  body[data-page="tickets"] .ticket-row{
+    grid-template-columns: 1fr;
+  }
+  body[data-page="tickets"] .ticket-row-title{
+    font-size: 1.1rem;
+  }
+}
+
+
+.ticket-hero{
+  text-align:center;
+  padding:50px 10px 30px;
+}
+.ticket-hero h1{
+  font-size:clamp(2rem,6vw,3rem);
+}
+.ticket-lead{
+  color: #000000;
+  margin-bottom:20px;
+}
+
+.ticket-main-btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:999px;
+  background:var(--primary);
+  color:#fff;
+  font-size:1.1rem;
+  box-shadow:var(--shadow);
+  text-decoration:none;
+}
+.ticket-main-btn:hover{opacity:.9;}
+
+.ticket-info{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  margin:40px 0;
+}
+.ticket-card{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:16px;
+  background:#fff;
+  box-shadow:var(--shadow);
+}
+
+.ticket-steps,
+.ticket-notes{
+  max-width:720px;
+  margin:40px auto;
+}
+.ticket-steps ol{
+  padding-left:20px;
+}
+.ticket-notes ul{
+  padding-left:20px;
+}
+
+/* =========================
+   tickets.html 専用：文字をすべて黒
+   ========================= */
+body[data-page="tickets"] {
+  color: #000;
+}
+
+body[data-page="tickets"] p,
+body[data-page="tickets"] h1,
+body[data-page="tickets"] h2,
+body[data-page="tickets"] h3,
+body[data-page="tickets"] h4,
+body[data-page="tickets"] li,
+body[data-page="tickets"] dd,
+body[data-page="tickets"] dt,
+body[data-page="tickets"] a {
+  color: #000 !important;
+}
+
+/* チケットページ：ヘッダーのロゴ文字だけ白に戻す */
+body[data-page="tickets"] .site-header .brand-text{
+  color: #fff !important;
+}
+
+
 /* スマホ対応 */
 @media (max-width: 768px){
   .characters-page .char-section{
