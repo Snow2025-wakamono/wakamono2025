@@ -11,33 +11,11 @@
 </head>
 <link rel="icon" href="../assets/img/favicon.JPG" type="image/png">
 <style>
-  .venue {
-    display: flex;
-    /* 横並びにする */
-    gap: 20px;
-    /* 要素間の余白 */
-    align-items: flex-start;
-    /* 上揃え */
-    flex-wrap: wrap;
-    /* 画面が狭いときは折り返す */
-  }
+.container{
+  display:flex;
+  justify-content: space-around;
+}
 
-  .venue .info {
-    flex: 1 1 300px;
-    /* 最小300pxで残りは可変 */
-  }
-
-  .venue .map {
-    flex: 1 1 400px;
-    /* 最小400pxで残りは可変 */
-    aspect-ratio: 4 / 3;
-    /* 比率を固定 */
-  }
-
-  .venue .map iframe {
-    width: 100%;
-    height: 100%;
-  }
 </style>
 
 <body data-page="about">
@@ -81,29 +59,30 @@
 
 
 
-<main class="container">
-  <h1 class="center">北海道地区大学生年代表現活動</h1>
-  <!--集合写真（スライド？）-->
-  <!--発表するお話（絵本とかの写真入れたいかも）とあらすじ-->
-  <section class="venue">
-          <div class="info">
-    <img src="../assets/img/SK25.jpg" style="width:50%; aspect-ratio:1/√2; overflow: hidden;">
-    <p>『Chippiyak Kamui チピヤㇰカムイ』（SK25）</p>
-    </div>
-    <div class="font_wide center size20">あらすじ</div>
-    <p>
-      天界の神々からの言いつけで人間たちが下界で暮らせるかどうかを確かめにきたオオジシギは、下界の美しさ・楽しさに夢中になりその言いつけを忘れてしまう。約束を守らなかったオオジシギは果たしてどうなってしまうのか。
-      神様（カムイ）と共に生きてきた北海道のアイヌの人たちが、古くから語り継いできた物語です。
-    </p>
-  </section>
-  <p>
-    北海道地区です！地区として6年ぶりとなる「わかもの」の舞台。
-    わたしたち6人にとっては最初で最後のわかものフェスティバルです。
-    『 チピヤㇰカムイ』は約10分という短いライブラリですが、自然の壮麗さと神聖さ、アイヌの心、そして共生の大切さという、わたしたちがこの日本という土地で暮らしていく上で忘れてはならない教えがたくさん詰まったお話です。
-    北海道地区として最後の雄姿、豊かな北海道の魅力たっぷり、全身でお届けします！
+<main>
+  <h1>北海道地区大学生年代表現活動</h1>
+  <h2 class="center">『Chippiyak Kamui チピヤㇰカムイ』（SK25）</h2>
+  <p class="container">
+    北海道地区です！地区として6年ぶりとなる「わかもの」の舞台。<br>
+    わたしたち6人にとっては最初で最後のわかものフェスティバルです。<br>
+    『チピヤㇰカムイ』は約10分という短いライブラリーですが、自然の壮麗さと神聖さ、アイヌの心、そして共生の大切さという、わたしたちがこの日本という土地で暮らしていく上で忘れてはならない教えがたくさん詰まったお話です。<br>
+    北海道地区として最後の雄姿、豊かな北海道の魅力たっぷり、全身でお届けします！<br>
     オオジシギも言いつけを忘れてしまう程の美しい自然を想像しながら、情景表現とその一体感をぜひお楽しみください。
   </p>
-  <!--一言-->
+  <!--集合写真（スライド？）-->
+  <!--発表するお話（絵本とかの写真入れたいかも）とあらすじ-->
+  <section  class="container">
+    <div>
+      <img src="../assets/img/SK25.jpg" style="width:50%; aspect-ratio:1/√2; overflow: hidden;">
+    </div>
+    <div>
+      <div class="font_wide center size20">あらすじ</div>
+      <p>
+        天界の神々からの言いつけで人間たちが下界で暮らせるかどうかを確かめにきたオオジシギは、下界の美しさ・楽しさに夢中になりその言いつけを忘れてしまう。約束を守らなかったオオジシギは果たしてどうなってしまうのか。<br>
+        神様（カムイ）と共に生きてきた北海道のアイヌの人たちが、古くから語り継いできた物語です。
+      </p>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
