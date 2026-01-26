@@ -11,11 +11,33 @@
 </head>
 <link rel="icon" href="../assets/img/favicon.JPG" type="image/png">
 <style>
-.container{
-  display:flex;
-  justify-content: space-around;
+.venue{
+  display: flex;
+    /* 横並びにする */
+    gap: 40px;
+    /* 要素間の余白 */
+    align-items: flex-start;
+    /* 上揃え */
+    
+    /* 中央揃え */
+    flex-wrap: wrap;
+    /* 画面が狭いときは折り返す */
 }
 
+.venue .about {
+  flex: 1 1 300px;
+    /* 最小300pxで残りは可変 */
+}
+
+.venue .pic {
+  flex: 1 1 50%;
+    aspect-ratio: auto;
+}
+
+.venue .pic img {
+    width: 400px;
+    height: auto;
+}
 </style>
 <body data-page="about">
 <header class="site-header">
@@ -67,11 +89,11 @@
   </p>
   <!--集合写真（スライド？）-->
   <!--発表するお話（絵本とかの写真入れたいかも）とあらすじ-->
-  <section  class="container">
-    <div>
-      <img src="../assets/img/GT24.jpg" style="width:50%; aspect-ratio:1/√2; overflow: hidden;">
+  <section  class="venue">
+    <div class="pic">
+      <img src="../assets/img/GT24.jpg">
     </div>
-    <div>
+    <div class="about">
       <div class="font_wide center size20">あらすじ</div>
       <p>
         ピーター、スーザン、エドマンド、ルーシィの4人の兄妹は、大きなたんすを通じて魔法の国ナルニア国へ迷い込む。そこは白い魔女によって永遠の冬に閉ざされ、住む者たちを恐怖で支配していた。兄妹は魔女の支配からナルニアを助けるためライオンの王アスランに会いに行くが、エドマンドは魔女の甘言に惑わされ兄妹を裏切ってしまう。アスランはエドマンドを救うため、魔女との間に「古い掟」に基づく交渉を行います。魔女は裏切り者の命を要求しますが、アスランは彼の代わりに自らを差し出すことを選びます。夜の石の祭壇へと連れて行かれるアスランは、魔女の軍勢に囲まれ、静かにその運命を受け入れようとします。ナルニアの運命はいかに...      </p>
