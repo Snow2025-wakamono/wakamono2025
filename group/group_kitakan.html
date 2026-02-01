@@ -22,7 +22,7 @@
     /* 横並びにする */
     gap: 40px;
     /* 要素間の余白 */
-    align-items: flex-start;
+    align-items: center;
     /* 上揃え */
     flex-wrap: wrap;
     /* 画面が狭いときは折り返す */
@@ -36,7 +36,9 @@
 
 .venue .pic {
   flex: 1 1 50%;
-    aspect-ratio: auto;
+  aspect-ratio: auto;
+  display: flex;
+  justify-content: center; 
 }
 
 .venue .pic img {
@@ -61,7 +63,22 @@
 .slide-items img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+.slide-items .tate img{
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+.slick-dots li button:before {
+  font-size: 12px;
+  top: 6px;
 }
 </style>
 <body data-page="about">
@@ -104,14 +121,14 @@
 <div id="backdrop" class="backdrop" hidden></div>
 
 <main class="container">
-  <img src="../assets/img/all_kitakan.png" style="width: 100%; height: auto;">
+  <img src="../assets/img/all_kitakan.png" style="width: 100%; height: auto; margin: auto; display: block;">
   <h1>北関東信越支部大学生年代表現活動</h1>
+  <h2 class="center">『THE LION, THE WITCH, AND THE WARDROBE　THE PROPHECY FULFILLED<br>ライオンと魔女と大きなたんす　予言の成就』（GT24 Disc4）</h2>
   <!--集合写真（スライド？）-->
   <!--発表するお話（絵本とかの写真入れたいかも）とあらすじ-->
   <section  class="venue">
     <div class="pic">
       <img src="../assets/img/GT24.jpg">
-      <h2 class="center">『THE LION, THE WITCH, AND THE WARDROBE　THE PROPHECY FULFILLED<br>ライオンと魔女と大きなたんす　予言の成就』（GT24 Disc4）</h2>
     </div>
     <div class="about">
       <div class="about-card">
@@ -124,21 +141,22 @@
   </section>
   <article>
       <section>
-        <ul class="slide-items">
-          <li><a href="#content1"><img src="../assets/img/kitakan/kitakan1.JPG"></a></li>
+        <ul class="slide-items center">
+          <li class="tate"><a href="#content1"><img src="../assets/img/kitakan/kitakan1.JPG"></a></li>
           <li><a href="#content2"><img src="../assets/img/kitakan/kitakan2.JPG"></a></li>
-          <li><a href="#content3"><img src="../assets/img/kitakan/kitakan3.jpg"></a></li>
+          <li class="tate"><a href="#content3"><img src="../assets/img/kitakan/kitakan3.jpg"></a></li>
           <li><a href="#content4"><img src="../assets/img/kitakan/kitakan4.jpg"></a></li>
           <li><a href="#content5"><img src="../assets/img/kitakan/kitakan5.JPG"></a></li>
           <li><a href="#content6"><img src="../assets/img/kitakan/kitakan6.JPG"></a></li>
-          <li><a href="#content7"><img src="../assets/img/kitakan/kitakan7.jpg"></a></li>
+          <li class="tate"><a href="#content7"><img src="../assets/img/kitakan/kitakan7.jpg"></a></li>
           <li><a href="#content8"><img src="../assets/img/kitakan/kitakan8.JPG"></a></li>
-          <li><a href="#content9"><img src="../assets/img/kitakan/kitakan9.JPG"></a></li>
+          <li class="tate"><a href="#content9"><img src="../assets/img/kitakan/kitakan9.JPG"></a></li>
           <li><a href="#content10"><img src="../assets/img/kitakan/kitakan10.jpg"></a></li>
         </ul>
       </section>
     </article>
   <div class="about-card">
+  <div class="font_wide center size20">コメント</div>
   <p>
     こんにちは、北関東信越支部です。<br>
     今年は初めて自支部でフェスティバルを開催できることになり、メンバー一同身の引き締まる思いです。<br>
