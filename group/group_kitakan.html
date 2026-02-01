@@ -8,6 +8,12 @@
 <script defer src="../assets/js/main.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<link rel="stylesheet" href="../assets/js/plugins/slick/slick.css">
+<link rel="stylesheet" href="../assets/js/plugins/slick/slick-theme.css">
+<!-- js -->
+<script src="../assets/js/library/jquery-3.7.1.min.js"></script>
+<script src="../assets/js/plugins/slick/slick.min.js"></script>
+
 </head>
 <link rel="icon" href="../assets/img/favicon.JPG" type="image/png">
 <style>
@@ -45,6 +51,17 @@
   background:  #ffebcc;
   border: solid 5px #f3b98c; /*線*/
   border-radius: 10px; /*角の丸み*/
+}
+
+  .slide-items {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+.slide-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
 <body data-page="about">
@@ -105,6 +122,22 @@
       </div>
     </div>
   </section>
+  <article>
+      <section>
+        <ul class="slide-items">
+          <li><a href="#content1"><img src="../assets/img/kitakan/kitakan1.JPG"></a></li>
+          <li><a href="#content2"><img src="../assets/img/kitakan/kitakan2.JPG"></a></li>
+          <li><a href="#content3"><img src="../assets/img/kitakan/kitakan3.JPG"></a></li>
+          <li><a href="#content4"><img src="../assets/img/kitakan/kitakan4.JPG"></a></li>
+          <li><a href="#content5"><img src="../assets/img/kitakan/kitakan5.JPG"></a></li>
+          <li><a href="#content6"><img src="../assets/img/kitakan/kitakan6.JPG"></a></li>
+          <li><a href="#content7"><img src="../assets/img/kitakan/kitakan7.JPG"></a></li>
+          <li><a href="#content8"><img src="../assets/img/kitakan/kitakan8.JPG"></a></li>
+          <li><a href="#content9"><img src="../assets/img/kitakan/kitakan9.JPG"></a></li>
+          <li><a href="#content10"><img src="../assets/img/kitakan/kitakan10.JPG"></a></li>
+        </ul>
+      </section>
+    </article>
   <p>
     こんにちは、北関東信越支部です。<br>
     今年は初めて自支部でフェスティバルを開催できることになり、メンバー一同身の引き締まる思いです。<br>
@@ -133,4 +166,12 @@
 <button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
 
 </body>
+<script type="text/javascript">
+
+$(".slide-items").slick({
+  arrows: true, // 矢印
+  dots: true, // インジケーター
+});
+
+</script>
 </html>
