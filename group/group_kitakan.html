@@ -17,6 +17,16 @@
 </head>
 <link rel="icon" href="../assets/img/favicon.JPG" type="image/png">
 <style>
+h2{
+  margin-bottom: 20px;
+}
+.all_pic{
+  width: 100%;
+  max-width: 80vw;
+  height: auto;
+  margin: auto;
+  display: block;
+}
 .venue{
   display: flex;
     /* 横並びにする */
@@ -59,10 +69,11 @@
   width: 80%;
   height: 80%;
   margin: auto;
+  display: block;
 }
 .slide-items img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
 }
 .slide-items .tate img{
@@ -76,9 +87,21 @@
 .slick-next:before {
   color: black;
 }
+.slick-dots {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
 .slick-dots li button:before {
   font-size: 12px;
   top: 6px;
+}
+.example {
+  /* CJKテキストでの折り返しを無効化 */
+  word-break: keep-all;
+
+  /* 長い単語でも折り返し可能に */
+  overflow-wrap: anywhere;
 }
 </style>
 <body data-page="about">
@@ -121,8 +144,8 @@
 <div id="backdrop" class="backdrop" hidden></div>
 
 <main class="container">
-  <img src="../assets/img/all_kitakan.png" style="width: 100%; height: auto; margin: auto; display: block;">
-  <h1>北関東信越支部大学生年代表現活動</h1>
+  <img class="all_pic" src="../assets/img/all_kitakan.png">
+  <h1 class="example">北関東信越支部<wbr>大学生年代表現活動</h1>
   <h2 class="center">『THE LION, THE WITCH, AND THE WARDROBE　THE PROPHECY FULFILLED<br>ライオンと魔女と大きなたんす　予言の成就』（GT24 Disc4）</h2>
   <!--集合写真（スライド？）-->
   <!--発表するお話（絵本とかの写真入れたいかも）とあらすじ-->
@@ -141,17 +164,17 @@
   </section>
   <article>
       <section>
-        <ul class="slide-items center">
-          <li class="tate"><a href="#content1"><img src="../assets/img/kitakan/kitakan1.JPG"></a></li>
-          <li><a href="#content2"><img src="../assets/img/kitakan/kitakan2.JPG"></a></li>
-          <li class="tate"><a href="#content3"><img src="../assets/img/kitakan/kitakan3.jpg"></a></li>
-          <li><a href="#content4"><img src="../assets/img/kitakan/kitakan4.jpg"></a></li>
-          <li><a href="#content5"><img src="../assets/img/kitakan/kitakan5.JPG"></a></li>
-          <li><a href="#content6"><img src="../assets/img/kitakan/kitakan6.JPG"></a></li>
-          <li class="tate"><a href="#content7"><img src="../assets/img/kitakan/kitakan7.jpg"></a></li>
-          <li><a href="#content8"><img src="../assets/img/kitakan/kitakan8.JPG"></a></li>
-          <li class="tate"><a href="#content9"><img src="../assets/img/kitakan/kitakan9.JPG"></a></li>
-          <li><a href="#content10"><img src="../assets/img/kitakan/kitakan10.jpg"></a></li>
+        <ul class="slide-items">
+          <li class="tate"><a href="#content1"><img src="../assets/img/group_pic/kitakan1.JPG"></a></li>
+          <li><a href="#content2"><img src="../assets/img/group_pic/kitakan2.JPG"></a></li>
+          <li class="tate"><a href="#content3"><img src="../assets/img/group_pic/kitakan3.jpg"></a></li>
+          <li><a href="#content4"><img src="../assets/img/group_pic/kitakan4.jpg"></a></li>
+          <li><a href="#content5"><img src="../assets/img/group_pic/kitakan5.JPG"></a></li>
+          <li><a href="#content6"><img src="../assets/img/group_pic/kitakan6.JPG"></a></li>
+          <li class="tate"><a href="#content7"><img src="../assets/img/group_pic/kitakan7.jpg"></a></li>
+          <li><a href="#content8"><img src="../assets/img/group_pic/kitakan8.JPG"></a></li>
+          <li class="tate"><a href="#content9"><img src="../assets/img/group_pic/kitakan9.JPG"></a></li>
+          <li><a href="#content10"><img src="../assets/img/group_pic/kitakan10.jpg"></a></li>
         </ul>
       </section>
     </article>

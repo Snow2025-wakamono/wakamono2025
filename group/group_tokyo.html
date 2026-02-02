@@ -8,14 +8,93 @@
 <script defer src="../assets/js/main.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<link rel="stylesheet" href="../assets/js/plugins/slick/slick.css">
+<link rel="stylesheet" href="../assets/js/plugins/slick/slick-theme.css">
+<!-- js -->
+<script src="../assets/js/library/jquery-3.7.1.min.js"></script>
+<script src="../assets/js/plugins/slick/slick.min.js"></script>
+
 </head>
 <link rel="icon" href="../assets/img/favicon.JPG" type="image/png">
 <style>
-.container{
-  display:flex;
-  justify-content: space-around;
+h2{
+  margin-bottom: 20px;
+}
+.all_pic{
+  width: 100%;
+  max-width: 80vw;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+.venue{
+  display: flex;
+    /* 横並びにする */
+    gap: 40px;
+    /* 要素間の余白 */
+    align-items: center;
+    /* 上揃え */
+    flex-wrap: wrap;
+    /* 画面が狭いときは折り返す */
+    padding: 24px;
 }
 
+.venue .about {
+  flex: 1 1 300px;
+    /* 最小300pxで残りは可変 */
+}
+
+.venue .pic {
+  flex: 1 1 50%;
+  aspect-ratio: auto;
+  display: flex;
+  justify-content: center; 
+}
+
+.venue .pic img {
+    width: 65%;
+    height: auto;
+}
+
+.about-card {
+  text-align: center;
+  padding: 20px;
+  border: 1px;
+  background:  #ffebcc;
+  border: solid 5px #f3b98c; /*線*/
+  border-radius: 10px; /*角の丸み*/
+}
+
+  .slide-items {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+.slide-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.slide-items .tate img{
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+.slick-dots {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.slick-dots li button:before {
+  font-size: 12px;
+  top: 6px;
+}
 </style>
 <body data-page="about">
 <header class="site-header">
@@ -56,11 +135,47 @@
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
-<main>
+<main class="container">
+  <img class="all_pic" src="../assets/img/all_tokyo.png">
   <h1>東京支部大学生年代表現活動</h1>
-  <h2 class="center">『Prometheus and the Gift of Fire   プロメテウスの火-』（SK21 DiscⅣ）
-</h2>
-  <p class="container">
+  <h2 class="center">『Prometheus and the Gift of Fire   プロメテウスの火-』（SK21 DiscⅣ）</h2>
+  <section  class="venue">
+    <div class="pic">
+      <img src="../assets/img/SK21.jpg">
+    </div>
+    <div class="about">
+      <div class="about-card">
+        <div class="font_wide center size20">あらすじ</div>
+        <p>
+          彼は選んだ。<br><br>
+          まだ誰も知らない人間の未来を<br>
+          ただひとりだけ見ていた。<br><br>
+          その代償がどれほど苦悶で<br>
+          どれほど孤独でも。<br><br>
+          そして彼は叫ぶ。
+        </p>
+      </div>
+    </div>
+  </section>
+  <article>
+    <section>
+      <ul class="slide-items center">
+        <li><a href="#content1"><img src="../assets/img/group_pic/tokyo1.jpeg"></a></li>
+        <li><a href="#content2"><img src="../assets/img/group_pic/tokyo2.jpeg"></a></li>
+        <li><a href="#content3"><img src="../assets/img/group_pic/tokyo3.PNG"></a></li>
+        <li class="tate"><a href="#content4"><img src="../assets/img/group_pic/tokyo4.jpeg"></a></li>
+        <li class="tate"><a href="#content5"><img src="../assets/img/group_pic/tokyo5.jpeg"></a></li>
+        <li class="tate"><a href="#content6"><img src="../assets/img/group_pic/tokyo6.jpeg"></a></li>
+        <li class="tate"><a href="#content7"><img src="../assets/img/group_pic/tokyo7.jpeg"></a></li>
+        <li><a href="#content8"><img src="../assets/img/group_pic/tokyo8.jpeg"></a></li>
+        <li><a href="#content9"><img src="../assets/img/group_pic/tokyo9.jpeg"></a></li>
+        <li><a href="#content10"><img src="../assets/img/group_pic/tokyo10.jpeg"></a></li>
+      </ul>
+    </section>
+  </article>
+  <div class="about-card">
+  <div class="font_wide center size20">コメント</div>
+  <p>
     向き合うことから逃げなかった。<br><br>
 
     ひとりでは足りない。<br>
@@ -72,29 +187,8 @@
     “表現”を<br>
     “束ねてきた軌跡のすべて”を<br>
     この-瞬間-に放出します。
-
   </p>
-  <!--集合写真（スライド？）-->
-  <!--発表するお話（絵本とかの写真入れたいかも）とあらすじ-->
-  <section  class="container">
-    <div>
-      <img src="../assets/img/SK21.jpg" style="width:50%; aspect-ratio:1/√2; overflow: hidden;">
-    </div>
-    <div>
-      <div class="font_wide center size20">あらすじ</div>
-      <p>
-        彼は選んだ。<br><br>
-
-まだ誰も知らない人間の未来を<br>
-ただひとりだけ見ていた。<br><br>
-
-その代償がどれほど苦悶で<br>
-どれほど孤独でも。<br><br>
-
-そして彼は叫ぶ。
-      </p>
-    </div>
-  </section>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -117,4 +211,10 @@
 <button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
 
 </body>
+<script type="text/javascript">
+$(".slide-items").slick({
+  arrows: true, // 矢印
+  dots: true, // インジケーター
+});
+</script>
 </html>
