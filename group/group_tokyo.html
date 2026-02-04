@@ -17,9 +17,6 @@
 </head>
 <link rel="icon" href="../assets/img/favicon.JPG" type="image/png">
 <style>
-h2{
-  margin-bottom: 20px;
-}
 .all_pic{
   width: 100%;
   max-width: 80vw;
@@ -60,8 +57,8 @@ h2{
   text-align: center;
   padding: 20px;
   border: 1px;
-  background:  #ffebcc;
-  border: solid 5px #f3b98c; /*線*/
+  background:  #f4ffe8;
+  border: solid 5px #adff2f; /*線*/
   border-radius: 10px; /*角の丸み*/
 }
 
@@ -95,6 +92,14 @@ h2{
   font-size: 12px;
   top: 6px;
 }
+.wbr {
+  /* CJKテキストでの折り返しを無効化 */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.wbr h2{
+  margin-bottom: 20px;
+}
 </style>
 <body data-page="about">
 <header class="site-header">
@@ -119,14 +124,13 @@ h2{
   <nav class="drawer-nav" role="navigation">
     <ul class="tab-list">
       <li><a class="tab" href="../index.html" aria-current="page">ホーム</a></li>
-      <li><a class="tab active" href="about.html">発表団体紹介</a></li> 
-      <li><a class="tab" href="fest.html">フェスティバル</a></li>
-      <li><a class="tab" href="tickets.html">チケット購入</a></li>
-      <li><a class="tab" href="camp.html">合宿</a></li>
-      <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a>
-      </li> <li><a class="tab" href="committee.html">実行委員紹介</a></li>
-      <li><a class="tab" href="mypage.html">マイページ</a></li>
-    </ul>
+      <li><a class="tab active" href="../about.html">発表団体紹介</a></li> 
+      <li><a class="tab" href="../fest.html">フェスティバル</a></li>
+      <li><a class="tab" href="../tickets.html">チケット購入</a></li>
+      <li><a class="tab" href="../camp.html">合宿</a></li>
+      <li><a class="tab" href="../kitakan.html">北関東信越支部紹介</a>
+      </li> <li><a class="tab" href="../committee.html">実行委員紹介</a></li>
+      <li><a class="tab" href="../mypage.html">マイページ</a></li>    </ul>
   </nav>
   <!-- キャラクター（ドロワー下部） -->
   <div class="drawer-character" aria-hidden="true">
@@ -137,8 +141,10 @@ h2{
 
 <main class="container">
   <img class="all_pic" src="../assets/img/all_tokyo.png">
-  <h1>東京支部大学生年代表現活動</h1>
+  <div class="wbr">
+  <h1>東京支部<wbr>大学生年代表現活動</h1>
   <h2 class="center">『Prometheus and the Gift of Fire   プロメテウスの火-』（SK21 DiscⅣ）</h2>
+  </div>
   <section  class="venue">
     <div class="pic">
       <img src="../assets/img/SK21.jpg">
@@ -162,7 +168,7 @@ h2{
       <ul class="slide-items center">
         <li><a href="#content1"><img src="../assets/img/group_pic/tokyo1.jpeg"></a></li>
         <li><a href="#content2"><img src="../assets/img/group_pic/tokyo2.jpeg"></a></li>
-        <li><a href="#content3"><img src="../assets/img/group_pic/tokyo3.PNG"></a></li>
+        <li><a href="#content3"><img src="../assets/img/group_pic/tokyo3.PNG" style="padding: 30px;"></a></li>
         <li class="tate"><a href="#content4"><img src="../assets/img/group_pic/tokyo4.jpeg"></a></li>
         <li class="tate"><a href="#content5"><img src="../assets/img/group_pic/tokyo5.jpeg"></a></li>
         <li class="tate"><a href="#content6"><img src="../assets/img/group_pic/tokyo6.jpeg"></a></li>

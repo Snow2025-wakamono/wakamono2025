@@ -17,9 +17,6 @@
 </head>
 <link rel="icon" href="../assets/img/favicon.JPG" type="image/png">
 <style>
-h2{
-  margin-bottom: 20px;
-}
 .all_pic{
   width: 100%;
   max-width: 80vw;
@@ -60,8 +57,8 @@ h2{
   text-align: center;
   padding: 20px;
   border: 1px;
-  background:  #ffebcc;
-  border: solid 5px #f3b98c; /*線*/
+  background:  #ffecec;
+  border: solid 5px #9b3434; /*線*/
   border-radius: 10px; /*角の丸み*/
 }
 
@@ -96,12 +93,13 @@ h2{
   font-size: 12px;
   top: 6px;
 }
-.example {
+.wbr {
   /* CJKテキストでの折り返しを無効化 */
   word-break: keep-all;
-
-  /* 長い単語でも折り返し可能に */
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+}
+.wbr h2{
+  margin-bottom: 20px;
 }
 </style>
 <body data-page="about">
@@ -127,14 +125,13 @@ h2{
   <nav class="drawer-nav" role="navigation">
     <ul class="tab-list">
       <li><a class="tab" href="../index.html" aria-current="page">ホーム</a></li>
-      <li><a class="tab active" href="about.html">発表団体紹介</a></li> 
-      <li><a class="tab" href="fest.html">フェスティバル</a></li>
-      <li><a class="tab" href="tickets.html">チケット購入</a></li>
-      <li><a class="tab" href="camp.html">合宿</a></li>
-      <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a>
-      </li> <li><a class="tab" href="committee.html">実行委員紹介</a></li>
-      <li><a class="tab" href="mypage.html">マイページ</a></li>
-    </ul>
+      <li><a class="tab active" href="../about.html">発表団体紹介</a></li> 
+      <li><a class="tab" href="../fest.html">フェスティバル</a></li>
+      <li><a class="tab" href="../tickets.html">チケット購入</a></li>
+      <li><a class="tab" href="../camp.html">合宿</a></li>
+      <li><a class="tab" href="../kitakan.html">北関東信越支部紹介</a>
+      </li> <li><a class="tab" href="../committee.html">実行委員紹介</a></li>
+      <li><a class="tab" href="../mypage.html">マイページ</a></li>    </ul>
   </nav>
   <!-- キャラクター（ドロワー下部） -->
   <div class="drawer-character" aria-hidden="true">
@@ -145,8 +142,10 @@ h2{
 
 <main class="container">
   <img class="all_pic" src="../assets/img/all_kitakan.png">
-  <h1 class="example">北関東信越支部<wbr>大学生年代表現活動</h1>
-  <h2 class="center">『THE LION, THE WITCH, AND THE WARDROBE　THE PROPHECY FULFILLED<br>ライオンと魔女と大きなたんす　予言の成就』（GT24 Disc4）</h2>
+  <div class="wbr">
+  <h1>北関東信越支部<wbr>大学生年代表現活動</h1>
+  <h2>『THE LION, THE WITCH, AND THE WARDROBE<wbr>　THE PROPHECY FULFILLED<br>ライオンと魔女と大きなたんす<wbr>　予言の成就』<wbr>（GT24 Disc4）</h2>
+  </div>
   <!--集合写真（スライド？）-->
   <!--発表するお話（絵本とかの写真入れたいかも）とあらすじ-->
   <section  class="venue">
@@ -210,11 +209,9 @@ h2{
 
 </body>
 <script type="text/javascript">
-
 $(".slide-items").slick({
   arrows: true, // 矢印
   dots: true, // インジケーター
 });
-
 </script>
 </html>

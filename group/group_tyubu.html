@@ -8,8 +8,100 @@
 <script defer src="../assets/js/main.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<link rel="stylesheet" href="../assets/js/plugins/slick/slick.css">
+<link rel="stylesheet" href="../assets/js/plugins/slick/slick-theme.css">
+<!-- js -->
+<script src="../assets/js/library/jquery-3.7.1.min.js"></script>
+<script src="../assets/js/plugins/slick/slick.min.js"></script>
+
 </head>
 <link rel="icon" href="../assets/img/favicon.JPG" type="image/png">
+<style>
+.all_pic{
+  width: 100%;
+  max-width: 80vw;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+.venue{
+  display: flex;
+    /* 横並びにする */
+    gap: 40px;
+    /* 要素間の余白 */
+    align-items: center;
+    /* 上揃え */
+    flex-wrap: wrap;
+    /* 画面が狭いときは折り返す */
+    padding: 24px;
+}
+
+.venue .about {
+  flex: 1 1 300px;
+    /* 最小300pxで残りは可変 */
+}
+
+.venue .pic {
+  flex: 1 1 50%;
+  aspect-ratio: auto;
+  display: flex;
+  justify-content: center; 
+}
+
+.venue .pic img {
+    width: 65%;
+    height: auto;
+}
+
+.about-card {
+  text-align: center;
+  padding: 20px;
+  border: 1px;
+  background:  #f2fff5;
+  border: solid 5px #006400; /*線*/
+  border-radius: 10px; /*角の丸み*/
+}
+
+  .slide-items {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  display: block;
+}
+.slide-items img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.slide-items .tate img{
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+.slick-dots {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.slick-dots li button:before {
+  font-size: 12px;
+  top: 6px;
+}
+.wbr {
+  /* CJKテキストでの折り返しを無効化 */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.wbr h2{
+  margin-bottom: 20px;
+}
+</style>
 <body data-page="about">
 <header class="site-header">
   <div class="container header-inner">
@@ -33,27 +125,70 @@
   <nav class="drawer-nav" role="navigation">
     <ul class="tab-list">
       <li><a class="tab" href="../index.html" aria-current="page">ホーム</a></li>
-      <li><a class="tab active" href="about.html">発表団体紹介</a></li> 
-      <li><a class="tab" href="fest.html">フェスティバル</a></li>
-      <li><a class="tab" href="tickets.html">チケット購入</a></li>
-      <li><a class="tab" href="camp.html">合宿</a></li>
-      <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a>
-      </li> <li><a class="tab" href="committee.html">実行委員紹介</a></li>
-      <li><a class="tab" href="mypage.html">マイページ</a></li>
-    </ul>
+      <li><a class="tab active" href="../about.html">発表団体紹介</a></li> 
+      <li><a class="tab" href="../fest.html">フェスティバル</a></li>
+      <li><a class="tab" href="../tickets.html">チケット購入</a></li>
+      <li><a class="tab" href="../camp.html">合宿</a></li>
+      <li><a class="tab" href="../kitakan.html">北関東信越支部紹介</a>
+      </li> <li><a class="tab" href="../committee.html">実行委員紹介</a></li>
+      <li><a class="tab" href="../mypage.html">マイページ</a></li>    </ul>
   </nav>
   <!-- キャラクター（ドロワー下部） -->
   <div class="drawer-character" aria-hidden="true">
-    <img id="drawerCharacter" src="../assets/img/drkitakuma.png" alt="">
+    <img id="drawerCharacter" src="../assets/img/drkitakuma.JPEG" alt="">
   </div>
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
-<main>
-  <h1 class="center">北海道</h1>
+<main class="container">
+  <img class="all_pic" src="../assets/img/all_tyubu.jpg">
+  <div class="wbr">
+  <h1>中部支部大学生ひろば</h1>
+  <h2>『The Pied Piper of Hamelin　<wbr>ハメルンの笛ふき』<wbr>（SK28-DISCⅣ</h2>
+  </div>
   <!--集合写真（スライド？）-->
   <!--発表するお話（絵本とかの写真入れたいかも）とあらすじ-->
-  <!--一言-->
+  <section  class="venue">
+    <div class="pic">
+      <img src="../assets/img/SK28.jpg">
+    </div>
+    <div class="about">
+      <div class="about-card">
+        <div class="font_wide center size20">あらすじ</div>
+        <p>
+          “And so long after what happened here<br>
+          “On the Twenty-second of July,<br>
+          “Thirteen hundred and seventy-six:”<br>
+          ”1376年7月22日<br>
+          ここでかくかく　しかじかありき”<br>
+          （『The Pied Piper of Hamelin　ハメルンの笛ふき』より）
+        </p>
+      </div>
+    </div>
+  </section>
+  <article>
+      <section>
+        <ul class="slide-items">
+          <li><a href="#content1"><img src="../assets/img/group_pic/tyubu1.jpg"></a></li>
+          <li class="tate"><a href="#content2"><img src="../assets/img/group_pic/tyubu2.jpg"></a></li>
+          <li class="tate"><a href="#content3"><img src="../assets/img/group_pic/tyubu3.jpg"></a></li>
+          <li class="tate"><a href="#content4"><img src="../assets/img/group_pic/tyubu4.jpg"></a></li>
+          <li class="tate"><a href="#content5"><img src="../assets/img/group_pic/tyubu5.jpg"></a></li>
+          <li class="tate"><a href="#content6"><img src="../assets/img/group_pic/tyubu6.jpg"></a></li>
+          <li class="tate"><a href="#content7"><img src="../assets/img/group_pic/tyubu7.jpg"></a></li>
+          <li class="tate"><a href="#content8"><img src="../assets/img/group_pic/tyubu8.jpg"></a></li>
+          <li><a href="#content9"><img src="../assets/img/group_pic/tyubu9.jpg"></a></li>
+          <li class="tate"><a href="#content10"><img src="../assets/img/group_pic/tyubu10.jpg"></a></li>
+        </ul>
+      </section>
+    </article>
+  <div class="about-card">
+  <div class="font_wide center size20">コメント</div>
+  <p>
+    英のみで発表します。よくライブラリーを聴いてから来てください！<br>
+    ―あらすじの文はどこに出てくるでしょう。
+  </p>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -76,4 +211,10 @@
 <button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
 
 </body>
+<script type="text/javascript">
+$(".slide-items").slick({
+  arrows: true, // 矢印
+  dots: true, // インジケーター
+});
+</script>
 </html>
