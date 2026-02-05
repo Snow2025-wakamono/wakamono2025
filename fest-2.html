@@ -24,8 +24,8 @@
 
   .line {
     border: none;
-    border-top: 1px solid #333;
-    margin: 0px;
+    border-bottom: 1px solid #333;
+    margin: 0;
   }
 
   .venue {
@@ -55,19 +55,9 @@
     width: 100%;
     height: 100%;
   }
-
-  .venue .kitakuma {
-    flex: 1 1 40%;
-    aspect-ratio: auto;
-  }
-
-  .venue .kitakuma img {
-    max-width: 100%;
-    height: auto;
-  }
 </style>
 
-<body data-page="camp">
+<body data-page="fest">
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
@@ -76,8 +66,8 @@
       </a>
       <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">☰</button>
       <!--<button class="nav-toggle" aria-label="メニューを開く">
-          <img src="assets/img/kitakuma2.png" alt="メニュー" width="30" height="30">
-        </button> -->
+      <img src="assets/img/kitakuma2.png" alt="メニュー" width="30" height="30">
+    </button> -->
     </div>
   </header>
 
@@ -91,11 +81,10 @@
       <ul class="tab-list">
         <li><a class="tab" href="index.html" aria-current="page">ホーム</a></li>
         <li><a class="tab" href="about.html">発表団体紹介</a></li>
-        <li><a class="tab" href="fest.html">フェスティバル</a>
+        <li><a class="tab active" href="fest.html">フェスティバル</a>
         <li><a class="tab" href="tickets.html">チケット購入</a></li>
-        <li><a class="tab active" href="camp.html">合宿</a></li>
+        <li><a class="tab" href="camp.html">合宿</a></li>
         <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a></li>
-        </li>
         <li><a class="tab" href="committee.html">実行委員紹介</a></li>
         <li><a class="tab" href="characters.html">きたくまちゃんの部屋</a></li>
         <li><a class="tab" href="mypage.html">マイページ</a></li>
@@ -108,12 +97,13 @@
   </aside>
   <div id="backdrop" class="backdrop" hidden></div>
 
+
   <main class="container">
-    <h1>合宿</h1>
-    <div class="concept center size20">合宿コンセプト</div>
+    <h1>フェスティバル</h1>
+    <div class="concept center size20">フェスティバルコンセプト</div>
     <div class="center size30">
       <div class="font_concept">
-        &emsp;『ROOT×ROUTE』
+        『MOMENT×MAGIC』
       </div>
     </div>
     <div class="cp_box1">
@@ -121,9 +111,8 @@
       <label for="cp01"></label>
       <div class="cp_container">
         <p>
-          我々はいま、ラボの世界の最年長と社会の最年少の狭間で生きている。このジレンマを抜けた先には、今よりも重大な責任や選択が待っているだろう。大学生という子どもから社会人へと変わっていく変遷期を経て未来を強く進むには、自身の武器や経験を生かして自分は何者かということを表していく必要があると考える。
-          同じ世代を生きる全国の仲間が集まるわかもの合宿。ここには異なる背景を持つ人同士で刺激をし合い、視野を広げ、自己理解を深めるきっかけを生んでくれる。なにより我々はラボで多様な他者との出会い、テーマ活動で目にした多くの表現から得た学びをもとに“今の自分”が形作られている。そのすべてがこれからの人生を歩むためのわたしらしさになる。
-          北関が提供するわかもの合宿では対話を通して自身を見つめなおし、気づきを表現へとつなげる。そうしてこれからのわたしの輪郭を少しずつ描いていく時間にしていく。参加者が未来を生きる自信を得るきっかけとなってほしい。
+          わかものフェスティバルは、全国の大学生ラボっ子がそれぞれの想いをテーマ活動を通して言葉や体にのせて表現し、観客に全力をぶつけることのできる貴重な時間だ。彼らが織りなす表現には各人・各支部の想いや色が存在し、過去の葛藤や試行錯誤も垣間見える。<br>そんな'’Identity’’を持つ彼らは、発表を通じて達成感や高揚感を味わうことができる。一方で、発表中の表現から魅力的な瞬間が生み出されると、そこから観客は演者が伝えたい想いや彼らへの憧れを感じる。演者が表現を届けるその“瞬間’’、会場全体は感動と興奮すなわち“魔法”で包まれていく。そしてこの“瞬間”がかける“魔法”はそのときのみならず、永遠の魔法となる。フェスティバルが終わった後も表現活動への憧れやテーマ活動の可能性を広げるなどの、様々な影響を与え続けるだろう。
+          <br>今回のわかものフェスティバルでは、全国から集う大学生ラボっ子が表現する全力の瞬間－MOMENT－と、それによってかけられる魔法－MAGIC－を惹き起こすべくこのコンセプトを建てた。それぞれが感じた魔法を持ち帰り、今後のラボのモチベーションとなるフェスティバルを作り上げる。そして、このフェスティバルを通じて今後のラボ活動にどのように向き合うか、そしてどのように生きていきたいかを問うきっかけを与えたい。
         </p>
       </div>
     </div><br>
@@ -135,27 +124,27 @@
         <div class="font_wide center size20">会場情報</div>
         <div class="space_min"></div>
         <div class="summary">
-          <div><span class="underline">日時</span>：2026年　3月1日(日)～3日(火)</div>
-          <div><span class="underline">場所</span>：ホテルヘリテイジ　四季の湯温泉(埼玉県熊谷市)</div>
-          <div class="text_indent3">〒360-0103埼玉県熊谷市小江川228</div>
-          <a href="https://www.hotel-heritage.co.jp/">
-            <div class="text_blue text_indent3">https://www.hotel-heritage.co.jp/</div>
+          <div><span class="underline">日時</span>：2026年 3/1(日)</div>
+          <div class="text_indent3">開場10：15　開演10：45</div>
+          <div><span class="underline">場所</span>：深谷市民文化会館</div>
+          <div class="text_indent3">〒366-0823 埼玉県深谷市本住町17番1号</div>
+          <a href="https://fukaya-connect.com/bunka/">
+            <div class="text_indent3 text_blue">https://fukaya-connect.com/bunka/</div>
           </a>
         </div>
         <p>
         <div class="underline">アクセス</div>
         <div>【お車】</div>
-        <div>▶東松山ICより熊谷方面へ約5.3㎞「滑川中学校北」交差点を左折、次の「滑川町役場北」を右折、直進約3.9km </div>
+        <div>▶関越自動車道花園ICから25分</div>
         <br>
         <div>【公共交通機関】</div>
-        <div>▶電車：東武東上線 森林公園駅で下車、路線バスorタクシーで約15分</div>
-        <div>▶路線バス：森林公園駅-ふかや花園プレミアム・アウトレット線ホテルヘリテイジで下車運賃380円(交通系IC370円)</div>
+        <div>▶JR高崎線深谷駅から徒歩20分</div>
         </p>
       </div>
 
       <div class="map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8761.607028088709!2d139.33476652095146!3d36.09336012071876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ed5dc05dccf49%3A0x6d2d5c72994bf852!2z5Zub5a2j44Gu5rmv5rip5rOJ44Ob44OG44Or44OY44Oq44OG44Kk44K4!5e0!3m2!1sja!2sjp!4v1758850084837!5m2!1sja!2sjp"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3219.6202993326206!2d139.2871247!3d36.2001152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ed9617bbcf0d9%3A0x483cebb0dc51c916!2z5rex6LC35biC5rCR5paH5YyW5Lya6aSo44O75rex6LC344Kz44Of44Ol44OL44OG44Kj44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1756654473963!5m2!1sja!2sjp"
           width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
@@ -163,36 +152,61 @@
     </section>
     <div class="space_big"></div>
     <hr class="line">
-    <div class="space_big"></div>
-    <div class="font_wide center size20">プレわかもの開催！</div>
-    <div class="space_big"></div>
-    <section class="venue">
-      <div class="info">
-        <div>日時：2026年2月16日(月)  14:00〜16:00</div>
-        <div>形態：オンライン（zoom）</div>
-        <div>内容：グループの顔合わせ、合宿企画のチラ見せ、フェスティバル発表者団体紹介など</div>
-        <div>参加資格：わかもの合宿参加者</div>
-      </div>
-      <div class="kitakuma">
-        <img src="assets/img/gasshukukitakuma.PNG" >
-      </div>
-    </section>
-<!--
-    <hr class="line">
     <div class="font_wide center size20">タイムテーブル</div>
     <div class="center">
-      <img src="assets/img/camp_program.png" style="width: 100%; overflow: hidden;">
-    </div>-->
-    <hr class="line">
-    <div class="space_big"></div>
-    <div class="font_wide center size20">館内案内</div><!-- 会場のホームページから画像持ってくる -->
-    <div class="space_big"></div>
-    <div class="center">
-      <img src="assets/img/camp_map.jpg" style="width:80%; aspect-ratio:√2/1; overflow: hidden;">
+      <img src="assets/img/fest_program.png" style="width: 70%; overflow: hidden;">
     </div>
 
+    <!-- 画像の名前変更必須 -->
+    <!--
+  <h2>発表者団体</h2><br>
+<div class="cp_cssslider04">
+  <div class="mask">
+  <ul>
+    <li><a href="#"><img src="assets/img/東北.jpeg" /></a>
+    <div class="tooltip"><h1>東北支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/北関.jpeg" /></a>
+    <div class="tooltip"><h1>北関東信越支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/東京.jpeg" /></a>
+    <div class="tooltip"><h1>東京支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/千葉.jpeg" /></a>
+    <div class="tooltip"><h1>千葉支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/神奈川.jpeg" /></a>
+    <div class="tooltip"><h1>神奈川支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/中部.jpeg" /></a>
+    <div class="tooltip"><h1>中部支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/関西.jpeg" /></a>
+    <div class="tooltip"><h1>関西支部</h1></div></li>
+
+    <li><a href="#"><img src="assets/img/中国・四国.jpeg" /></a>
+    <div class="tooltip"><h1>中国・四国支部</h1></div></li>
+
+  <li><a href="#"><img src="assets/img/九州.jpeg" /></a>
+    <div class="tooltip"><h1>九州支部</h1></div></li>
+  </ul>
+  </div>
+  <div class="cp_progressbar"></div>
+</div>
+-->
+    <hr class="line">
+    <div class="space_big"></div>
+    <div class="font_wide center size20">館内情報</div><!-- 会場のホームページから画像持ってくる -->
+    <div class="space_big"></div>
+    <div class="center">
+      <img src="assets/img/fest_map.jpg" style="width:80%; aspect-ratio:√2/1; overflow: hidden;">
+    </div>
   </main>
 
+
+    <br>
+    </div>
+  </main>
   <footer class="site-footer">
     <div class="container">
       <nav class="footer-sns" aria-label="SNSリンク">
@@ -213,6 +227,6 @@
     </div>
   </footer>
   <button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
-</body>
 
+</body>
 </html>
