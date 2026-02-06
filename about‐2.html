@@ -108,6 +108,29 @@
   display:flex;
   justify-content: space-around;
 }
+
+/* スライドショー */
+.slideshow {
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideshow img {
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* フェードアニメーション */
+}
+
+.slideshow img.active {
+  opacity: 1; /* 表示する画像の透明度を変更 */
+}
 </style>
 
 <body data-page="about">
@@ -148,6 +171,11 @@
   <!--パンフみたいに日本地図できるかな？（目次）-->
   <!--手動のスライドはフェスページでもいいかも-->
   <!--北海道と中四国の書き方、正式名称で書くのか場所だけで書くのか-->
+  <div class="slideshow">
+    <img src="assets/img/Comingboard.png" alt="Slide 1" class="active">
+    <img src="assets/img/ComingW.png" alt="Slide 2">
+    <img src="assets/img/Comingski.png" alt="Slide 3">
+  </div>
   <div>
     <p>北海道</p>
     <!--目次を押したらそれぞれの箇所へ移動、集合写真と各ページへのボタンを配置-->

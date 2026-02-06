@@ -337,3 +337,17 @@ function transform(section) {
   });
   scrollSection.style.transform = `translateX(${-maxScroll * progress}px)`;
 }
+
+//発表者団体、スライドショー
+// HTML内のすべての画像を取得
+const slides = document.querySelectorAll('.slideshow img');
+// 現在のスライドインデックスを初期化
+let currentIndex = 0;
+// 画像を切り替える関数
+const changeImage = () => {
+  slides[currentIndex].classList.remove('active'); // 現在の画像を非表示
+  currentIndex = (currentIndex + 1) % slides.length; // 次の画像のインデックスを計算
+  slides[currentIndex].classList.add('active'); // 次の画像を表示
+};
+// 3秒ごとに画像を切り替える
+setInterval(() => changeImage(), 3000);
