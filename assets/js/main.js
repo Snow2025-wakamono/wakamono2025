@@ -339,15 +339,48 @@ function transform(section) {
 }
 
 //発表者団体、スライドショー
-// HTML内のすべての画像を取得
+// スライドショーの要素を取得
 const slides = document.querySelectorAll('.slideshow img');
-// 現在のスライドインデックスを初期化
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+// 現在のスライドインデックス
 let currentIndex = 0;
+
 // 画像を切り替える関数
-const changeImage = () => {
-  slides[currentIndex].classList.remove('active'); // 現在の画像を非表示
-  currentIndex = (currentIndex + 1) % slides.length; // 次の画像のインデックスを計算
-  slides[currentIndex].classList.add('active'); // 次の画像を表示
+const showSlide = (index) => {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index); // 現在のスライドにactiveクラスを付与
+  });
 };
-// 3秒ごとに画像を切り替える
-setInterval(() => changeImage(), 3000);
+
+// 自動スライドの間隔
+const autoSlideInterval = 3000; // 3秒
+
+// 自動スライドをスタート
+let autoSlide = setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length; // 次のスライドに移動
+  showSlide(currentIndex);
+}, autoSlideInterval);
+
+// 「次へ」ボタンのクリックイベント
+nextButton.addEventListener('click', () => {
+  clearInterval(autoSlide); // 自動スライドを一時停止
+  currentIndex = (currentIndex + 1) % slides.length; // 次のスライドに移動
+  showSlide(currentIndex);
+  autoSlide = setInterval(() => { // 再度自動スライドを開始
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }, autoSlideInterval);
+});
+
+// 「前へ」ボタンのクリックイベント
+prevButton.addEventListener('click', () => {
+  clearInterval(autoSlide); // 自動スライドを一時停止
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length; // 前のスライドに移動
+  showSlide(currentIndex);
+  autoSlide = setInterval(() => { // 再度自動スライドを開始
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }, autoSlideInterval);
+});
