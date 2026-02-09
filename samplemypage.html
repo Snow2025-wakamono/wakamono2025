@@ -10,8 +10,6 @@
 <link rel="icon" href="assets/img/favicon.JPG" type="image/png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<!-- 公開前は検索避け（必要なければ削除） -->
-<meta name="robots" content="noindex, nofollow">
 </head>
 <body data-page="mypage">
 <header class="site-header">
@@ -46,15 +44,21 @@
 <div id="backdrop" class="backdrop" hidden></div>
 
 <main class="container">
-  <section class="comingsoon" aria-labelledby="cs-title">
-    <div class="cs-icon" aria-hidden="true">🔒</div>
-    <h1 id="cs-title" class="cs-title">Coming Soon . . .</h1>
-    <p class="cs-lead">このページは現在準備中です</p>
-    <p class="cs-note">合宿参加者向けのマイページです。<br>公開までもうしばらくお待ちください。<br>最新情報はホームまたは各SNSからご確認ください。</p>
-    <div class="cs-actions">
-      <a class="btn" href="index.html">ホームへ戻る</a>
-    </div>
-  </section>
+  <table class="mypage-info">
+  <tr><th>支部</th><td id="branch"></td></tr>
+  <tr><th>学年</th><td id="grade"></td></tr>
+  <tr><th>あだ名</th><td id="nickname"></td></tr>
+
+  <tr><th>バス</th><td id="bus"></td></tr>
+  <tr><th>コース</th><td id="course"></td></tr>
+  <tr><th>グループ</th><td id="courseGroup"></td></tr>
+  <tr><th>自由企画</th><td id="freeCourse"></td></tr>
+
+  <tr><th>部屋</th><td id="room"></td></tr>
+</table>
+
+<img id="roomMap" class="room-map-img" hidden alt="部屋案内図">
+<p id="message" class="user-message"></p>
 </main>
 
 <footer class="site-footer">

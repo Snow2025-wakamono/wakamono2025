@@ -384,3 +384,33 @@ prevButton.addEventListener('click', () => {
     showSlide(currentIndex);
   }, autoSlideInterval);
 });
+
+// マイページ
+// data は GAS から返ってきたJSON
+document.getElementById("branch").textContent = data.branch || "";
+document.getElementById("grade").textContent = data.grade || "";
+document.getElementById("nickname").textContent = data.nickname || "";
+
+document.getElementById("bus").textContent = data.bus || "後日案内";
+document.getElementById("course").textContent = data.course || data.themeCourse || "";
+document.getElementById("courseGroup").textContent = data.courseGroup || "";
+document.getElementById("freeCourse").textContent = data.freeCourse || "";
+
+document.getElementById("room").textContent = data.room || "後日案内";
+document.getElementById("message").textContent = data.message || "";
+
+// 地図：部屋エリアで切替（おすすめ）
+const mapByArea = {
+  "A": "assets/img/maps/area_a.webp",
+  "B": "assets/img/maps/area_b.webp",
+  "GYM": "assets/img/maps/gym.webp",
+};
+
+const roomMap = document.getElementById("roomMap");
+const src = mapByArea[(data.roomArea || "").toUpperCase()];
+if (src) {
+  roomMap.src = src;
+  roomMap.hidden = false;
+} else {
+  roomMap.hidden = true;
+}
