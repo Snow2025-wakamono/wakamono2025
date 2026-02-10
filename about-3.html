@@ -28,9 +28,9 @@
 }
 
 .slideshow img {
-  width: 80%;
-  height: auto;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
@@ -61,6 +61,43 @@
 .slideshow button.next {
   right: 10px; /* 右端に配置 */
 }
+
+.venue{
+  display: flex;
+    /* 横並びにする */
+    gap: 40px;
+    /* 要素間の余白 */
+    align-items: stretch;
+    /* 上揃え */
+    flex-wrap: wrap;
+    /* 画面が狭いときは折り返す */
+    padding: 24px;
+}
+
+.venue .group {
+    width: 300px;
+    flex: 0 0 300px;
+    /* 最小300pxで残りは可変 */
+    display: flex;
+    flex-direction: column;   /* 縦に並べる */
+    justify-content: center;  /* 上下中央 */
+    align-items: center;      /* 左右中央 */
+    text-align: center;       /* テキストも中央寄せ */
+    padding: 20px;
+
+    min-height: 350px;        /* ← ★ここで高さを揃える */
+    box-sizing: border-box;
+
+}
+
+.venue .group img {
+  width: 65%;
+  max-width: 280px;
+  height: auto;
+  padding: 10px;
+}
+
+
 </style>
 
 <body data-page="about">
@@ -116,6 +153,91 @@
     <button class="next">⇨</button>
 </div>
 
+<hr class="divider--soft">
+<div style="margin: 50px;"></div>
+<div class="center">写真を押して詳細を確認してみてね！</div>
+<div class="venue">
+    <div class="group" style="background:  #f7fbfe; border: solid 5px #6a8caf;">
+        <P>
+            北海道地区大学生年代表現活動
+        </P>
+        <a href="group/group_hokkaido.html">
+            <img src="assets/img/SK25.jpg">
+        </a>
+    </div>
+    <div class="group" style="background:  #f7f2ff; border: solid 5px #800080;">
+        <P>
+            東北支部大学生年代表現活動
+        </P>
+        <a href="group/group_tohoku.html">
+        <img src="assets/img/SK25_2.jpg">
+        </a>
+    </div>
+    <div class="group" style="background:  #ffecec; border: solid 5px #9b3434;">
+        <P>
+            北関東信越支部大学生年代表現活動
+        </P>
+        <a href="group/group_kitakan.html">
+        <img src="assets/img/GT24.jpg">
+        </a>
+    </div>
+    <div class="group" style="background:  #f4ffe8; border: solid 5px #adff2f;">
+        <P>
+            東京支部大学生年代表現活動
+        </P>
+        <a href="group/group_tokyo.html">
+        <img src="assets/img/SK21.jpg">
+        </a>
+    </div>
+    <div class="group" style="background:  #fffdeb; border: solid 5px #fff44f;">
+        <P>
+            千葉支部表現活動の会
+        </P>
+        <a href="group/group_chiba.html">
+        <img src="assets/img/GT15.jpg">
+        </a>
+    </div>
+    <div class="group" style="background:  #ffeed2; border: solid 5px #ffa500;">
+        <P>
+            神奈川支部表現活動
+        </P>
+        <a href="group/group_kanagawa.html">
+        <img src="assets/img/SK29.jpg">
+        </a>
+    </div>
+    <div class="group" style="background:  #f2fff5; border: solid 5px #006400;">
+        <P>
+            中部支部大学生ひろば
+        </P>
+        <a href="group/group_tyubu.html">
+        <img src="assets/img/SK28.jpg">
+        </a>
+    </div>
+    <div class="group" style="background:  #eaf8ff; border: solid 5px #87cefa;">
+        <P>
+            29期関西テーマ活動研究
+        </P>
+        <a href="group/group_kansai.html">
+        <img src="assets/img/SK9.jpg">
+        </a>
+    </div>
+    <div class="group" style="background:  #ffeff4; border: solid 5px #ffc0cb;">
+        <P>
+            中国支部大学生年代表現活動
+        </P>
+        <a href="group/group_tyugoku.html">
+        <img src="assets/img/SK30.jpg">
+        </a>
+    </div>
+    <div class="group" style="background:  #eaf4ff; border: solid 5px #6a8caf;">
+        <P>
+            九州支部表現活動
+        </P>
+        <a href="group/group_kyusyu.html">
+        <img src="assets/img/GT16.jpg">
+        </a>
+    </div>
+</div>
 
 </main>
 
