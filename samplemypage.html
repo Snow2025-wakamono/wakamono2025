@@ -44,22 +44,59 @@
 <div id="backdrop" class="backdrop" hidden></div>
 
 <main class="container">
-  <table class="mypage-info">
-  <tr><th>支部</th><td id="branch"></td></tr>
-  <tr><th>学年</th><td id="grade"></td></tr>
-  <tr><th>あだ名</th><td id="nickname"></td></tr>
 
-  <tr><th>バス</th><td id="bus"></td></tr>
-  <tr><th>コース</th><td id="course"></td></tr>
-  <tr><th>グループ</th><td id="courseGroup"></td></tr>
-  <tr><th>自由企画</th><td id="freeCourse"></td></tr>
+  <!-- ✅ ログイン画面 -->
+  <section id="loginBox" class="myp-login">
+    <h1 class="myp-title">マイページ</h1>
+    <p class="myp-lead">配布された<strong>固有ID</strong>でログインしてください。</p>
 
-  <tr><th>部屋</th><td id="room"></td></tr>
-</table>
+    <div class="myp-form">
+      <label class="myp-label" for="loginId">固有ID</label>
+      <input id="loginId" class="myp-input" type="text" inputmode="numeric" placeholder="例：1000" />
+      <button id="loginBtn" class="myp-btn" type="button">ログイン</button>
+      <p id="loginError" class="myp-error" aria-live="polite"></p>
+    </div>
+  </section>
 
-<img id="roomMap" class="room-map-img" hidden alt="部屋案内図">
-<p id="message" class="user-message"></p>
+  <!-- ✅ ログイン後に表示 -->
+  <section id="mypageContent" class="myp-content" hidden>
+
+    <!-- 画像保存の対象（ここだけをPNGにします） -->
+    <div id="mypage-capture" class="myp-capture">
+      <h1 class="myp-name">
+        <span id="nickname">—</span>
+      </h1>
+      <p class="muted">※この画面は保存してオフラインでも確認できます</p>
+
+      <table class="myp-table" aria-label="個人情報">
+        <tr><th>支部</th><td id="branch">—</td></tr>
+        <tr><th>学年</th><td id="grade">—</td></tr>
+        <tr><th>バス号車</th><td id="bus">—</td></tr>
+        <tr><th>コース名</th><td id="course">—</td></tr>
+        <tr><th>グループ番号</th><td id="courseGroup">—</td></tr>
+        <tr><th>自由企画</th><td id="freeCourse">—</td></tr>
+        <tr><th>宿泊部屋</th><td id="room">—</td></tr>
+      </table>
+
+      <!-- 部屋の地図（roomAreaで切替） -->
+      <div class="myp-mapbox">
+        <img id="roomMap" class="myp-map" src="" alt="部屋の場所案内図" hidden>
+        <p id="mapNote" class="muted" hidden>※地図をタップすると拡大できます</p>
+      </div>
+
+      <!-- 運営からの個別連絡（あれば表示） -->
+      <p id="message" class="myp-message" hidden></p>
+    </div>
+
+    <!-- 画像として保存 -->
+    <button id="saveImageBtn" class="myp-btn-save" type="button">📸 画面を画像として保存</button>
+
+    <!-- ログアウト（ローカル保存を使う場合用：今は任意） -->
+    <button id="logoutBtn" class="myp-btn-ghost" type="button">ログアウト</button>
+  </section>
+
 </main>
+
 
 <footer class="site-footer">
   <div class="container">

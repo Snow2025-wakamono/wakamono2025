@@ -385,32 +385,180 @@ prevButton.addEventListener('click', () => {
   }, autoSlideInterval);
 });
 
+
+
 // マイページ
-// data は GAS から返ってきたJSON
-document.getElementById("branch").textContent = data.branch || "";
-document.getElementById("grade").textContent = data.grade || "";
-document.getElementById("nickname").textContent = data.nickname || "";
+/* =========================
+   MyPage JS
+   ========================= */
 
-document.getElementById("bus").textContent = data.bus || "後日案内";
-document.getElementById("course").textContent = data.course || data.themeCourse || "";
-document.getElementById("courseGroup").textContent = data.courseGroup || "";
-document.getElementById("freeCourse").textContent = data.freeCourse || "";
+/** ★ここを必ず変更：GAS WebアプリURL（.../exec） */
+const API_URL = "https://script.google.com/macros/s/AKfycbzwVsaiwS87J1NnnwAWtL80eBwwjfCV0dRz7MbVYbst2o2ikGFIc8sZPQ5Gio6BhaBwfw/exec";
 
-document.getElementById("room").textContent = data.room || "後日案内";
-document.getElementById("message").textContent = data.message || "";
-
-// 地図：部屋エリアで切替（おすすめ）
+/** ★地図の切り替え：部屋エリアコード → 画像パス */
 const mapByArea = {
   "A": "assets/img/maps/area_a.webp",
   "B": "assets/img/maps/area_b.webp",
   "GYM": "assets/img/maps/gym.webp",
+  // 例： "C": "assets/img/maps/area_c.webp",
 };
 
-const roomMap = document.getElementById("roomMap");
-const src = mapByArea[(data.roomArea || "").toUpperCase()];
-if (src) {
-  roomMap.src = src;
-  roomMap.hidden = false;
-} else {
-  roomMap.hidden = true;
+function $(id) {
+  return document.getElementById(id);
 }
+
+function setText(id, value, fallback = "—") {
+  const el = $(id);
+  if (!el) return;
+  const v = (value === null || value === undefined || String(value).trim() === "") ? fallback : String(value);
+  el.textContent = v;
+}
+
+function show(el, yes) {
+  if (!el) return;
+  el.hidden = !yes;
+}
+
+async function fetchUserById(id) {
+  const url = `${API_URL}?id=${encodeURIComponent(id)}`;
+  const res = await fetch(url, { method: "GET" });
+  // GASがHTMLを返してしまう等の事故に備えて text→json
+  const text = await res.text();
+  try {
+    return JSON.parse(text);
+  } catch {
+    return { error: "invalid response", raw: text };
+  }
+}
+
+function renderUser(data) {
+  // 表示項目（あなたのDBの列名に合わせてGASが返すキーを想定）
+  setText("nickname", data.nickname);
+  setText("branch", data.branch);
+  setText("grade", data.grade);
+
+  setText("bus", data.bus, "後日案内");
+  setText("course", data.course || data.themeCourse || "", "—");
+  setText("courseGroup", data.courseGroup);
+  setText("freeCourse", data.freeCourse);
+
+  setText("room", data.room, "後日案内");
+
+  // 個別連絡
+  const msg = (data.message || "").toString().trim();
+  const msgEl = $("message");
+  if (msgEl) {
+    msgEl.textContent = msg;
+    show(msgEl, !!msg);
+  }
+
+  // 部屋地図（roomAreaがある人だけ表示）
+  const area = (data.roomArea || "").toString().trim().toUpperCase();
+  const mapSrc = mapByArea[area];
+  const mapEl = $("roomMap");
+  const noteEl = $("mapNote");
+
+  if (mapEl && mapSrc) {
+    mapEl.src = mapSrc;
+    show(mapEl, true);
+    show(noteEl, true);
+
+    // タップで拡大（別タブで開く）
+    mapEl.style.cursor = "pointer";
+    mapEl.onclick = () => window.open(mapSrc, "_blank", "noopener");
+  } else {
+    show(mapEl, false);
+    show(noteEl, false);
+  }
+}
+
+function initYear() {
+  const y = document.getElementById("year");
+  if (y) y.textContent = String(new Date().getFullYear());
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initYear();
+
+  const loginBtn = $("loginBtn");
+  const loginId = $("loginId");
+  const loginError = $("loginError");
+
+  const loginBox = $("loginBox");
+  const mypageContent = $("mypageContent");
+
+  const saveBtn = $("saveImageBtn");
+  const logoutBtn = $("logoutBtn");
+
+  if (loginBtn) {
+    loginBtn.addEventListener("click", async () => {
+      const id = (loginId?.value || "").trim();
+      if (loginError) loginError.textContent = "";
+
+      if (!id) {
+        if (loginError) loginError.textContent = "IDを入力してください";
+        return;
+      }
+
+      const data = await fetchUserById(id);
+
+      if (data.error) {
+        // よくあるエラー表示
+        if (loginError) {
+          if (data.error === "not found") loginError.textContent = "IDが見つかりません";
+          else if (data.error === "ID missing") loginError.textContent = "IDを入力してください";
+          else loginError.textContent = `エラー：${data.error}`;
+        }
+        return;
+      }
+
+      // 表示反映
+      renderUser(data);
+
+      // ログイン状態を保存（任意：次回入力省略）
+      localStorage.setItem("mypage_id", id);
+
+      show(loginBox, false);
+      show(mypageContent, true);
+    });
+  }
+
+  // ページ読み込み時に自動ログイン（任意）
+  const savedId = localStorage.getItem("mypage_id");
+  if (savedId && loginId) {
+    loginId.value = savedId;
+  }
+
+  // 画像として保存
+  if (saveBtn) {
+    saveBtn.addEventListener("click", async () => {
+      const target = $("mypage-capture");
+      if (!target || typeof html2canvas !== "function") return;
+
+      // iOS含め、画像が入る場合は useCORS が重要
+      const canvas = await html2canvas(target, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: "#ffffff",
+      });
+
+      const a = document.createElement("a");
+      const yyyyMMdd = new Date().toISOString().slice(0, 10);
+      a.href = canvas.toDataURL("image/png");
+      a.download = `mypage_${yyyyMMdd}.png`;
+      a.click();
+    });
+  }
+
+  // ログアウト（localStorageを消してログイン画面に戻す）
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("mypage_id");
+      show(mypageContent, false);
+      show(loginBox, true);
+      if (loginId) loginId.value = "";
+      if (loginError) loginError.textContent = "";
+    });
+  }
+});
+
