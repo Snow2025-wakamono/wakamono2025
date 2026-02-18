@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbx0n0J_k5N97VB2swa4k_8ZtoVwaH8twd9gCkDtFuXUIuQOLD-NcSoKg-4skHcmHbjVvA/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbxWHsfZGtV6o1SG8nj97MXCUusKBe7hVDhI7m4-tVJ7n3n2wqNQZGk6l5BtX2QKkQdmmg/exec";
 
 const loginBtn = document.getElementById("loginBtn");
 const loginId = document.getElementById("loginId");
