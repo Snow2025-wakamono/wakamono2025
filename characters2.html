@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ラボ・パーティ 2025わかものin 北関</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+<script defer src="assets/js/main.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<link rel="icon" href="assets/img/favicon.JPG" type="image/png">
+<style>
+  h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+.mp4{
+  width: 60vh;
+}
+</style>
+<body data-page="characters">
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="assets/img/favicon.JPG" alt="わかもの in 北関 ロゴ" width="36" height="36">
+      <span class="brand-text">2025 わかもの in 北関</span>
+    </a>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">☰</button>
+    <!--<button class="nav-toggle" aria-label="メニューを開く">
+      <img src="assets/img/kitakuma2.png" alt="メニュー" width="30" height="30">
+    </button> -->
+  </div>
+</header>
+
+<!-- 右スライドのドロワー -->
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <strong>メニュー</strong>
+    <button class="drawer-close" aria-label="メニューを閉じる">×</button>
+  </div>
+  <nav class="drawer-nav" role="navigation">
+    <ul class="tab-list">
+      <li><a class="tab" href="index.html" aria-current="page">ホーム</a></li> <li><a class="tab" href="about.html">発表団体紹介</a></li> <li><a class="tab" href="fest.html">フェスティバル</a><li><a class="tab" href="tickets.html">チケット購入</a></li> <li><a class="tab" href="camp.html">合宿</a></li> <li><a class="tab" href="kitakan.html">北関東信越支部紹介</a></li> </li> <li><a class="tab" href="committee.html">実行委員紹介</a></li><li><a class="tab active" href="characters.html">きたくまちゃんの部屋</a></li> <li><a class="tab" href="mypage.html">マイページ</a></li>
+    </ul>
+  </nav>
+  <!-- キャラクター（ドロワー下部） -->
+  <div class="drawer-character" aria-hidden="true">
+    <img id="drawerCharacter" src="assets/img/drkitakuma.png" alt="">
+  </div>
+</aside>
+<div id="backdrop" class="backdrop" hidden></div>
+
+<main class="container characters-page">
+
+  <!-- ヒーロー（タイトル部分） -->
+  <section class="char-hero">
+    <p class="char-label-en">CHARACTER</p>
+    <h1 class="char-title">きたくまちゃんの部屋</h1>
+    <h1 class="char-title">キャラクター紹介</h1>
+    <p class="char-sub">
+      「2025 わかもの in 北関」を盛り上げる、6体のキャラクターたち。<br>
+      それぞれの個性や役割をのぞいてみよう！
+    </p>
+  </section>
+
+  <!-- キャラ一覧ナビ -->
+  <nav class="char-nav" aria-label="キャラクターナビ">
+    <ul>
+      <li><button type="button" data-target="#char-1">きたくまちゃん</button></li>
+      <li><button type="button" data-target="#char-2">そうむちゃん</button></li>
+      <li><button type="button" data-target="#char-3">ふぇすちゃん</button></li>
+      <li><button type="button" data-target="#char-4">がっしゅくん</button></li>
+      <li><button type="button" data-target="#char-5">こ～ほ～ちゃん</button></li>
+      <li><button type="button" data-target="#char-6">きょうりょくさん</button></li>
+    </ul>
+  </nav>
+
+  <!-- 1: きたくまちゃん -->
+  <section id="char-1" class="char-section char-secret">
+    <div class="char-visual">
+      <img src="assets/img/chkitakuma.png" alt="きたくまちゃんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">みんなのリーダー</p>
+      <h2 class="char-name">きたくまちゃん</h2>
+      <p class="char-copy">わかものin北関を統括する。イベントのどこかで会えるかも…？</p>
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>全体の調整・スケジュール管理</dd>
+        </div>
+        <div>
+          <dt>性格</dt><dd>陽気、時々おふざけがすき。やる気は人一倍</dd>
+        </div>
+        <div>
+          <dt>好きなもの</dt><dd>音楽とノリ</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「みんなに楽しんでもらえるように、全力でサポートするよ」</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 2: そうむちゃん -->
+  <section id="char-2" class="char-section is-alt">
+    <div class="char-visual">
+      <img src="assets/img/soumukitakuma.PNG" alt="そうむちゃんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">総務担当</p>
+      <h2 class="char-name">そうむちゃん</h2>
+      <p class="char-copy">みんなの「困った！」をそっと支える、頼れるまとめ役。</p>
+
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>全体の調整・スケジュール管理・当日サポート</dd>
+        </div>
+        <div>
+          <dt>性格</dt><dd>しっかり者だけど、ちょっとドジな一面もある。</dd>
+        </div>
+        <div>
+          <dt>好きなもの</dt><dd>チェックリスト、きれいなノート、あったかい飲み物。</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「みんなが安心して楽しめるように、ぜんぶ準備しておくっす！」</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 3: ふぇすちゃん -->
+  <section id="char-3" class="char-section">
+    <div class="char-visual">
+      <img src="assets/img/feskitakuma.PNG" alt="ふぇすちゃんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">フェス担当</p>
+      <h2 class="char-name">ふぇすちゃん</h2>
+      <p class="char-copy">ステージと音楽がだいすきな、にぎやか担当。</p>
+
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>フェスティバルの企画・進行・盛り上げ係</dd>
+        </div>
+        <div>
+          <dt>性格</dt><dd>明るく元気！ でも本番前はちょっとだけ緊張する。</dd>
+        </div>
+        <div>
+          <dt>好きなもの</dt><dd>スポットライト、拍手、みんなの笑顔。</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「いっしょに、いちばんのフェスにしよーきぃ！！！」</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 4: がっしゅくん -->
+  <section id="char-4" class="char-section is-alt">
+    <div class="char-visual">
+      <img src="assets/img/gasshukukitakuma.PNG" alt="がっしゅくんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">合宿担当</p>
+      <h2 class="char-name">がっしゅくん</h2>
+      <p class="char-copy">夜のおしゃべりと、みんなで過ごす時間がだいすき。</p>
+
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>合宿の企画・運営・夜の見守り係</dd>
+        </div>
+        <div>
+          <dt>性格</dt><dd>おっとりしていて話しやすい、聞き役タイプ。</dd>
+        </div>
+        <div>
+          <dt>好きなもの</dt><dd>星空、焚き火、みんなとの「ないしょ話」。</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「沢山の大学生と過ごす時間、みんなで楽しみたいさ～！」</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 5: こ～ほ～ちゃん -->
+  <section id="char-5" class="char-section">
+    <div class="char-visual">
+      <img src="assets/img/kouhoukitakuma.PNG" alt="こ～ほ～ちゃんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">広報担当</p>
+      <h2 class="char-name">こ～ほ～ちゃん</h2>
+      <p class="char-copy">「たのしい」を、ちゃんとみんなに届けたい！ 発信のプロ。</p>
+
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>SNS・チラシ・ホームページの情報発信</dd>
+        </div>
+        <div>
+          <dt>性格</dt><dd>マイペースだけど、好きなことには全力。</dd>
+        </div>
+        <div>
+          <dt>好きなもの</dt><dd>カメラ、スタンプ、いいね！ とリポスト。</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「#2025わかものin北関 で、感想たくさん教えてな！」</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 6: きょうりょくさん -->
+  <section id="char-6" class="char-section is-alt">
+    <div class="char-visual">
+      <img src="assets/img/kyouryokutaikitakuma.PNG" alt="きょうりょくさんのイラスト">
+    </div>
+    <div class="char-profile">
+      <p class="char-tag">協力隊</p>
+      <h2 class="char-name">きょうりょくさん</h2>
+      <p class="char-copy">「手伝うよ」が口ぐせの、縁の下の力持ち。</p>
+
+      <dl class="char-table">
+        <div>
+          <dt>役割</dt><dd>当日の全体サポート・困りごと相談・お手伝い全般</dd>
+        </div>
+        <div>
+          <dt>性格</dt><dd>やさしくて、相手をよく見て動けるタイプ。</dd>
+        </div>
+        <div>
+          <dt>好きなもの</dt><dd>「ありがとう」の言葉と、みんなのほっとした顔。</dd>
+        </div>
+        <div>
+          <dt>ひとこと</dt><dd>「なにかあったら、すぐ呼んでね。すぐ行くぬん！」</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="space_big"></div>
+  <hr class="divider--soft">
+  <h2 class="font_wide">絵描き歌</h2>
+  <div class="center">
+    <p>
+      おっきなおっきなおまんじゅうに<br>
+      受話器をおきました<br>
+      涙が二つ おちてきて<br>
+      月も二つ 浮かんでる<br>
+      カモメが 空から飛んできて<br>
+      鼻をちょいとつつきました<br>
+      ほっぺが赤くなったなら きたくまちゃん<br>
+    </p><br>
+    <video class="mp4" src="assets/img/ekakiuta.mp4" controls></video>
+  </div>
+</main>
+
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <nav class="footer-sns" aria-label="SNSリンク">
+      <a class="sns-btn sns-line" href="https://lin.ee/I1zqlAx" target="_blank" rel="noopener" aria-label="LINE公式">
+        <i class="fa-brands fa-line" aria-hidden="true"></i>
+      </a>
+      <a class="sns-btn sns-instagram" href="https://www.instagram.com/labo_wakamono/?igsh=anNoMGw0bGF4dDNz" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a class="sns-btn sns-facebook" href="https://facebook.com/qr?id=61581130306331" target="_blank" rel="noopener" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      </a>
+    </nav>
+
+    <p>©2025 わかもの in 北関</p>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="ページ上部へ">↑</button>
+
+</body>
+</html>
