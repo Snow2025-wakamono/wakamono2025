@@ -6,6 +6,8 @@
 <title>ラボ・パーティ 2025わかものin 北関</title>
 <link rel="stylesheet" href="assets/css/styles.css" />
 <script defer src="assets/js/main.js"></script>
+<script defer src="assets/js/mypage.js"></script>
+<link rel="stylesheet" href="assets/css/mypage.css">
 
 <link rel="icon" href="assets/img/favicon.JPG" type="image/png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -43,56 +45,47 @@
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
-<main class="container">
 
-  <!-- ✅ ログイン画面 -->
+<main class="container mypage">
+
+  <!-- ===== ログイン画面 ===== -->
   <section id="loginBox" class="myp-login">
     <h1 class="myp-title">マイページ</h1>
-    <p class="myp-lead">配布された<strong>固有ID</strong>でログインしてください。</p>
+    <p class="myp-lead">配布された <strong>個人ID</strong> を入力してください</p>
 
     <div class="myp-form">
-      <label class="myp-label" for="loginId">固有ID</label>
-      <input id="loginId" class="myp-input" type="text" inputmode="numeric" placeholder="例：1000" />
-      <button id="loginBtn" class="myp-btn" type="button">ログイン</button>
-      <p id="loginError" class="myp-error" aria-live="polite"></p>
+      <label for="loginId">個人ID</label>
+      <input id="loginId" class="myp-input" type="text" placeholder="例：1001">
+
+      <button id="loginBtn" class="myp-btn">ログイン</button>
+      <p id="loginError" class="myp-error"></p>
     </div>
   </section>
 
-  <!-- ✅ ログイン後に表示 -->
+
+  <!-- ===== ログイン後表示 ===== -->
   <section id="mypageContent" class="myp-content" hidden>
 
-    <!-- 画像保存の対象（ここだけをPNGにします） -->
-    <div id="mypage-capture" class="myp-capture">
-      <h1 class="myp-name">
-        <span id="nickname">—</span>
-      </h1>
-      <p class="muted">※この画面は保存してオフラインでも確認できます</p>
+    <div class="myp-card">
+      <h2 class="myp-name"><span id="nickname">—</span> さん</h2>
 
-      <table class="myp-table" aria-label="個人情報">
-        <tr><th>支部</th><td id="branch">—</td></tr>
-        <tr><th>学年</th><td id="grade">—</td></tr>
-        <tr><th>バス号車</th><td id="bus">—</td></tr>
-        <tr><th>コース名</th><td id="course">—</td></tr>
-        <tr><th>グループ番号</th><td id="courseGroup">—</td></tr>
-        <tr><th>自由企画</th><td id="freeCourse">—</td></tr>
-        <tr><th>宿泊部屋</th><td id="room">—</td></tr>
+      <table class="myp-table">
+        <tr><th>所属支部</th><td id="branch"></td></tr>
+        <tr><th>学年</th><td id="grade"></td></tr>
+        <tr><th>バス号車</th><td id="bus"></td></tr>
+
+        <tr><th>自由企画</th><td id="freeAssign"></td></tr>
+        <tr><th>テーマコース</th><td id="themeCourse"></td></tr>
+        <tr><th>テーマグループ</th><td id="themeGroup"></td></tr>
+
+        <tr><th>自由活動部屋</th><td id="freeRoom"></td></tr>
+        <tr><th>テーマ活動部屋</th><td id="themeRoom"></td></tr>
+        <tr><th>宿泊部屋</th><td id="stayRoom"></td></tr>
       </table>
 
-      <!-- 部屋の地図（roomAreaで切替） -->
-      <div class="myp-mapbox">
-        <img id="roomMap" class="myp-map" src="" alt="部屋の場所案内図" hidden>
-        <p id="mapNote" class="muted" hidden>※地図をタップすると拡大できます</p>
-      </div>
-
-      <!-- 運営からの個別連絡（あれば表示） -->
-      <p id="message" class="myp-message" hidden></p>
+      <button id="logoutBtn" class="myp-btn-ghost">ログアウト</button>
     </div>
 
-    <!-- 画像として保存 -->
-    <button id="saveImageBtn" class="myp-btn-save" type="button">📸 画面を画像として保存</button>
-
-    <!-- ログアウト（ローカル保存を使う場合用：今は任意） -->
-    <button id="logoutBtn" class="myp-btn-ghost" type="button">ログアウト</button>
   </section>
 
 </main>
