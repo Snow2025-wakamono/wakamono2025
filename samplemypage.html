@@ -46,50 +46,99 @@
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
-
+<!-- ===================== MyPage ===================== -->
 <main class="container mypage">
 
-  <!-- ===== ログイン画面 ===== -->
+  <!-- ログイン -->
   <section id="loginBox" class="myp-login">
     <h1 class="myp-title">マイページ</h1>
     <p class="myp-lead">配布された <strong>個人ID</strong> を入力してください</p>
 
     <div class="myp-form">
       <label for="loginId">個人ID</label>
-      <input id="loginId" class="myp-input" type="text" placeholder="例：1001">
-
-      <button id="loginBtn" class="myp-btn">ログイン</button>
-      <p id="loginError" class="myp-error"></p>
+      <input id="loginId" class="myp-input" type="text" inputmode="numeric" placeholder="例：1001">
+      <button id="loginBtn" class="myp-btn" type="button">ログイン</button>
+      <p id="loginError" class="myp-error" aria-live="polite"></p>
     </div>
   </section>
 
-
-  <!-- ===== ログイン後表示 ===== -->
+  <!-- ログイン後 -->
   <section id="mypageContent" class="myp-content" hidden>
 
-    <div class="myp-card">
-      <h2 class="myp-name"><span id="nickname">—</span> さん</h2>
+    <!-- 見出し帯 -->
+    <header class="mp-hero">
+      <div class="mp-hero-inner">
+        <div class="mp-hero-text">
+          <div class="mp-hero-small"><span id="nickname">—</span> の</div>
+          <div class="mp-hero-big">マイページ</div>
+        </div>
+        <img class="mp-hero-chara" src="assets/img/drkitakuma.png" alt="" aria-hidden="true">
+      </div>
+    </header>
 
-      <table class="myp-table">
-        <tr><th>所属支部</th><td id="branch"></td></tr>
-        <tr><th>学年</th><td id="grade"></td></tr>
-        <tr><th>バス号車</th><td id="bus"></td></tr>
+    <!-- 情報 -->
+    <section class="mp-card">
+      <h2 class="mp-sec-title">《基本情報》</h2>
+      <div class="mp-kv">
+        <div class="mp-row"><span class="mp-label">所属支部</span><span class="mp-val" id="branch">—</span></div>
+        <div class="mp-row"><span class="mp-label">学年</span><span class="mp-val" id="grade">—</span></div>
+        <div class="mp-row"><span class="mp-label">バス号車</span><span class="mp-val" id="bus">—</span></div>
+      </div>
 
-        <tr><th>自由企画</th><td id="freeAssign"></td></tr>
-        <tr><th>テーマコース</th><td id="themeCourse"></td></tr>
-        <tr><th>テーマグループ</th><td id="themeGroup"></td></tr>
+      <h2 class="mp-sec-title">《企画》</h2>
+      <div class="mp-kv">
+        <div class="mp-row"><span class="mp-label">自由企画</span><span class="mp-val" id="freeAssign">—</span></div>
+        <div class="mp-row"><span class="mp-label">テーマ企画_コース</span><span class="mp-val" id="themeCourse">—</span></div>
+        <div class="mp-row"><span class="mp-label">テーマ企画_グループ</span><span class="mp-val" id="themeGroup">—</span></div>
+      </div>
 
-        <tr><th>自由活動部屋</th><td id="freeRoom"></td></tr>
-        <tr><th>テーマ活動部屋</th><td id="themeRoom"></td></tr>
-        <tr><th>宿泊部屋</th><td id="stayRoom"></td></tr>
-      </table>
+      <h2 class="mp-sec-title">《部屋》</h2>
+      <div class="mp-kv">
+        <div class="mp-row"><span class="mp-label">自由活動部屋</span><span class="mp-val" id="freeRoom">—</span></div>
+        <div class="mp-row"><span class="mp-label">テーマ活動部屋</span><span class="mp-val" id="themeRoom">—</span></div>
+        <div class="mp-row"><span class="mp-label">宿泊部屋</span><span class="mp-val" id="stayRoom">—</span></div>
+      </div>
 
-      <button id="logoutBtn" class="myp-btn-ghost">ログアウト</button>
-    </div>
+      <div class="mp-actions">
+        <button id="saveBtn" class="mp-btn" type="button">画像として保存</button>
+        <button id="logoutBtn" class="mp-btn mp-btn-ghost" type="button">ログアウト</button>
+      </div>
+      <p class="mp-save-hint">※保存できない場合はスクショでもOKです。</p>
+    </section>
+
+    <!-- タイムテーブル（グループ別で差し替え） -->
+    <section class="mp-gallery" aria-label="タイムテーブル">
+      <h2 class="mp-gallery-title">タイムテーブル</h2>
+
+      <!-- JSがここに 2枚×3セット を生成する -->
+      <div class="mp-slides" id="ttSlides"></div>
+
+      <div class="mp-slide-ctrl">
+        <button class="mp-btn" type="button" id="ttPrev" aria-label="前のセット">←</button>
+        <div class="mp-dots" id="ttDots" aria-hidden="true"></div>
+        <button class="mp-btn" type="button" id="ttNext" aria-label="次のセット">→</button>
+      </div>
+
+      <p class="mp-hint" id="ttHint">左右ボタン / スワイプで切替できます</p>
+    </section>
+
+    <!-- 館内図（固定） -->
+    <section class="mp-map" aria-label="館内案内図">
+      <h2 class="mp-gallery-title">館内案内図</h2>
+
+      <a class="mp-map-link" href="assets/img/mypage/map.webp" target="_blank" rel="noopener">
+        <img class="mp-map-img" src="assets/img/mypage/map.webp" alt="館内案内図（タップで拡大）">
+      </a>
+
+      <p class="mp-hint">タップすると拡大表示できます</p>
+    </section>
 
   </section>
-
 </main>
+
+<!-- 画像保存用ライブラリ -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
 
 
 <footer class="site-footer">
