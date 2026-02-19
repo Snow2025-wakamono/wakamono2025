@@ -77,6 +77,14 @@
   color: var(--muted, #6b7280);
   font-size: .9rem;
 }
+/* aタグをボタン風に（館内案内図へ） */
+.mp-btn-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 1;
+}
 
 /* ---- common blocks ---- */
 .mp-gallery, .mp-map{
@@ -144,3 +152,5 @@
   .mp-hero-chara{ width: 96px; }
   .mp-card{ padding: 18px 18px 14px; }
 }
+
+html{ scroll-behavior: smooth; }
