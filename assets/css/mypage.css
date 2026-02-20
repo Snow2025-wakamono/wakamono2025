@@ -149,7 +149,7 @@
 
 /* a bit bigger screens */
 @media (min-width: 760px){
-  .mp-hero-chara{ width: 96px; }
+  .mp-hero-chara{ width: 120px; }
   .mp-card{ padding: 18px 18px 14px; }
 }
 
