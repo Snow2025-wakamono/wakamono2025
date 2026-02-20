@@ -65,53 +65,80 @@
   <!-- ログイン後 -->
   <section id="mypageContent" class="myp-content" hidden>
 
-    <!-- 見出し帯 -->
-    <header class="mp-hero">
-      <div class="mp-hero-inner">
-        <div class="mp-hero-text">
-          <div class="mp-hero-small"><span id="nickname">—</span> の</div>
-          <div class="mp-hero-big">マイページ</div>
+  <!-- ==== 上の“〇〇のマイページ”帯（2段ピル） ==== -->
+  <section class="mp-top">
+    <div class="mp-title-bubbles" aria-label="ページタイトル">
+      <div class="mp-title-pill mp-title-pill--small">
+        <span id="nickname">—</span> の
+      </div>
+      <div class="mp-title-pill mp-title-pill--big">
+        マイページ
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== キャラ＋吹き出し（基本情報） ==== -->
+  <section class="mp-profile">
+    <img class="mp-chara" src="assets/img/gasshukukitakuma.PNG" alt="" aria-hidden="true">
+
+    <div class="mp-bubble" role="group" aria-label="基本情報">
+      <div class="mp-bubble-head">
+        <span class="mp-bubble-title">《基本情報》</span>
+
+        <div class="mp-groupbox">
+          <span class="mp-groupbox-label">グループ</span>
+          <span class="mp-groupbox-value" id="themeGroup">—</span>
         </div>
-        <img class="mp-hero-chara" src="assets/img/gasshukukitakuma.PNG" alt="" aria-hidden="true">
-      </div>
-    </header>
-
-    <!-- 情報 -->
-    <section class="mp-card">
-      <h2 class="mp-sec-title">《基本情報》</h2>
-      <div class="mp-kv">
-        <div class="mp-row"><span class="mp-label">所属支部</span><span class="mp-val" id="branch">—</span></div>
-        <div class="mp-row"><span class="mp-label">学年</span><span class="mp-val" id="grade">—</span></div>
       </div>
 
-      <h2 class="mp-sec-title">《バス~フェスティバル会場から合宿会場まで~》</h2>
-      <div class="mp-kv">
-        <div class="mp-row"><span class="mp-label">バス号車</span><span class="mp-val" id="bus">—</span></div>
+      <div class="mp-bubble-body">
+        <p class="mp-line"><span id="branch">—</span>　<span id="grade">—</span></p>
       </div>
+    </div>
+  </section>
 
-      <h2 class="mp-sec-title">《企画》</h2>
-      <div class="mp-kv">
-        <div class="mp-row"><span class="mp-label">わかものたちのいるところ</span><span class="mp-val" id="freeAssign">—</span></div>
-        <div class="mp-row"><span class="mp-label">コース</span><span class="mp-val" id="themeCourse">—</span></div>
-        <div class="mp-row"><span class="mp-label">グループ</span><span class="mp-val" id="themeGroup">—</span></div>
-      </div>
+  <!-- ==== 真ん中：黄色ラベル＋企画名 ==== -->
+  <section class="mp-themearea" aria-label="企画">
+    <div class="mp-tag">わかものたちのいるところ</div>
+    <div class="mp-theme-title" id="freeAssign">—</div>
+    <div class="mp-theme-sub">（<span id="themeCourse">—</span>）</div>
+    <div class="mp-info-line">
+      <span class="mp-info-label">わかものたちのいるところ：</span>
+      <span class="mp-info-val" id="freeRoom">—</span>
+    </div>
+  </section>
 
-      <h2 class="mp-sec-title">《部屋》</h2>
-      <div class="mp-kv">
-        <div class="mp-row"><span class="mp-label">わかものたちのいるところ活動部屋</span><span class="mp-val" id="freeRoom">—</span></div>
-        <div class="mp-row"><span class="mp-label">グループ活動部屋</span><span class="mp-val" id="themeRoom">—</span></div>
-        <div class="mp-row"><span class="mp-label">宿泊部屋</span><span class="mp-val" id="stayRoom">—</span></div>
-      </div>
+  <!-- ==== 下：活動部屋 / 宿泊部屋 / バス ==== -->
+  <section class="mp-info">
 
-      <div class="mp-actions">
-        <a class="mp-btn mp-btn-ghost mp-btn-link" href="#facilityMap">施設・館内案内図へ</a>
+    <div class="mp-pill mp-pill--green">活動部屋</div>
+    <div class="mp-info-line">
+      <span class="mp-info-label">グループ活動：</span>
+      <span class="mp-info-val" id="themeRoom">—</span>
+    </div>
 
-        <button id="saveBtn" class="mp-btn" type="button">画像として保存</button>
+    <div class="mp-info-line">
+      <span class="mp-info-label">宿泊部屋：</span>
+      <span class="mp-info-val" id="stayRoom">—</span>
+    </div>
 
-        <button id="logoutBtn" class="mp-btn mp-btn-ghost" type="button">ログアウト</button>
-      </div>
-      <p class="mp-save-hint">※保存できない場合はスクショでもOKです。</p>
-    </section>
+    <div class="mp-pill mp-pill--orange">フェスティバルから合宿</div>
+    <div class="mp-info-line">
+      <span class="mp-info-label">バス：</span>
+      <span class="mp-info-val" id="bus">—</span>
+    </div>
+
+    <!-- ボタン -->
+    <div class="mp-actions">
+      <a class="mp-btn mp-btn-ghost mp-btn-link" href="#facilityMap">施設・館内案内図へ</a>
+      <button id="saveBtn" class="mp-btn" type="button">画像として保存</button>
+      <button id="logoutBtn" class="mp-btn mp-btn-ghost" type="button">ログアウト</button>
+    </div>
+    <p class="mp-save-hint">※保存できない場合はスクショでもOKです。</p>
+
+  </section>
+
+  <!-- ここから下（タイムテーブル/館内図など）は今のままでOK -->
 
     <!-- タイムテーブル（グループ別で差し替え） -->
     <section class="mp-gallery" aria-label="タイムテーブル">

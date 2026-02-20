@@ -154,3 +154,163 @@
 }
 
 html{ scroll-behavior: smooth; }
+
+/* ===== MyPage redesign: speech bubble style ===== */
+body[data-page="mypage"]{
+  background: #f4f3ef;
+}
+
+/* 上のタイトル（2段ピル） */
+.mp-top{ padding: 8px 0 10px; }
+.mp-title-bubbles{ display:grid; gap: 10px; justify-items:center; }
+.mp-title-pill{
+  background:#7fb79c;
+  color:#111;
+  border-radius: 22px;
+  padding: 12px 18px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+.mp-title-pill--small{
+  width: min(420px, 92%);
+  text-align:center;
+  font-size: clamp(1.6rem, 7vw, 2.4rem);
+}
+.mp-title-pill--big{
+  width: min(520px, 96%);
+  text-align:center;
+  font-size: clamp(2.2rem, 9vw, 3.3rem);
+}
+
+/* キャラ＋吹き出し */
+.mp-profile{
+  display:flex;
+  align-items:flex-end;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.mp-chara{
+  width: 120px;
+  height: auto;
+  flex: 0 0 auto;
+}
+
+/* 吹き出し本体 */
+.mp-bubble{
+  position: relative;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 14px 16px;
+  flex: 1;
+  border: 1px solid rgba(0,0,0,.10);
+  box-shadow: 0 12px 26px rgba(0,0,0,.08);
+}
+
+/* ふきだしの“しっぽ” */
+.mp-bubble::before{
+  content:"";
+  position:absolute;
+  left: -14px;
+  bottom: 22px;
+  width: 0; height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 18px solid #fff;
+  filter: drop-shadow(-2px 2px 1px rgba(0,0,0,.06));
+}
+
+.mp-bubble-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 12px;
+}
+
+.mp-bubble-title{
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+/* グループ表示（右側） */
+.mp-groupbox{
+  text-align:center;
+  min-width: 84px;
+}
+.mp-groupbox-label{
+  display:block;
+  font-weight: 900;
+  font-size: .95rem;
+}
+.mp-groupbox-value{
+  display:block;
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 1.0;
+  margin-top: 4px;
+}
+
+.mp-bubble-body{ margin-top: 8px; }
+.mp-line{
+  margin: 0;
+  font-weight: 900;
+  font-size: 1.05rem;
+  letter-spacing: .06em;
+}
+
+/* 真ん中：黄色ラベル＋企画名 */
+.mp-themearea{
+  text-align:center;
+  margin: 18px 0 10px;
+}
+.mp-tag{
+  display:inline-block;
+  background: #fff2a8;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  border: 1px solid rgba(0,0,0,.08);
+}
+.mp-theme-title{
+  margin-top: 12px;
+  font-weight: 900;
+  font-size: 1.35rem;
+  letter-spacing: .10em;
+}
+.mp-theme-sub{
+  margin-top: 4px;
+  font-weight: 900;
+  opacity: .8;
+}
+
+/* 下：活動部屋 / 宿泊部屋 / バス */
+.mp-info{
+  margin-top: 18px;
+  padding: 8px 4px 0;
+}
+.mp-pill{
+  display:inline-block;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 900;
+  letter-spacing: .10em;
+  margin: 10px 0;
+}
+.mp-pill--green{ background:#7fb79c; }
+.mp-pill--orange{ background:#ff964a; }
+
+.mp-info-line{
+  margin: 10px 0;
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: .08em;
+}
+.mp-info-val{ word-break: break-word; }
+
+/* 小さいスマホ対策 */
+@media (max-width: 420px){
+  .mp-chara{ width: 96px; }
+  .mp-bubble{ border-radius: 28px; }
+  .mp-groupbox-value{ font-size: 2.1rem; }
+}
