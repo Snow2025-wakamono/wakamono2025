@@ -186,12 +186,12 @@ body[data-page="mypage"]{
 .mp-profile{
   display:flex;
   align-items:flex-end;
-  gap: 14px;
+  gap: 8px;
   margin-top: 8px;
 }
 
 .mp-chara{
-  width: 120px;
+  width: 200px;
   height: auto;
   flex: 0 0 auto;
 }
