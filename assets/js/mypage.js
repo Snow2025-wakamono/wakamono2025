@@ -49,7 +49,7 @@ function buildTimetableSlidesByGroup(themeGroupRaw){
 
   if(hint){
     hint.textContent = g
-      ? `あなたのテーマ企画グループ：${g}（専用タイムテーブル）`
+      ? `あなたのグループ：${g}（専用タイムテーブル）`
       : `グループ未設定（共通タイムテーブル）`;
   }
 
