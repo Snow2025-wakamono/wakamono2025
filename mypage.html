@@ -4,14 +4,15 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>ラボ・パーティ 2025わかものin 北関</title>
+<script defer src="assets/js/mypage.js"></script>
+<link rel="stylesheet" href="assets/css/mypage.css">
 <link rel="stylesheet" href="assets/css/styles.css" />
 <script defer src="assets/js/main.js"></script>
+
 
 <link rel="icon" href="assets/img/favicon.JPG" type="image/png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<!-- 公開前は検索避け（必要なければ削除） -->
-<meta name="robots" content="noindex, nofollow">
 </head>
 <body data-page="mypage">
 <header class="site-header">
@@ -45,17 +46,134 @@
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
-<main class="container">
-  <section class="comingsoon" aria-labelledby="cs-title">
-    <div class="cs-icon" aria-hidden="true">🔒</div>
-    <h1 id="cs-title" class="cs-title">Coming Soon . . .</h1>
-    <p class="cs-lead">このページは現在準備中です</p>
-    <p class="cs-note">合宿参加者向けのマイページです。<br>公開までもうしばらくお待ちください。<br>最新情報はホームまたは各SNSからご確認ください。</p>
-    <div class="cs-actions">
-      <a class="btn" href="index.html">ホームへ戻る</a>
+<!-- ===================== MyPage ===================== -->
+<main class="container mypage">
+
+  <!-- ログイン -->
+  <section id="loginBox" class="myp-login">
+    <h1 class="myp-title">マイページ</h1>
+    <p class="myp-lead">配布された <strong>個人ID</strong> を入力してください</p>
+
+    <div class="myp-form">
+      <label for="loginId">個人ID</label>
+      <input id="loginId" class="myp-input" type="text" inputmode="numeric" placeholder="例：1001">
+      <button id="loginBtn" class="myp-btn" type="button">ログイン</button>
+      <p id="loginError" class="myp-error" aria-live="polite"></p>
     </div>
   </section>
+
+  <!-- ログイン後 -->
+  <section id="mypageContent" class="myp-content" hidden>
+
+  <!-- ==== 上の“〇〇のマイページ”帯（2段ピル） ==== -->
+  <section class="mp-top">
+    <div class="mp-title-bubbles" aria-label="ページタイトル">
+      <div class="mp-title-pill mp-title-pill--small">
+        <span id="nickname">—</span> の
+      </div>
+      <div class="mp-title-pill mp-title-pill--big">
+        マイページ
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== キャラ＋吹き出し（基本情報） ==== -->
+  <section class="mp-profile">
+    <img class="mp-chara" src="assets/img/gasshukukitakuma.PNG" alt="" aria-hidden="true">
+
+    <div class="mp-bubble" role="group" aria-label="基本情報">
+      <div class="mp-bubble-head">
+        <span class="mp-bubble-title">《基本情報》</span>
+
+        <div class="mp-groupbox">
+          <span class="mp-groupbox-label">グループ</span>
+          <span class="mp-groupbox-value" id="themeGroup">—</span>
+        </div>
+      </div>
+
+      <div class="mp-bubble-body">
+        <p class="mp-line"><span id="branch">—</span></p>
+        <p class="mp-line"><span id="grade">—</span></p>
+      </div>
+
+      <div class="mp-bubble-body"><p class="mp-line"><span id="themeCourse">—</span></p></div>
+    </div>
+  </section>
+
+  <!-- ==== 真ん中：黄色ラベル＋企画名 ==== -->
+  <section class="mp-themearea" aria-label="企画">
+    <div class="mp-tag">わかものたちのいるところ</div>
+    <div class="mp-theme-title" id="freeAssign">—</div>
+    <div class="mp-info-line">
+      (<span class="mp-info-val" id="freeRoom">—</span>)
+    </div>
+  </section>
+
+  <!-- ==== 下：活動部屋 / 宿泊部屋 / バス ==== -->
+  <section class="mp-info">
+
+    <div class="mp-pill mp-pill--green">活動部屋</div>
+    <div class="mp-info-line">
+      <span class="mp-info-label">グループ活動：</span>
+      <span class="mp-info-val" id="themeRoom">—</span>
+    </div>
+
+    <div class="mp-info-line">
+      <span class="mp-info-label">宿泊部屋：</span>
+      <span class="mp-info-val" id="stayRoom">—</span>
+      <span class="mp-info-label">号室</span>
+    </div>
+
+    <div class="mp-pill mp-pill--orange">フェスティバルから合宿</div>
+    <div class="mp-info-line">
+      <span class="mp-info-label">バス：</span>
+      <span class="mp-info-val" id="bus">—</span>
+    </div>
+
+    <!-- ボタン -->
+    <div class="mp-actions">
+      <a class="mp-btn mp-btn-ghost mp-btn-link" href="#facilityMap">施設・館内案内図へ</a>
+      <button id="logoutBtn" class="mp-btn mp-btn-ghost" type="button">ログアウト</button>
+    </div>
+
+  </section>
+
+  <!-- ここから下（タイムテーブル/館内図など）は今のままでOK -->
+
+    <!-- タイムテーブル（グループ別で差し替え） -->
+    <section class="mp-gallery" aria-label="タイムテーブル">
+      <h2 class="mp-gallery-title">タイムテーブル</h2>
+
+      <!-- JSがここに 2枚×3セット を生成する -->
+      <div class="mp-slides" id="ttSlides"></div>
+
+      <div class="mp-slide-ctrl">
+        <button class="mp-btn" type="button" id="ttPrev" aria-label="前のセット">←</button>
+        <div class="mp-dots" id="ttDots" aria-hidden="true"></div>
+        <button class="mp-btn" type="button" id="ttNext" aria-label="次のセット">→</button>
+      </div>
+
+      <p class="mp-hint" id="ttHint">左右ボタン / スワイプで切替できます</p>
+    </section>
+
+    <!-- 館内図（固定） -->
+    <section id="facilityMap" class="mp-map" aria-label="館内案内図"></section>
+      <h2 class="mp-gallery-title">施設・館内案内図</h2>
+
+      <a class="mp-map-link" href="assets/img/mypage/map2.webp" target="_blank" rel="noopener">
+        <img class="mp-map-img" src="assets/img/mypage/map2.webp" alt="館内案内図（タップで拡大）">
+      </a>
+
+      <p class="mp-hint">タップすると拡大表示できます</p>
+    </section>
+
+  </section>
 </main>
+
+<!-- 画像保存用ライブラリ -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+
 
 <footer class="site-footer">
   <div class="container">

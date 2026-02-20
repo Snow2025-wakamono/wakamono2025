@@ -46,50 +46,135 @@
 </aside>
 <div id="backdrop" class="backdrop" hidden></div>
 
-
+<!-- ===================== MyPage ===================== -->
 <main class="container mypage">
 
-  <!-- ===== ログイン画面 ===== -->
+  <!-- ログイン -->
   <section id="loginBox" class="myp-login">
     <h1 class="myp-title">マイページ</h1>
     <p class="myp-lead">配布された <strong>個人ID</strong> を入力してください</p>
 
     <div class="myp-form">
       <label for="loginId">個人ID</label>
-      <input id="loginId" class="myp-input" type="text" placeholder="例：1001">
-
-      <button id="loginBtn" class="myp-btn">ログイン</button>
-      <p id="loginError" class="myp-error"></p>
+      <input id="loginId" class="myp-input" type="text" inputmode="numeric" placeholder="例：1001">
+      <button id="loginBtn" class="myp-btn" type="button">ログイン</button>
+      <p id="loginError" class="myp-error" aria-live="polite"></p>
     </div>
   </section>
 
-
-  <!-- ===== ログイン後表示 ===== -->
+  <!-- ログイン後 -->
   <section id="mypageContent" class="myp-content" hidden>
 
-    <div class="myp-card">
-      <h2 class="myp-name"><span id="nickname">—</span> さん</h2>
-
-      <table class="myp-table">
-        <tr><th>所属支部</th><td id="branch"></td></tr>
-        <tr><th>学年</th><td id="grade"></td></tr>
-        <tr><th>バス号車</th><td id="bus"></td></tr>
-
-        <tr><th>自由企画</th><td id="freeAssign"></td></tr>
-        <tr><th>テーマコース</th><td id="themeCourse"></td></tr>
-        <tr><th>テーマグループ</th><td id="themeGroup"></td></tr>
-
-        <tr><th>自由活動部屋</th><td id="freeRoom"></td></tr>
-        <tr><th>テーマ活動部屋</th><td id="themeRoom"></td></tr>
-        <tr><th>宿泊部屋</th><td id="stayRoom"></td></tr>
-      </table>
-
-      <button id="logoutBtn" class="myp-btn-ghost">ログアウト</button>
+  <!-- ==== 上の“〇〇のマイページ”帯（2段ピル） ==== -->
+  <section class="mp-top">
+    <div class="mp-title-bubbles" aria-label="ページタイトル">
+      <div class="mp-title-pill mp-title-pill--small">
+        <span id="nickname">—</span> の
+      </div>
+      <div class="mp-title-pill mp-title-pill--big">
+        マイページ
+      </div>
     </div>
+  </section>
+
+  <!-- ==== キャラ＋吹き出し（基本情報） ==== -->
+  <section class="mp-profile">
+    <img class="mp-chara" src="assets/img/gasshukukitakuma.PNG" alt="" aria-hidden="true">
+
+    <div class="mp-bubble" role="group" aria-label="基本情報">
+      <div class="mp-bubble-head">
+        <span class="mp-bubble-title">《基本情報》</span>
+
+        <div class="mp-groupbox">
+          <span class="mp-groupbox-label">グループ</span>
+          <span class="mp-groupbox-value" id="themeGroup">—</span>
+        </div>
+      </div>
+
+      <div class="mp-bubble-body">
+        <p class="mp-line"><span id="branch">—</span></p>
+        <p class="mp-line"><span id="grade">—</span></p>
+      </div>
+
+      <div class="mp-bubble-body"><p class="mp-line"><span id="themeCourse">—</span></p></div>
+    </div>
+  </section>
+
+  <!-- ==== 真ん中：黄色ラベル＋企画名 ==== -->
+  <section class="mp-themearea" aria-label="企画">
+    <div class="mp-tag">わかものたちのいるところ</div>
+    <div class="mp-theme-title" id="freeAssign">—</div>
+    <div class="mp-info-line">
+      (<span class="mp-info-val" id="freeRoom">—</span>)
+    </div>
+  </section>
+
+  <!-- ==== 下：活動部屋 / 宿泊部屋 / バス ==== -->
+  <section class="mp-info">
+
+    <div class="mp-pill mp-pill--green">活動部屋</div>
+    <div class="mp-info-line">
+      <span class="mp-info-label">グループ活動：</span>
+      <span class="mp-info-val" id="themeRoom">—</span>
+    </div>
+
+    <div class="mp-info-line">
+      <span class="mp-info-label">宿泊部屋：</span>
+      <span class="mp-info-val" id="stayRoom">—</span>
+      <span class="mp-info-label">号室</span>
+    </div>
+
+    <div class="mp-pill mp-pill--orange">フェスティバルから合宿</div>
+    <div class="mp-info-line">
+      <span class="mp-info-label">バス：</span>
+      <span class="mp-info-val" id="bus">—</span>
+    </div>
+
+    <!-- ボタン -->
+    <div class="mp-actions">
+      <a class="mp-btn mp-btn-ghost mp-btn-link" href="#facilityMap">施設・館内案内図へ</a>
+      <button id="saveBtn" class="mp-btn" type="button">画像として保存</button>
+      <button id="logoutBtn" class="mp-btn mp-btn-ghost" type="button">ログアウト</button>
+    </div>
+    <p class="mp-save-hint">※保存できない場合はスクショでもOKです。</p>
 
   </section>
 
+  <!-- ここから下（タイムテーブル/館内図など）は今のままでOK -->
+
+    <!-- タイムテーブル（グループ別で差し替え） -->
+    <section class="mp-gallery" aria-label="タイムテーブル">
+      <h2 class="mp-gallery-title">タイムテーブル</h2>
+
+      <!-- JSがここに 2枚×3セット を生成する -->
+      <div class="mp-slides" id="ttSlides"></div>
+
+      <div class="mp-slide-ctrl">
+        <button class="mp-btn" type="button" id="ttPrev" aria-label="前のセット">←</button>
+        <div class="mp-dots" id="ttDots" aria-hidden="true"></div>
+        <button class="mp-btn" type="button" id="ttNext" aria-label="次のセット">→</button>
+      </div>
+
+      <p class="mp-hint" id="ttHint">左右ボタン / スワイプで切替できます</p>
+    </section>
+
+    <!-- 館内図（固定） -->
+    <section id="facilityMap" class="mp-map" aria-label="館内案内図"></section>
+      <h2 class="mp-gallery-title">施設・館内案内図</h2>
+
+      <a class="mp-map-link" href="assets/img/mypage/map2.webp" target="_blank" rel="noopener">
+        <img class="mp-map-img" src="assets/img/mypage/map2.webp" alt="館内案内図（タップで拡大）">
+      </a>
+
+      <p class="mp-hint">タップすると拡大表示できます</p>
+    </section>
+
+  </section>
 </main>
+
+<!-- 画像保存用ライブラリ -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
 
 
 <footer class="site-footer">
