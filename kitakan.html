@@ -13,6 +13,39 @@
 <!-- 公開前は検索避け（必要なければ削除OK） -->
 <meta name="robots" content="noindex, nofollow">
 </head>
+<style>
+  h1{
+    margin-bottom:50px;
+  }
+  .pic{
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .back_totigi{
+    background-image:url("assets/img/totigi.webp");
+    background-size:20%;
+    background-attachment: fixed;
+    border-bottom: 4px solid #333;
+  }
+  .back_gunma{
+    background-image:url("assets/img/gunma.webp");
+    background-size:20%;
+    background-attachment: fixed;
+  }
+  .back_saitama{
+    background-image:url("assets/img/saitama.webp");
+    background-size:20%;
+    background-attachment: fixed;
+    border-bottom: 4px solid #333;
+  }
+  .back_nagano{
+    background-image:url("assets/img/nagano.webp");
+    background-size:20%;
+    background-attachment: fixed;
+    border-bottom: 4px solid #333;
+  }
+</style>
 <body data-page="kitakan">
 <header class="site-header">
   <div class="container header-inner">
@@ -46,13 +79,20 @@
 <div id="backdrop" class="backdrop" hidden></div>
 
 <main class="container">
-  <section class="comingsoon" aria-labelledby="cs-title">
-    <div class="cs-icon" aria-hidden="true">🗺️</div>
-    <h1 id="cs-title" class="cs-title">Coming Soon . . .</h1>
-    <p class="cs-lead">このページは現在準備中です</p>
-    <p class="cs-note">北関東信越支部のおすすめスポットをご紹介予定です。<br>公開までもうしばらくお待ちください。<br>最新情報はホームまたは各SNSからご確認ください。</p>
-    <div class="cs-actions">
-      <a class="btn" href="index.html">ホームへ戻る</a>
+  <h1>北関東支部紹介</h1>
+  <section class="center">
+    <div class="back_totigi">
+      <img class="pic" src="assets/img/kitakan_gyouza.webp" alt="宇都宮餃子" style="margin-top: 25px;">
+      <img class="pic" src="assets/img/kitakan_asikaga.webp" alt="あしかがフラワーパーク">
+    </div>
+    <div class="back_nagano">
+      <img class="pic" src="assets/img/kitakan_kamikouti.webp" alt="上高地">
+    </div>
+    <div class="back_saitama">
+      <img class="pic" src="assets/img/kitakan_kawagoe.webp" alt="川越">
+    </div>
+    <div class="back_gunma">
+      <img class="pic" src="assets/img/kitakan_kusatu.webp" alt="草津">
     </div>
   </section>
 </main>
