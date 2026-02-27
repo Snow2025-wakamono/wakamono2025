@@ -1,6 +1,6 @@
 /* ===== MyPage ===== */
 /* ここだけ必ず自分のGAS exec URLに差し替え */
-const API_URL = "https://script.google.com/macros/s/AKfycbxWHsfZGtV6o1SG8nj97MXCUusKBe7hVDhI7m4-tVJ7n3n2wqNQZGk6l5BtX2QKkQdmmg/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzhNshcFuQFrAX4StFJTBSdDv7Q4iOXwdI0FdAY0fuDqvi_gDd79X5awOOLwNJPSGTSBQ/exec";
 
 /* ---------- helpers ---------- */
 function setText(id, value){
@@ -10,9 +10,13 @@ function setText(id, value){
   el.textContent = v;
 }
 
-function fetchUser(id){
+/**
+ * JSONP汎用呼び出し（GASのcallback対応用）
+ */
+function jsonp(url){
   return new Promise((resolve)=>{
     const cb = "cb_" + Date.now() + "_" + Math.random().toString(16).slice(2);
+
     window[cb] = (data) => { resolve(data); cleanup(); };
 
     const script = document.createElement("script");
@@ -23,9 +27,113 @@ function fetchUser(id){
       if(script.parentNode) script.parentNode.removeChild(script);
     }
 
-    script.src = `${API_URL}?id=${encodeURIComponent(id)}&callback=${encodeURIComponent(cb)}`;
+    script.src = `${url}${url.includes("?") ? "&" : "?"}callback=${encodeURIComponent(cb)}`;
     document.body.appendChild(script);
   });
+}
+
+/* 個人情報取得（JSONP） */
+function fetchUser(id){
+  const url = `${API_URL}?id=${encodeURIComponent(id)}`;
+  return jsonp(url);
+}
+
+/* ---------- notice (shared) ---------- */
+/**
+ * お知らせ取得（全員共通）
+ * GAS: ?mode=notice を返す想定
+ */
+async function loadNotice(){
+  const box   = document.getElementById("mpNotice");
+  const list  = document.getElementById("noticeList");
+  const empty = document.getElementById("noticeEmpty");
+
+  // HTMLにお知らせ欄が無いページでも落ちないように
+  if(!box || !list || !empty) return;
+
+  try{
+    const data = await jsonp(`${API_URL}?mode=notice`);
+
+    // 失敗時は無理に出さない（見た目崩れ防止）
+    if(!data || data.error){
+      console.warn("notice error:", data?.error);
+      return;
+    }
+
+    const notices = Array.isArray(data.notices) ? data.notices : [];
+    list.innerHTML = "";
+
+    if(notices.length === 0){
+      box.hidden = false;
+      empty.hidden = false;
+      return;
+    }
+
+    notices.forEach(n=>{
+      const li = document.createElement("li");
+
+      // GASは {text, date} 形式 or 文字列のみ、どちらでもOK
+      const text = (typeof n === "string") ? n : (n?.text ?? "");
+      const date = (typeof n === "object" && n?.date) ? String(n.date) : "";
+
+      li.textContent = date ? `【${date}】${text}` : text;
+      list.appendChild(li);
+    });
+
+    empty.hidden = true;
+    box.hidden = false;
+
+  }catch(err){
+    console.error("notice load error", err);
+  }
+}
+
+/* お知らせの×で閉じる */
+function initNoticeClose(){
+  const btn = document.getElementById("noticeClose");
+  const box = document.getElementById("mpNotice");
+  if(!btn || !box) return;
+
+  // 二重登録を避ける（同じページで再初期化してもOKにする）
+  btn.onclick = () => { box.hidden = true; };
+}
+
+/* ---------- drawer (fix) ---------- */
+/**
+ * マイページで「ログイン前後でドロワーが効かなくなる」対策：
+ * いつでも呼べる初期化関数にして、DOMContentLoaded とログイン後に呼ぶ
+ */
+function initDrawer(){
+  const toggle   = document.querySelector(".nav-toggle");
+  const drawer   = document.getElementById("drawer");
+  const closeBtn = document.querySelector(".drawer-close");
+  const backdrop = document.getElementById("backdrop");
+
+  if(!toggle || !drawer || !closeBtn || !backdrop) return;
+
+  const open = () => {
+    drawer.classList.add("open");
+    drawer.setAttribute("aria-hidden", "false");
+    toggle.setAttribute("aria-expanded", "true");
+    backdrop.hidden = false;
+  };
+
+  const close = () => {
+    drawer.classList.remove("open");
+    drawer.setAttribute("aria-hidden", "true");
+    toggle.setAttribute("aria-expanded", "false");
+    backdrop.hidden = true;
+  };
+
+  // onclickで上書きして二重登録を防ぐ
+  toggle.onclick = open;
+  closeBtn.onclick = close;
+  backdrop.onclick = close;
+
+  // Escで閉じる（任意）
+  document.onkeydown = (e) => {
+    if(e.key === "Escape") close();
+  };
 }
 
 /* ---------- timetable: group-based ---------- */
@@ -179,6 +287,9 @@ function initSaveButton(){
 
 /* ---------- main ---------- */
 document.addEventListener("DOMContentLoaded", ()=>{
+  // ドロワーはページ表示時点で初期化
+  initDrawer();
+
   const loginBtn = document.getElementById("loginBtn");
   const loginId = document.getElementById("loginId");
   const loginError = document.getElementById("loginError");
@@ -211,6 +322,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     document.getElementById("loginBox").hidden = true;
     document.getElementById("mypageContent").hidden = false;
 
+    // 念のため、表示切替後にドロワーを再初期化（効かなくなる対策）
+    initDrawer();
+
     // fill
     setText("nickname", data.nickname);
     setText("branch", data.branch);
@@ -224,6 +338,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     setText("freeRoom", data.freeRoom);
     setText("themeRoom", data.themeRoom);
     setText("stayRoom", data.stayRoom);
+
+    // お知らせ（ログイン後に読み込み＆表示）
+    loadNotice();
+    initNoticeClose();
 
     // timetable: group based
     buildTimetableSlidesByGroup(data.themeGroup);
