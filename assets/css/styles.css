@@ -1044,6 +1044,10 @@ h2 strong {
   text-align: right;
 }
 
+.audio_left{
+  text-align: left;
+}
+
 .concept {
   color: brown;
 }
@@ -1642,5 +1646,9 @@ body[data-page="tickets"] .site-header .brand-text {
 
   .back_totigi,.back_gunma,.back_nagano,.back_saitama{
     background-size: 10%;
+  }
+
+  .audio_left{
+    text-align: center;
   }
 }
