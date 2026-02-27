@@ -1044,7 +1044,7 @@ h2 strong {
   text-align: right;
 }
 
-.audio_left{
+.left{
   text-align: left;
 }
 
@@ -1648,7 +1648,7 @@ body[data-page="tickets"] .site-header .brand-text {
     background-size: 10%;
   }
 
-  .audio_left{
+  div audio{
     text-align: center;
   }
 }
