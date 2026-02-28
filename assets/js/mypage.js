@@ -1,6 +1,6 @@
 /* ===== MyPage ===== */
 /* ここだけ必ず自分のGAS exec URLに差し替え */
-const API_URL = "https://script.google.com/macros/s/AKfycbzhNshcFuQFrAX4StFJTBSdDv7Q4iOXwdI0FdAY0fuDqvi_gDd79X5awOOLwNJPSGTSBQ/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbw_iVLLtwglXACmVaytTVfEfEe-ipNq8xE87x73uFM0lyFn2GyMT_H5POymCML743zDpg/exec";
 
 /* ---------- helpers ---------- */
 function setText(id, value){
@@ -47,14 +47,12 @@ async function loadNotice(){
   const box   = document.getElementById("mpNotice");
   const list  = document.getElementById("noticeList");
   const empty = document.getElementById("noticeEmpty");
-
-  // HTMLにお知らせ欄が無いページでも落ちないように
   if(!box || !list || !empty) return;
 
   try{
+    // JSONP運用なら jsonp()、fetch運用なら fetch() にしてOK
     const data = await jsonp(`${API_URL}?mode=notice`);
 
-    // 失敗時は無理に出さない（見た目崩れ防止）
     if(!data || data.error){
       console.warn("notice error:", data?.error);
       return;
@@ -72,11 +70,24 @@ async function loadNotice(){
     notices.forEach(n=>{
       const li = document.createElement("li");
 
-      // GASは {text, date} 形式 or 文字列のみ、どちらでもOK
-      const text = (typeof n === "string") ? n : (n?.text ?? "");
-      const date = (typeof n === "object" && n?.date) ? String(n.date) : "";
+      // 本文
+      const p = document.createElement("div");
+      p.className = "mp-notice-text";
+      p.textContent = n.text ?? "";
+      li.appendChild(p);
 
-      li.textContent = date ? `【${date}】${text}` : text;
+      // PDFリンクがある場合だけリンク追加
+      const url = (n.pdfUrl ?? "").trim();
+      if(url){
+        const a = document.createElement("a");
+        a.className = "mp-notice-link";
+        a.href = url;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = (n.linkText && n.linkText.trim()) ? n.linkText.trim() : "PDFを見る";
+        li.appendChild(a);
+      }
+
       list.appendChild(li);
     });
 
