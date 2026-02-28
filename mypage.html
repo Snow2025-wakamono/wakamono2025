@@ -65,6 +65,18 @@
   <!-- ログイン後 -->
   <section id="mypageContent" class="myp-content" hidden>
 
+  <!-- ==== お知らせ（ログイン後の上部） ==== -->
+  <section id="mpNotice" class="mp-notice" aria-label="お知らせ" hidden>
+    <div class="mp-notice-head">
+      <span class="mp-notice-badge">お知らせ</span>
+      <button id="noticeClose" class="mp-notice-close" type="button" aria-label="お知らせを閉じる">×</button>
+    </div>
+
+    <ul id="noticeList" class="mp-notice-list"></ul>
+
+    <p id="noticeEmpty" class="mp-notice-empty" hidden>現在お知らせはありません。</p>
+  </section>
+
   <!-- ==== 上の“〇〇のマイページ”帯（2段ピル） ==== -->
   <section class="mp-top">
     <div class="mp-title-bubbles" aria-label="ページタイトル">
@@ -133,8 +145,10 @@
     <!-- ボタン -->
     <div class="mp-actions">
       <a class="mp-btn mp-btn-ghost mp-btn-link" href="#facilityMap">施設・館内案内図へ</a>
+      <button id="saveBtn" class="mp-btn" type="button">画像として保存</button>
       <button id="logoutBtn" class="mp-btn mp-btn-ghost" type="button">ログアウト</button>
     </div>
+    <p class="mp-save-hint">※保存できない場合はスクショでもOKです。</p>
 
   </section>
 
