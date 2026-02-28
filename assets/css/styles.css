@@ -1651,4 +1651,13 @@ body[data-page="tickets"] .site-header .brand-text {
   div audio{
     text-align: center;
   }
+
+  .attention dt{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .attention dd{
+    text-align: left;
+  }
 }
