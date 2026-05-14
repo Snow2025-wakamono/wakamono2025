@@ -1076,6 +1076,60 @@ h2 strong {
   margin: 30px;
 }
 
+.cp_qa02 {
+  margin: 0 auto;
+}
+.cp_qa02 .cp_actab input[type=checkbox] {
+  display: none;
+}
+.cp_qa02 .cp_actab {
+  padding: 20px 0;
+  border-bottom: 1px dotted #cccccc;
+}
+/*質問テキスト*/
+.cp_qa02 label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 120%;
+  width: calc(100% - 70px);
+  margin: 0 0 0 50px;
+  padding: 10px;
+  cursor: pointer;
+}
+/*＋アイコン*/
+.cp_qa02 label::before {
+  position: absolute;
+  content: '+';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 210%;
+  font-weight: bold;
+  margin-left: -50px;
+  padding: 0 0 0 0;
+  transition: 0.4s ease;
+}
+.cp_qa02 .cp_actab input[type=checkbox]:checked ~ label::before {
+  transform: rotate(45deg);
+}
+/*答えテキスト*/
+.cp_qa02 .cp_actab-content {
+  font-size: 1em;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  margin: 0 40px;
+  padding: 0 14px;
+  transition: 0.4s ease;
+  opacity: 0;
+}
+.cp_qa02 .cp_actab input[type=checkbox]:checked ~ .cp_actab-content {
+  height: auto;
+  padding: 14px;
+  opacity: 1;
+}
+
 /*フェス合宿テーマ説明の一部非表示*/
   .cp_box1 {
     position: relative;
